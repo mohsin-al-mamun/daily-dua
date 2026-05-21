@@ -144,6 +144,9 @@ export default function DuaReader({ meta, detail }: { meta: DuaMeta; detail: Dua
               <div className="fac-arabic">{detail.fullArabic}</div>
               <div className="fac-translit">{detail.fullBanglaTranslit}</div>
               <div className="fac-meaning">{detail.fullMeaningBn}</div>
+              {detail.reference && (
+                <div className="fac-reference">{detail.reference}</div>
+              )}
             </div>
 
             {/* SEGMENT CARDS */}

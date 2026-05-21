@@ -13,6 +13,7 @@ export type DuaDetail = {
   fullArabic: string;
   fullBanglaTranslit: string;
   fullMeaningBn: string;
+  reference?: string;
   segments: Segment[];
 };
 
@@ -66,6 +67,15 @@ export const DUAS: DuaMeta[] = [
   { id: 'evening-forgiveness', cat: 'evening', titleAr: 'دعاء قبل النوم',    titleBn: 'ঘুমের আগের দুআ',         firstLine: 'اللَّهُمَّ قِنِي عَذَابَكَ يَوْمَ تَبْعَثُ عِبَادَكَ' },
   { id: 'evening-tasbih',      cat: 'evening', titleAr: 'تسبيح المساء',      titleBn: 'সন্ধ্যার তাসবিহ',        firstLine: 'سُبْحَانَ اللَّهِ وَبِحَمْدِهِ سُبْحَانَ اللَّهِ الْعَظِيمِ' },
   { id: 'evening-kul',         cat: 'evening', titleAr: 'المعوذتان مساءً',   titleBn: 'সন্ধ্যায় মুআউওয়িযাতাইন', firstLine: 'قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ مِنْ شَرِّ مَا خَلَقَ' },
+  // After Salat
+  { id: 'istighfar-salat', cat: 'after-salat', titleAr: 'الاستغفار بعد الصلاة', titleBn: 'ইস্তিগফার (নামাজের পর)',   firstLine: 'أَسْتَغْفِرُ اللَّهَ' },
+  { id: 'salam-dua',       cat: 'after-salat', titleAr: 'اللهم أنت السلام',      titleBn: 'সালামের দুআ',             firstLine: 'اللَّهُمَّ أَنْتَ السَّلَامُ وَمِنْكَ السَّلَامُ' },
+  { id: 'tahleel',         cat: 'after-salat', titleAr: 'التهليل',               titleBn: 'তাহলীল',                  firstLine: 'لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ' },
+  { id: 'tasbih-fatemi',   cat: 'after-salat', titleAr: 'تسبيح فاطمة',           titleBn: 'তাসবীহে ফাতেমী',          firstLine: 'سُبْحَانَ اللَّهِ · الْحَمْدُ لِلَّهِ · اللَّهُ أَكْبَرُ' },
+  { id: 'after-salat-dua', cat: 'after-salat', titleAr: 'دعاء بعد الصلاة',       titleBn: 'নামাজের পর বিশেষ দুআ',   firstLine: 'اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ' },
+  { id: 'la-manea',        cat: 'after-salat', titleAr: 'لا مانع لما أعطيت',     titleBn: 'লা মানিআ দুআ',            firstLine: 'اللَّهُمَّ لَا مَانِعَ لِمَا أَعْطَيْتَ' },
+  { id: 'durood-after',    cat: 'after-salat', titleAr: 'الصلاة على النبي',       titleBn: 'দরূদ শরীফ',               firstLine: 'اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ' },
+  { id: 'ayah-kursi-after',cat: 'after-salat', titleAr: 'آية الكرسي بعد الصلاة', titleBn: 'আয়াতুল কুরসি (নামাজ পরে)', firstLine: 'اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ' },
 ];
 
 export const CATS: Category[] = [
@@ -73,7 +83,8 @@ export const CATS: Category[] = [
   { id: 'quran',   icon: '📖', titleBn: 'কুরআনের সূরা', sub: 'Surahs of the Quran' },
   { id: 'amal',    icon: '⭐', titleBn: 'আমল ও ফজিলত',  sub: 'Deeds & Virtues'     },
   { id: 'morning', icon: '🌅', titleBn: 'সকালের আমল',   sub: 'Morning Deeds'       },
-  { id: 'evening', icon: '🌙', titleBn: 'সন্ধ্যার আমল', sub: 'Evening Deeds'       },
+  { id: 'evening',     icon: '🌙', titleBn: 'সন্ধ্যার আমল',    sub: 'Evening Deeds'              },
+  { id: 'after-salat', icon: '🤲', titleBn: 'নামাজের পর দুআ', sub: 'Post-Prayer Supplications'  },
 ];
 
 export const CAT_LABELS: Record<string, CatLabel> = {
@@ -81,11 +92,13 @@ export const CAT_LABELS: Record<string, CatLabel> = {
   quran:   { bn: 'কুরআনের সূরা', en: 'Surahs of the Quran' },
   amal:    { bn: 'আমল ও ফজিলত',  en: 'Deeds & Virtues'     },
   morning: { bn: 'সকালের আমল',   en: 'Morning Deeds'       },
-  evening: { bn: 'সন্ধ্যার আমল', en: 'Evening Deeds'       },
+  evening:     { bn: 'সন্ধ্যার আমল',    en: 'Evening Deeds'             },
+  'after-salat': { bn: 'নামাজের পর দুআ', en: 'Post-Prayer Supplications' },
 };
 
 export const DETAIL_MAP: Record<string, DuaDetail> = {
   tashahhud: {
+    reference: 'সহীহ বুখারি · সহীহ মুসলিম',
     fullArabic: 'التَّحِيَّاتُ لِلَّهِ وَالصَّلَوَاتُ وَالطَّيِّبَاتُ،\nالسَّلَامُ عَلَيْكَ أَيُّهَا النَّبِيُّ وَرَحْمَةُ اللَّهِ وَبَرَكَاتُهُ،\nالسَّلَامُ عَلَيْنَا وَعَلَى عِبَادِ اللَّهِ الصَّالِحِينَ،\nأَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ',
     fullBanglaTranslit: 'আত্তাহিয়্যাতু লিল্লাহি ওয়াস্সালাওয়াতু ওয়াত্তাইয়্যিবাত, আস্সালামু আলাইকা আইয়্যুহান্নাবিয়্যু ওয়া রাহমাতুল্লাহি ওয়া বারাকাতুহু, আস্সালামু আলাইনা ওয়া আলা ইবাদিল্লাহিস্ সালিহিন, আশহাদু আল্লা ইলাহা ইল্লাল্লাহু ওয়া আশহাদু আন্না মুহাম্মাদান আবদুহু ওয়া রাসুলুহু',
     fullMeaningBn: 'সকল সম্মান, ইবাদত ও পবিত্র কথা আল্লাহর জন্য। হে নবী! আপনার উপর শান্তি বর্ষিত হোক এবং আল্লাহর রহমত ও বরকত। আমাদের উপর এবং আল্লাহর সৎ বান্দাদের উপর শান্তি বর্ষিত হোক। আমি সাক্ষ্য দিচ্ছি যে আল্লাহ ছাড়া কোনো ইলাহ নেই এবং মুহাম্মাদ তাঁর বান্দা ও রাসুল।',
@@ -151,6 +164,7 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
   },
 
   darud: {
+    reference: 'সহীহ বুখারি · সহীহ মুসলিম',
     fullArabic: 'اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ،\nكَمَا صَلَّيْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ،\nإِنَّكَ حَمِيدٌ مَجِيدٌ،\nاللَّهُمَّ بَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ،\nكَمَا بَارَكْتَ عَلَى إِبْرَاهِيمَ وَعَلَى آلِ إِبْرَاهِيمَ،\nإِنَّكَ حَمِيدٌ مَجِيدٌ',
     fullBanglaTranslit: 'আল্লাহুম্মা সাল্লি আলা মুহাম্মাদিন ওয়া আলা আলি মুহাম্মাদ, কামা সাল্লাইতা আলা ইব্রাহিমা ওয়া আলা আলি ইব্রাহিম, ইন্নাকা হামিদুম মাজিদ। আল্লাহুম্মা বারিক আলা মুহাম্মাদিন ওয়া আলা আলি মুহাম্মাদ, কামা বারাকতা আলা ইব্রাহিমা ওয়া আলা আলি ইব্রাহিম, ইন্নাকা হামিদুম মাজিদ।',
     fullMeaningBn: 'হে আল্লাহ! মুহাম্মাদ এবং মুহাম্মাদের পরিবারের উপর রহমত বর্ষণ করুন, যেভাবে আপনি ইব্রাহিম ও তাঁর পরিবারের উপর রহমত বর্ষণ করেছিলেন। নিশ্চয়ই আপনি প্রশংসনীয়, মহিমান্বিত। হে আল্লাহ! মুহাম্মাদ ও তাঁর পরিবারের উপর বরকত দিন, যেভাবে আপনি ইব্রাহিম ও তাঁর পরিবারের উপর বরকত দিয়েছিলেন। নিশ্চয়ই আপনি প্রশংসনীয়, মহিমান্বিত।',
@@ -214,6 +228,7 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
   },
 
   'dua-masura': {
+    reference: 'সহীহ বুখারি · সহীহ মুসলিম',
     fullArabic: 'اللَّهُمَّ إِنِّي ظَلَمْتُ نَفْسِي ظُلْمًا كَثِيرًا وَلَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ،\nفَاغْفِرْ لِي مَغْفِرَةً مِنْ عِنْدِكَ وَارْحَمْنِي،\nإِنَّكَ أَنْتَ الْغَفُورُ الرَّحِيمُ',
     fullBanglaTranslit: 'আল্লাহুম্মা ইন্নি যালামতু নাফসি যুলমান কাসিরান ওয়া লা ইয়াগফিরুয্ যুনুবা ইল্লা আন্তা, ফাগফিরলি মাগফিরাতাম মিন ইন্দিকা ওয়ারহামনি, ইন্নাকা আন্তাল গাফুরুর রাহিম।',
     fullMeaningBn: 'হে আল্লাহ! আমি আমার নিজের উপর অনেক যুলুম করেছি এবং গুনাহ ক্ষমা করার ক্ষমতা কেবল আপনারই। তাই আপনার পক্ষ থেকে আমাকে বিশেষ ক্ষমা করুন এবং আমার উপর রহম করুন। নিশ্চয়ই আপনি মহাক্ষমাশীল, অসীম দয়ালু।',
@@ -252,6 +267,7 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
   },
 
   ruku: {
+    reference: 'সহীহ মুসলিম · আবু দাউদ',
     fullArabic: 'سُبْحَانَ رَبِّيَ الْعَظِيمِ',
     fullBanglaTranslit: 'সুবহানা রব্বিয়াল আযিম',
     fullMeaningBn: 'আমার মহান প্রভুর পবিত্রতা ঘোষণা করছি',
@@ -272,6 +288,7 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
   },
 
   sijdah: {
+    reference: 'সহীহ মুসলিম · আবু দাউদ',
     fullArabic: 'سُبْحَانَ رَبِّيَ الْأَعْلَى',
     fullBanglaTranslit: "সুবহানা রব্বিয়াল আ'লা",
     fullMeaningBn: 'আমার সর্বোচ্চ প্রভুর পবিত্রতা ঘোষণা করছি',
@@ -292,6 +309,7 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
   },
 
   qiyam: {
+    reference: 'আবু দাউদ · তিরমিযি',
     fullArabic: 'سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ\nوَتَبَارَكَ اسْمُكَ وَتَعَالَى جَدُّكَ\nوَلَا إِلَهَ غَيْرُكَ',
     fullBanglaTranslit: 'সুবহানাকাল্লাহুম্মা ওয়া বিহামদিকা ওয়া তাবারাকাসমুকা ওয়া তাআলা জাদ্দুকা ওয়া লা ইলাহা গাইরুক',
     fullMeaningBn: 'হে আল্লাহ! আমি আপনার প্রশংসাসহ পবিত্রতা ঘোষণা করছি। আপনার নাম বরকতময়, আপনার মহত্ব অতি উচ্চ এবং আপনি ছাড়া কোনো ইলাহ নেই।',
@@ -327,6 +345,7 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
   },
 
   fatiha: {
+    reference: 'সূরা আল-ফাতিহা · আয়াত ১–৭ · মাক্কী সূরা',
     fullArabic: 'بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ ۝١\nالْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ ۝٢\nالرَّحْمَنِ الرَّحِيمِ ۝٣\nمَالِكِ يَوْمِ الدِّينِ ۝٤\nإِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ ۝٥\nاهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ ۝٦\nصِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ ۝٧',
     fullBanglaTranslit: "বিসমিল্লাহির রাহমানির রাহিম। আলহামদু লিল্লাহি রব্বিল আলামিন। আর্রাহমানির রাহিম। মালিকি ইয়াওমিদ্দিন। ইয়্যাকা না'বুদু ওয়া ইয়্যাকা নাস্তাইন। ইহদিনাস্ সিরাতাল মুস্তাকিম। সিরাতাল্লাযিনা আন'আমতা আলাইহিম, গাইরিল মাগযুবি আলাইহিম ওয়ালাদ দ্বাল্লিন।",
     fullMeaningBn: 'পরম করুণাময় অসীম দয়ালু আল্লাহর নামে। সমস্ত প্রশংসা আল্লাহর জন্য, যিনি সমগ্র সৃষ্টির পালনকর্তা। যিনি পরম করুণাময়, অসীম দয়ালু। যিনি বিচার দিনের মালিক। আমরা কেবল আপনারই ইবাদত করি এবং কেবল আপনার কাছেই সাহায্য চাই। আমাদের সরল পথ দেখান — তাদের পথ যাদের উপর আপনি অনুগ্রহ করেছেন, তাদের পথ নয় যাদের উপর ক্রোধ হয়েছে এবং যারা পথভ্রষ্ট।',
@@ -424,6 +443,7 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
   },
 
   ikhlas: {
+    reference: 'সূরা আল-ইখলাস · আয়াত ১–৪ · মাক্কী সূরা',
     fullArabic: 'قُلْ هُوَ اللَّهُ أَحَدٌ ۝١\nاللَّهُ الصَّمَدُ ۝٢\nلَمْ يَلِدْ وَلَمْ يُولَدْ ۝٣\nوَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ ۝٤',
     fullBanglaTranslit: 'কুল হুওয়াল্লাহু আহাদ। আল্লাহুস্ সামাদ। লাম ইয়ালিদ ওয়ালাম ইউলাদ। ওয়ালাম ইয়াকুল্লাহু কুফুওয়ান আহাদ।',
     fullMeaningBn: 'বলুন, তিনি আল্লাহ, একক। আল্লাহ চিরস্থায়ী ও সকলের আশ্রয়। তিনি জন্ম দেননি এবং জন্ম নেননি। এবং তাঁর সমকক্ষ কেউ নেই।',
@@ -482,6 +502,7 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
   },
 
   kalima: {
+    reference: 'সহীহ বুখারি · সহীহ মুসলিম',
     fullArabic: 'لَا إِلَهَ إِلَّا اللَّهُ مُحَمَّدٌ رَسُولُ اللَّهِ',
     fullBanglaTranslit: 'লা ইলাহা ইল্লাল্লাহু মুহাম্মাদুর রাসুলুল্লাহ',
     fullMeaningBn: 'আল্লাহ ছাড়া কোনো ইলাহ নেই, মুহাম্মাদ আল্লাহর রাসুল।',
@@ -509,6 +530,172 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
           { ar: 'مُحَمَّدٌ', tr: 'Muhammadun', en: 'Muhammad', bn: 'মুহাম্মাদ' },
           { ar: 'رَسُولُ', tr: 'Rasūlu', en: 'the messenger', bn: 'রাসুল' },
           { ar: 'اللَّهِ', tr: 'Allāhi', en: 'of Allah', bn: 'আল্লাহর' },
+        ],
+      },
+    ],
+  },
+
+  'istighfar-salat': {
+    reference: 'সহীহ মুসলিম · আবু দাউদ',
+    fullArabic: 'أَسْتَغْفِرُ اللَّهَ،\nأَسْتَغْفِرُ اللَّهَ،\nأَسْتَغْفِرُ اللَّهَ',
+    fullBanglaTranslit: 'আস্তাগফিরুল্লাহ, আস্তাগফিরুল্লাহ, আস্তাগফিরুল্লাহ',
+    fullMeaningBn: 'আমি আল্লাহর কাছে ক্ষমা চাই (তিনবার)',
+    segments: [
+      {
+        arabic: 'أَسْتَغْفِرُ اللَّهَ',
+        translit: 'Astaghfirullāh',
+        banglaTranslit: 'আস্তাগফিরুল্লাহ',
+        meaningBn: 'আমি আল্লাহর কাছে ক্ষমা চাই — নামাজের পর তিনবার পড়তে হয়',
+        meaningEn: 'I seek forgiveness from Allah — recited three times after prayer',
+        words: [
+          { ar: 'أَسْتَغْفِرُ', tr: 'Astaghfiru', en: 'I seek forgiveness', bn: 'আমি ক্ষমা চাই' },
+          { ar: 'اللَّهَ', tr: 'Allāha', en: 'from Allah', bn: 'আল্লাহর কাছে' },
+        ],
+      },
+    ],
+  },
+
+  'salam-dua': {
+    reference: 'সহীহ মুসলিম · নাসাই',
+    fullArabic: 'اللَّهُمَّ أَنْتَ السَّلَامُ وَمِنْكَ السَّلَامُ،\nتَبَارَكْتَ يَا ذَا الْجَلَالِ وَالْإِكْرَامِ',
+    fullBanglaTranslit: 'আল্লাহুম্মা আন্তাস্ সালামু ওয়া মিন্কাস্ সালাম, তাবারাকতা ইয়া যাল জালালি ওয়াল ইকরাম।',
+    fullMeaningBn: 'হে আল্লাহ! আপনি শান্তি এবং আপনার কাছ থেকেই শান্তি আসে। হে মহিমাময় ও সম্মানিত! আপনি বরকতময়।',
+    segments: [
+      {
+        arabic: 'اللَّهُمَّ أَنْتَ السَّلَامُ وَمِنْكَ السَّلَامُ',
+        translit: 'Allāhumma antas-Salāmu wa minkas-Salām',
+        banglaTranslit: 'আল্লাহুম্মা আন্তাস্ সালামু ওয়া মিন্কাস্ সালাম',
+        meaningBn: 'হে আল্লাহ! আপনি শান্তি এবং শান্তি আসে আপনার কাছ থেকেই',
+        meaningEn: 'O Allah, You are Peace and from You comes peace',
+        words: [
+          { ar: 'اللَّهُمَّ', tr: 'Allāhumma', en: 'O Allah', bn: 'হে আল্লাহ' },
+          { ar: 'أَنْتَ', tr: 'anta', en: 'You are', bn: 'আপনি' },
+          { ar: 'السَّلَامُ', tr: 'as-Salāmu', en: 'the Peace', bn: 'শান্তি' },
+          { ar: 'وَمِنْكَ', tr: 'wa minka', en: 'and from You', bn: 'এবং আপনার কাছ থেকে' },
+          { ar: 'السَّلَامُ', tr: 'as-Salāmu', en: 'comes peace', bn: 'আসে শান্তি' },
+        ],
+      },
+      {
+        arabic: 'تَبَارَكْتَ يَا ذَا الْجَلَالِ وَالْإِكْرَامِ',
+        translit: 'tabārakta yā Dhal-Jalāli wal-Ikrām',
+        banglaTranslit: 'তাবারাকতা ইয়া যাল জালালি ওয়াল ইকরাম',
+        meaningBn: 'হে মহিমাময় ও সম্মানিত! আপনি বরকতময়',
+        meaningEn: 'Blessed are You, O Possessor of Majesty and Honour',
+        words: [
+          { ar: 'تَبَارَكْتَ', tr: 'tabārakta', en: 'You are Blessed', bn: 'আপনি বরকতময়' },
+          { ar: 'يَا ذَا', tr: 'yā Dha', en: 'O Possessor of', bn: 'হে অধিকারী' },
+          { ar: 'الْجَلَالِ', tr: 'al-Jalāli', en: 'Majesty', bn: 'মহিমা' },
+          { ar: 'وَالْإِكْرَامِ', tr: 'wal-Ikrām', en: 'and Honour', bn: 'এবং সম্মান' },
+        ],
+      },
+    ],
+  },
+
+  tahleel: {
+    reference: 'সহীহ মুসলিম · সহীহ বুখারি',
+    fullArabic: 'لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ،\nلَهُ الْمُلْكُ وَلَهُ الْحَمْدُ،\nوَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ',
+    fullBanglaTranslit: 'লা ইলাহা ইল্লাল্লাহু ওয়াহদাহু লা শারিকা লাহু, লাহুল মুলকু ওয়া লাহুল হামদু, ওয়া হুয়া আলা কুল্লি শাইয়িন কাদির।',
+    fullMeaningBn: 'আল্লাহ ছাড়া কোনো ইলাহ নেই, তিনি একা, তাঁর কোনো শরিক নেই। রাজত্ব তাঁরই এবং প্রশংসাও তাঁরই। তিনি সব কিছুর উপর সর্বশক্তিমান।',
+    segments: [
+      {
+        arabic: 'لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ',
+        translit: 'Lā ilāha illallāhu wahdahū lā sharīka lah',
+        banglaTranslit: 'লা ইলাহা ইল্লাল্লাহু ওয়াহদাহু লা শারিকা লাহু',
+        meaningBn: 'আল্লাহ ছাড়া কোনো ইলাহ নেই, তিনি একা, তাঁর কোনো শরিক নেই',
+        meaningEn: 'There is no god but Allah, alone, without partner',
+        words: [
+          { ar: 'لَا إِلَهَ إِلَّا اللَّهُ', tr: 'Lā ilāha illallāhu', en: 'There is no god but Allah', bn: 'আল্লাহ ছাড়া কোনো ইলাহ নেই' },
+          { ar: 'وَحْدَهُ', tr: 'wahdahū', en: 'alone', bn: 'তিনি একা' },
+          { ar: 'لَا شَرِيكَ لَهُ', tr: 'lā sharīka lah', en: 'without partner', bn: 'তাঁর কোনো শরিক নেই' },
+        ],
+      },
+      {
+        arabic: 'لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ',
+        translit: 'lahul-mulku wa lahul-hamdu wa huwa alā kulli shayʾin Qadīr',
+        banglaTranslit: 'লাহুল মুলকু ওয়া লাহুল হামদু ওয়া হুয়া আলা কুল্লি শাইয়িন কাদির',
+        meaningBn: 'রাজত্ব তাঁরই, প্রশংসাও তাঁরই এবং তিনি সব কিছুর উপর সর্বশক্তিমান',
+        meaningEn: 'His is the dominion, His is all praise, and He is over all things omnipotent',
+        words: [
+          { ar: 'لَهُ الْمُلْكُ', tr: 'lahul-mulku', en: 'His is the dominion', bn: 'রাজত্ব তাঁরই' },
+          { ar: 'وَلَهُ الْحَمْدُ', tr: 'wa lahul-hamdu', en: 'and His is all praise', bn: 'এবং প্রশংসাও তাঁরই' },
+          { ar: 'وَهُوَ', tr: 'wa huwa', en: 'and He is', bn: 'এবং তিনি' },
+          { ar: 'عَلَى كُلِّ شَيْءٍ', tr: 'alā kulli shayʾin', en: 'over all things', bn: 'সব কিছুর উপর' },
+          { ar: 'قَدِيرٌ', tr: 'Qadīr', en: 'omnipotent', bn: 'সর্বশক্তিমান' },
+        ],
+      },
+    ],
+  },
+
+  'tasbih-fatemi': {
+    reference: 'সহীহ বুখারি · সহীহ মুসলিম',
+    fullArabic: 'سُبْحَانَ اللَّهِ (٣٣ مرة)\nالْحَمْدُ لِلَّهِ (٣٣ مرة)\nاللَّهُ أَكْبَرُ (٣٤ مرة)',
+    fullBanglaTranslit: 'সুবহানাল্লাহ (৩৩ বার), আলহামদুলিল্লাহ (৩৩ বার), আল্লাহু আকবার (৩৪ বার)',
+    fullMeaningBn: 'আল্লাহ পবিত্র (৩৩ বার), সকল প্রশংসা আল্লাহর (৩৩ বার), আল্লাহ সর্বমহান (৩৪ বার)। মোট ১০০ বার।',
+    segments: [
+      {
+        arabic: 'سُبْحَانَ اللَّهِ — ٣٣ مرة',
+        translit: 'Subhānallāh — 33 times',
+        banglaTranslit: 'সুবহানাল্লাহ — ৩৩ বার',
+        meaningBn: 'আল্লাহ পবিত্র — ৩৩ বার পড়তে হয়',
+        meaningEn: 'Glory be to Allah — recited 33 times',
+        words: [
+          { ar: 'سُبْحَانَ', tr: 'Subhāna', en: 'Glory be to', bn: 'পবিত্র' },
+          { ar: 'اللَّهِ', tr: 'Allāhi', en: 'Allah', bn: 'আল্লাহ' },
+        ],
+      },
+      {
+        arabic: 'الْحَمْدُ لِلَّهِ — ٣٣ مرة',
+        translit: 'Alhamdulillāh — 33 times',
+        banglaTranslit: 'আলহামদুলিল্লাহ — ৩৩ বার',
+        meaningBn: 'সকল প্রশংসা আল্লাহর — ৩৩ বার পড়তে হয়',
+        meaningEn: 'All praise is for Allah — recited 33 times',
+        words: [
+          { ar: 'الْحَمْدُ', tr: 'al-Hamdu', en: 'all praise', bn: 'সকল প্রশংসা' },
+          { ar: 'لِلَّهِ', tr: 'lillāhi', en: 'for Allah', bn: 'আল্লাহর জন্য' },
+        ],
+      },
+      {
+        arabic: 'اللَّهُ أَكْبَرُ — ٣٤ مرة',
+        translit: 'Allāhu Akbar — 34 times',
+        banglaTranslit: 'আল্লাহু আকবার — ৩৪ বার',
+        meaningBn: 'আল্লাহ সর্বমহান — ৩৪ বার পড়তে হয়',
+        meaningEn: 'Allah is the Greatest — recited 34 times',
+        words: [
+          { ar: 'اللَّهُ', tr: 'Allāhu', en: 'Allah', bn: 'আল্লাহ' },
+          { ar: 'أَكْبَرُ', tr: 'Akbaru', en: 'is the Greatest', bn: 'সর্বমহান' },
+        ],
+      },
+    ],
+  },
+
+  'after-salat-dua': {
+    reference: 'আবু দাউদ · নাসাই · মুসনাদ আহমাদ',
+    fullArabic: 'اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ',
+    fullBanglaTranslit: 'আল্লাহুম্মা আইন্নি আলা যিকরিকা ওয়া শুকরিকা ওয়া হুসনি ইবাদাতিক।',
+    fullMeaningBn: 'হে আল্লাহ! আপনার যিকর করতে, আপনার শুকরিয়া আদায় করতে এবং সুন্দরভাবে আপনার ইবাদত করতে আমাকে সাহায্য করুন।',
+    segments: [
+      {
+        arabic: 'اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ',
+        translit: 'Allāhumma aʿinnī alā dhikrik',
+        banglaTranslit: 'আল্লাহুম্মা আইন্নি আলা যিকরিক',
+        meaningBn: 'হে আল্লাহ! আপনার যিকর করতে আমাকে সাহায্য করুন',
+        meaningEn: 'O Allah, help me to remember You',
+        words: [
+          { ar: 'اللَّهُمَّ', tr: 'Allāhumma', en: 'O Allah', bn: 'হে আল্লাহ' },
+          { ar: 'أَعِنِّي', tr: "aʿinnī", en: 'help me', bn: 'আমাকে সাহায্য করুন' },
+          { ar: 'عَلَى ذِكْرِكَ', tr: 'alā dhikrik', en: 'to remember You', bn: 'আপনার যিকর করতে' },
+        ],
+      },
+      {
+        arabic: 'وَشُكْرِكَ وَحُسْنِ عِبَادَتِكَ',
+        translit: 'wa shukrik wa husni ibādatik',
+        banglaTranslit: 'ওয়া শুকরিকা ওয়া হুসনি ইবাদাতিক',
+        meaningBn: 'এবং আপনার শুকরিয়া আদায় করতে এবং সুন্দরভাবে আপনার ইবাদত করতে',
+        meaningEn: 'and to be grateful to You and to worship You in the best manner',
+        words: [
+          { ar: 'وَشُكْرِكَ', tr: 'wa shukrik', en: 'and to be grateful to You', bn: 'এবং আপনার শুকরিয়া আদায় করতে' },
+          { ar: 'وَحُسْنِ', tr: 'wa husni', en: 'and the best of', bn: 'এবং সুন্দরভাবে' },
+          { ar: 'عِبَادَتِكَ', tr: 'ibādatik', en: 'Your worship', bn: 'আপনার ইবাদত' },
         ],
       },
     ],

@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import type { DuaMeta, Category } from '@/lib/data';
+import { LogoIcon } from './Logo';
 
 export default function DuaShell({
   duas,
@@ -17,7 +18,6 @@ export default function DuaShell({
   const pathname = usePathname();
   const currentId = pathname.startsWith('/dua/') ? pathname.slice(5) : null;
 
-  const [activeTab, setActiveTab] = useState('all');
   const [searchQ, setSearchQ] = useState('');
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [dark, setDark] = useState(false);
@@ -38,14 +38,14 @@ export default function DuaShell({
 
   const q = searchQ.toLowerCase().trim();
 
+  const currentDua = duas.find((d) => d.id === currentId);
+  const currentCat = cats.find((c) => c.id === currentDua?.cat);
+
   const visibleDuas = duas.filter((d) => {
-    const catMatch = activeTab === 'all' || d.cat === activeTab;
+    const catMatch = d.cat === currentDua?.cat;
     const qMatch = !q || d.titleBn.toLowerCase().includes(q) || d.titleAr.includes(q);
     return catMatch && qMatch;
   });
-
-  const cat = duas.find((d) => d.id === currentId);
-  const catLabel = cats.find((c) => c.id === cat?.cat);
 
   return (
     <>
@@ -54,12 +54,12 @@ export default function DuaShell({
         <button className="hamburger" onClick={openSidebar} aria-label="Menu">☰</button>
         <nav className="breadcrumb">
           <Link href="/">দুআ শিক্ষা</Link>
-          {cat && (
+          {currentDua && (
             <>
               <span>›</span>
-              <span>{catLabel?.titleBn ?? cat.cat}</span>
+              <Link href={`/category/${currentDua.cat}`}>{currentCat?.titleBn ?? currentDua.cat}</Link>
               <span>›</span>
-              <span>{cat.titleBn}</span>
+              <span>{currentDua.titleBn}</span>
             </>
           )}
         </nav>
@@ -81,9 +81,13 @@ export default function DuaShell({
         {/* SIDEBAR */}
         <aside className={`sidebar${sidebarOpen ? ' open' : ''}`}>
           <div className="sb-head">
-            <Link className="sb-logo" href="/">Dua Learning</Link>
-            <div className="sb-logo-ar">دعاء و صلاة</div>
-            <div className="sb-logo-bn">দুআ ও সূরা শিক্ষা</div>
+            <Link className="sb-logo" href="/" aria-label="Daily Dua — Home">
+              <LogoIcon size={44} />
+              <div className="sb-logo-text">
+                <div className="sb-logo-title">DAILY DUA</div>
+                <div className="sb-logo-bn">দুআ ও সূরা শিক্ষা</div>
+              </div>
+            </Link>
           </div>
 
           <div className="sb-search-wrap">
@@ -97,17 +101,16 @@ export default function DuaShell({
             />
           </div>
 
-          <div className="cat-tabs">
-            {[{ id: 'all', titleBn: 'সব' }, ...cats].map((c) => (
-              <button
-                key={c.id}
-                className={`cat-tab${activeTab === c.id ? ' active' : ''}`}
-                onClick={() => setActiveTab(c.id)}
+          {currentCat && (
+            <div style={{ padding: '8px 14px 4px' }}>
+              <Link
+                href={`/category/${currentCat.id}`}
+                style={{ fontSize: 12, color: 'var(--gold)', fontWeight: 600, letterSpacing: '.04em', textDecoration: 'none' }}
               >
-                {c.titleBn}
-              </button>
-            ))}
-          </div>
+                ← {currentCat.titleBn}
+              </Link>
+            </div>
+          )}
 
           <ul className="dua-list">
             {visibleDuas.map((d) => (

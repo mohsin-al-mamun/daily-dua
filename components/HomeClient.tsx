@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
 import type { DuaMeta, Category } from '@/lib/data';
+import { LogoIcon } from './Logo';
 
 const BN = '০১২৩৪৫৬৭৮৯';
 function toBn(n: number) {
@@ -12,7 +13,7 @@ function toBn(n: number) {
 export default function HomeClient({ duas, cats }: { duas: DuaMeta[]; cats: Category[] }) {
   const [dark, setDark] = useState(false);
   const [searchQ, setSearchQ] = useState('');
-  const sectionsRef = useRef<HTMLElement[]>([]);
+  const gridRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const stored = localStorage.getItem('darkMode') === 'true';
@@ -25,18 +26,16 @@ export default function HomeClient({ duas, cats }: { duas: DuaMeta[]; cats: Cate
   }, [dark]);
 
   useEffect(() => {
+    if (!gridRef.current) return;
     const io = new IntersectionObserver(
       (entries) => {
         entries.forEach((e) => {
-          if (e.isIntersecting) {
-            e.target.classList.add('visible');
-            io.unobserve(e.target);
-          }
+          if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
         });
       },
       { threshold: 0.06 }
     );
-    sectionsRef.current.forEach((el) => el && io.observe(el));
+    gridRef.current.querySelectorAll('.cat-section').forEach((el) => io.observe(el));
     return () => io.disconnect();
   }, [searchQ]);
 
@@ -46,8 +45,10 @@ export default function HomeClient({ duas, cats }: { duas: DuaMeta[]; cats: Cate
     <>
       {/* NAVBAR */}
       <nav className="navbar">
-        <Link className="nav-logo" href="/">Dua Learning</Link>
-        <span className="nav-arabic">دعاء و صلاة</span>
+        <Link className="nav-logo" href="/" aria-label="Daily Dua — Home">
+          <LogoIcon size={34} />
+          <span className="nav-logo-text">Daily Dua</span>
+        </Link>
         <div className="nav-search-wrap">
           <input
             className="nav-search"
@@ -88,60 +89,84 @@ export default function HomeClient({ duas, cats }: { duas: DuaMeta[]; cats: Cate
       </section>
 
       {/* MAIN */}
-      <main className="main-wrap">
-        {cats.map((cat, i) => {
-          const catDuas = duas.filter((d) => d.cat === cat.id);
-          const filteredDuas = q
-            ? catDuas.filter(
-                (d) =>
-                  d.titleBn.toLowerCase().includes(q) ||
-                  d.titleAr.includes(q) ||
-                  d.cat.includes(q)
-              )
-            : catDuas;
-
-          if (q && filteredDuas.length === 0) return null;
-
-          return (
-            <section
-              key={cat.id}
-              className="cat-section"
-              style={{ transitionDelay: `${i * 90}ms` }}
-              ref={(el) => { if (el) sectionsRef.current[i] = el; }}
-            >
-              <div className="section-hdr">
-                <div className="sec-icon">{cat.icon}</div>
-                <div className="sec-text">
-                  <div className="sec-name">{cat.titleBn}</div>
-                  <div className="sec-sub">{cat.sub}</div>
+      {q ? (
+        /* ── SEARCH RESULTS ── */
+        <main className="main-wrap" ref={gridRef as React.RefObject<HTMLElement>}>
+          {cats.map((cat, i) => {
+            const filteredDuas = duas.filter(
+              (d) =>
+                d.cat === cat.id &&
+                (d.titleBn.toLowerCase().includes(q) || d.titleAr.includes(q))
+            );
+            if (filteredDuas.length === 0) return null;
+            return (
+              <section
+                key={cat.id}
+                className="cat-section"
+                style={{ transitionDelay: `${i * 90}ms` }}
+              >
+                <div className="section-hdr">
+                  <div className="sec-icon">{cat.icon}</div>
+                  <div className="sec-text">
+                    <div className="sec-name">{cat.titleBn}</div>
+                    <div className="sec-sub">{cat.sub}</div>
+                  </div>
+                  <span className="count-pill">{toBn(filteredDuas.length)}</span>
                 </div>
-                <span className="count-pill">{toBn(filteredDuas.length)}</span>
-              </div>
-              <div className="cards-grid">
-                {filteredDuas.map((dua) => (
-                  <Link key={dua.id} className="dua-card" href={`/dua/${dua.id}`}>
-                    <div className="card-top">
-                      <div className="card-ar-line">{dua.firstLine}</div>
-                    </div>
-                    <div className="card-btm">
-                      <div className="card-title-ar">{dua.titleAr}</div>
-                      <div className="card-title-bn">{dua.titleBn}</div>
-                      <div className="card-read">পড়ুন <span aria-hidden="true">→</span></div>
-                    </div>
-                  </Link>
-                ))}
-              </div>
-            </section>
-          );
-        })}
-
-        {q && cats.every((cat) => duas.filter((d) => d.cat === cat.id && (d.titleBn.toLowerCase().includes(q) || d.titleAr.includes(q) || d.cat.includes(q))).length === 0) && (
-          <div className="no-results show">
-            <div className="no-results-ar">لم يوجد</div>
-            কোনো দুআ পাওয়া যায়নি। অনুগ্রহ করে অন্য শব্দ দিয়ে অনুসন্ধান করুন।
-          </div>
-        )}
-      </main>
+                <div className="cards-grid">
+                  {filteredDuas.map((dua) => (
+                    <Link key={dua.id} className="dua-card" href={`/dua/${dua.id}`}>
+                      <div className="card-top">
+                        <div className="card-ar-line">{dua.firstLine}</div>
+                      </div>
+                      <div className="card-btm">
+                        <div className="card-title-ar">{dua.titleAr}</div>
+                        <div className="card-title-bn">{dua.titleBn}</div>
+                        <div className="card-read">পড়ুন <span aria-hidden="true">→</span></div>
+                      </div>
+                    </Link>
+                  ))}
+                </div>
+              </section>
+            );
+          })}
+          {cats.every(
+            (cat) =>
+              duas.filter(
+                (d) =>
+                  d.cat === cat.id &&
+                  (d.titleBn.toLowerCase().includes(q) || d.titleAr.includes(q))
+              ).length === 0
+          ) && (
+            <div className="no-results show">
+              <div className="no-results-ar">لم يوجد</div>
+              কোনো দুআ পাওয়া যায়নি। অনুগ্রহ করে অন্য শব্দ দিয়ে অনুসন্ধান করুন।
+            </div>
+          )}
+        </main>
+      ) : (
+        /* ── CATEGORY HERO CARDS ── */
+        <div className="cat-hero-grid">
+          {cats.map((cat) => {
+            const catDuas = duas.filter((d) => d.cat === cat.id);
+            const preview = catDuas.slice(0, 2).map((d) => d.firstLine).join('  ·  ');
+            return (
+              <Link key={cat.id} className="cat-hero-card" href={`/category/${cat.id}`}>
+                <div className="chc-top">
+                  <div className="chc-icon">{cat.icon}</div>
+                  <div className="chc-preview">{preview}</div>
+                </div>
+                <div className="chc-btm">
+                  <div className="chc-title-bn">{cat.titleBn}</div>
+                  <div className="chc-sub">{cat.sub}</div>
+                  <div className="chc-count">{toBn(catDuas.length)}টি দুআ ও সূরা</div>
+                  <div className="chc-cta">দেখুন →</div>
+                </div>
+              </Link>
+            );
+          })}
+        </div>
+      )}
 
       {/* FOOTER */}
       <footer className="site-footer">
