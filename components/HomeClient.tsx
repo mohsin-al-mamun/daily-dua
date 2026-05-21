@@ -16,14 +16,8 @@ export default function HomeClient({ duas, cats }: { duas: DuaMeta[]; cats: Cate
   const gridRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const stored = localStorage.getItem('darkMode') === 'true';
-    setDark(stored);
+    setDark(document.documentElement.getAttribute('data-theme') === 'dark');
   }, []);
-
-  useEffect(() => {
-    document.documentElement.setAttribute('data-theme', dark ? 'dark' : 'light');
-    localStorage.setItem('darkMode', String(dark));
-  }, [dark]);
 
   useEffect(() => {
     if (!gridRef.current) return;
@@ -60,7 +54,12 @@ export default function HomeClient({ duas, cats }: { duas: DuaMeta[]; cats: Cate
             onChange={(e) => setSearchQ(e.target.value)}
           />
         </div>
-        <button className="dark-btn" onClick={() => setDark((d) => !d)} aria-label="Toggle dark mode">
+        <button className="dark-btn" onClick={() => {
+          const next = !dark;
+          setDark(next);
+          document.documentElement.setAttribute('data-theme', next ? 'dark' : 'light');
+          localStorage.setItem('darkMode', String(next));
+        }} aria-label="Toggle dark mode">
           {dark ? '☀️' : '🌙'}
         </button>
       </nav>
