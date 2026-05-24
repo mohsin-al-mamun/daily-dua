@@ -79,12 +79,12 @@ export const DUAS: DuaMeta[] = [
 ];
 
 export const CATS: Category[] = [
-  { id: 'salat',   icon: '🕌', titleBn: 'নামাজের দুআ',   sub: 'Prayers of Salat'    },
-  { id: 'quran',   icon: '📖', titleBn: 'কুরআনের সূরা', sub: 'Surahs of the Quran' },
-  { id: 'amal',    icon: '⭐', titleBn: 'আমল ও ফজিলত',  sub: 'Deeds & Virtues'     },
-  { id: 'morning', icon: '🌅', titleBn: 'সকালের আমল',   sub: 'Morning Deeds'       },
-  { id: 'evening',     icon: '🌙', titleBn: 'সন্ধ্যার আমল',    sub: 'Evening Deeds'              },
+  { id: 'salat',       icon: '🕌', titleBn: 'নামাজের দুআ',    sub: 'Prayers of Salat'           },
   { id: 'after-salat', icon: '🤲', titleBn: 'নামাজের পর দুআ', sub: 'Post-Prayer Supplications'  },
+  { id: 'quran',       icon: '📖', titleBn: 'কুরআনের সূরা',  sub: 'Surahs of the Quran'        },
+  { id: 'amal',        icon: '⭐', titleBn: 'আমল ও ফজিলত',   sub: 'Deeds & Virtues'            },
+  { id: 'morning',     icon: '🌅', titleBn: 'সকালের আমল',    sub: 'Morning Deeds'              },
+  { id: 'evening',     icon: '🌙', titleBn: 'সন্ধ্যার আমল',   sub: 'Evening Deeds'              },
 ];
 
 export const CAT_LABELS: Record<string, CatLabel> = {

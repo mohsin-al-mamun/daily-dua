@@ -655,18 +655,10 @@ body {
 }
 .chc-top {
   background: linear-gradient(135deg, var(--green-deep), var(--green-mid));
-  padding: 22px 20px 16px;
-  display: flex; flex-direction: column; gap: 8px;
+  padding: 28px 20px;
+  display: flex; align-items: center; justify-content: center;
 }
-.chc-icon { font-size: 28px; line-height: 1; }
-.chc-preview {
-  font-family: var(--font-amiri), serif;
-  font-size: 18px; color: rgba(255,255,255,.85);
-  direction: rtl; text-align: right;
-  line-height: 1.7;
-  display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;
-  overflow: hidden;
-}
+.chc-icon { font-size: 40px; line-height: 1; }
 .chc-btm {
   padding: 14px 18px 16px;
   display: flex; flex-direction: column; gap: 4px;

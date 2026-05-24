@@ -148,12 +148,10 @@ export default function HomeClient({ duas, cats }: { duas: DuaMeta[]; cats: Cate
         <div className="cat-hero-grid">
           {cats.map((cat) => {
             const catDuas = duas.filter((d) => d.cat === cat.id);
-            const preview = catDuas.slice(0, 2).map((d) => d.firstLine).join('  ·  ');
             return (
               <Link key={cat.id} className="cat-hero-card" href={`/category/${cat.id}`}>
                 <div className="chc-top">
                   <div className="chc-icon">{cat.icon}</div>
-                  <div className="chc-preview">{preview}</div>
                 </div>
                 <div className="chc-btm">
                   <div className="chc-title-bn">{cat.titleBn}</div>
