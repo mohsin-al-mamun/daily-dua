@@ -56,17 +56,17 @@ export const DUAS: DuaMeta[] = [
   { id: 'durood-simple',cat: 'amal',    titleAr: 'الصلاة على النبي',       titleBn: 'দরূদ শরিফ সংক্ষিপ্ত',     firstLine: 'اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ' },
   { id: 'alhamdulillah',cat: 'amal',    titleAr: 'الحمد لله',              titleBn: 'আলহামদুলিল্লাহ',           firstLine: 'الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ' },
   // Morning
-  { id: 'morning-wakeup',     cat: 'morning', titleAr: 'دعاء الاستيقاظ',  titleBn: 'ঘুম থেকে উঠার দুআ',    firstLine: 'الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا' },
-  { id: 'morning-protection', cat: 'morning', titleAr: 'دعاء الصباح',      titleBn: 'সকালের সুরক্ষার দুআ',  firstLine: 'اللَّهُمَّ بِكَ أَصْبَحْنَا وَبِكَ أَمْسَيْنَا' },
-  { id: 'morning-tasbih',     cat: 'morning', titleAr: 'تسبيح الصباح',     titleBn: 'সকালের তাসবিহ',         firstLine: 'سُبْحَانَ اللَّهِ وَبِحَمْدِهِ عَدَدَ خَلْقِهِ' },
-  { id: 'morning-dress',      cat: 'morning', titleAr: 'دعاء اللباس',       titleBn: 'পোশাক পরার দুআ',        firstLine: 'الْحَمْدُ لِلَّهِ الَّذِي كَسَانِي هَذَا' },
-  { id: 'morning-leaving',    cat: 'morning', titleAr: 'دعاء الخروج',       titleBn: 'বের হওয়ার দুআ',         firstLine: 'بِسْمِ اللَّهِ تَوَكَّلْتُ عَلَى اللَّهِ وَلَا حَوْلَ' },
+  { id: 'morning-wakeup',     cat: 'masnun', titleAr: 'دعاء الاستيقاظ',  titleBn: 'ঘুম থেকে উঠার দুআ',    firstLine: 'الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا' },
+  { id: 'morning-protection', cat: 'masnun', titleAr: 'دعاء الصباح',      titleBn: 'সকালের সুরক্ষার দুআ',  firstLine: 'اللَّهُمَّ بِكَ أَصْبَحْنَا وَبِكَ أَمْسَيْنَا' },
+  { id: 'morning-tasbih',     cat: 'masnun', titleAr: 'تسبيح الصباح',     titleBn: 'সকালের তাসবিহ',         firstLine: 'سُبْحَانَ اللَّهِ وَبِحَمْدِهِ عَدَدَ خَلْقِهِ' },
+  { id: 'morning-dress',      cat: 'masnun', titleAr: 'دعاء اللباس',       titleBn: 'পোশাক পরার দুআ',        firstLine: 'الْحَمْدُ لِلَّهِ الَّذِي كَسَانِي هَذَا' },
+  { id: 'morning-leaving',    cat: 'masnun', titleAr: 'دعاء الخروج',       titleBn: 'বের হওয়ার দুআ',         firstLine: 'بِسْمِ اللَّهِ تَوَكَّلْتُ عَلَى اللَّهِ وَلَا حَوْلَ' },
   // Evening
-  { id: 'evening-protection', cat: 'evening', titleAr: 'دعاء المساء',       titleBn: 'সন্ধ্যার সুরক্ষার দুআ', firstLine: 'اللَّهُمَّ بِكَ أَمْسَيْنَا وَبِكَ أَصْبَحْنَا' },
-  { id: 'sleep-dua',           cat: 'evening', titleAr: 'دعاء النوم',        titleBn: 'ঘুমানোর দুআ',            firstLine: 'بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا' },
-  { id: 'evening-forgiveness', cat: 'evening', titleAr: 'دعاء قبل النوم',    titleBn: 'ঘুমের আগের দুআ',         firstLine: 'اللَّهُمَّ قِنِي عَذَابَكَ يَوْمَ تَبْعَثُ عِبَادَكَ' },
-  { id: 'evening-tasbih',      cat: 'evening', titleAr: 'تسبيح المساء',      titleBn: 'সন্ধ্যার তাসবিহ',        firstLine: 'سُبْحَانَ اللَّهِ وَبِحَمْدِهِ سُبْحَانَ اللَّهِ الْعَظِيمِ' },
-  { id: 'evening-kul',         cat: 'evening', titleAr: 'المعوذتان مساءً',   titleBn: 'সন্ধ্যায় মুআউওয়িযাতাইন', firstLine: 'قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ مِنْ شَرِّ مَا خَلَقَ' },
+  { id: 'evening-protection', cat: 'masnun', titleAr: 'دعاء المساء',       titleBn: 'সন্ধ্যার সুরক্ষার দুআ', firstLine: 'اللَّهُمَّ بِكَ أَمْسَيْنَا وَبِكَ أَصْبَحْنَا' },
+  { id: 'sleep-dua',           cat: 'masnun', titleAr: 'دعاء النوم',        titleBn: 'ঘুমানোর দুআ',            firstLine: 'بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا' },
+  { id: 'evening-forgiveness', cat: 'masnun', titleAr: 'دعاء قبل النوم',    titleBn: 'ঘুমের আগের দুআ',         firstLine: 'اللَّهُمَّ قِنِي عَذَابَكَ يَوْمَ تَبْعَثُ عِبَادَكَ' },
+  { id: 'evening-tasbih',      cat: 'masnun', titleAr: 'تسبيح المساء',      titleBn: 'সন্ধ্যার তাসবিহ',        firstLine: 'سُبْحَانَ اللَّهِ وَبِحَمْدِهِ سُبْحَانَ اللَّهِ الْعَظِيمِ' },
+  { id: 'evening-kul',         cat: 'masnun', titleAr: 'المعوذتان مساءً',   titleBn: 'সন্ধ্যায় মুআউওয়িযাতাইন', firstLine: 'قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ مِنْ شَرِّ مَا خَلَقَ' },
   // After Salat — serial reading order
   { id: 'istighfar-salat', cat: 'after-salat', titleAr: 'الاستغفار بعد الصلاة', titleBn: 'ইস্তিগফার (নামাজের পর)',      firstLine: 'أَسْتَغْفِرُ اللَّهَ' },
   { id: 'salam-dua',       cat: 'after-salat', titleAr: 'اللهم أنت السلام',      titleBn: 'সালামের দুআ',                firstLine: 'اللَّهُمَّ أَنْتَ السَّلَامُ وَمِنْكَ السَّلَامُ' },
@@ -82,18 +82,16 @@ export const CATS: Category[] = [
   { id: 'salat',       icon: '🕌', titleBn: 'নামাজের দুআ',    sub: 'Prayers of Salat'           },
   { id: 'after-salat', icon: '🤲', titleBn: 'নামাজের পর দুআ', sub: 'Post-Prayer Supplications'  },
   { id: 'quran',       icon: '📖', titleBn: 'কুরআনের সূরা',  sub: 'Surahs of the Quran'        },
-  { id: 'amal',        icon: '⭐', titleBn: 'আমল ও ফজিলত',   sub: 'Deeds & Virtues'            },
-  { id: 'morning',     icon: '🌅', titleBn: 'সকালের আমল',    sub: 'Morning Deeds'              },
-  { id: 'evening',     icon: '🌙', titleBn: 'সন্ধ্যার আমল',   sub: 'Evening Deeds'              },
+  { id: 'amal',        icon: '🕊️', titleBn: 'আমল ও ফজিলত',        sub: 'Deeds & Virtues'      },
+  { id: 'masnun',      icon: '📿', titleBn: 'বিভিন্ন মাসনুন দোয়া', sub: 'Various Masnoon Duas' },
 ];
 
 export const CAT_LABELS: Record<string, CatLabel> = {
   salat:   { bn: 'নামাজের দুআ',   en: 'Prayers of Salat'    },
   quran:   { bn: 'কুরআনের সূরা', en: 'Surahs of the Quran' },
-  amal:    { bn: 'আমল ও ফজিলত',  en: 'Deeds & Virtues'     },
-  morning: { bn: 'সকালের আমল',   en: 'Morning Deeds'       },
-  evening:     { bn: 'সন্ধ্যার আমল',    en: 'Evening Deeds'             },
-  'after-salat': { bn: 'নামাজের পর দুআ', en: 'Post-Prayer Supplications' },
+  amal:          { bn: 'আমল ও ফজিলত',        en: 'Deeds & Virtues'           },
+  masnun:        { bn: 'বিভিন্ন মাসনুন দোয়া', en: 'Various Masnoon Duas'      },
+  'after-salat': { bn: 'নামাজের পর দুআ',     en: 'Post-Prayer Supplications' },
 };
 
 export const DETAIL_MAP: Record<string, DuaDetail> = {
@@ -850,6 +848,696 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
           { ar: 'وَلَا يَنْفَعُ', tr: 'wa lā yanfaʿu', en: 'and it does not avail', bn: 'এবং কাজে আসে না' },
           { ar: 'ذَا الْجَدِّ', tr: 'dhal-jaddi', en: 'the one of fortune', bn: 'ভাগ্যবানের' },
           { ar: 'مِنْكَ الْجَدُّ', tr: 'minkal-jadd', en: 'his fortune against You', bn: 'আপনার কাছে ভাগ্য' },
+        ],
+      },
+    ],
+  },
+
+  'morning-wakeup': {
+    reference: 'সহীহ বুখারি',
+    fullArabic: 'الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ',
+    fullBanglaTranslit: 'আলহামদুলিল্লাহিল্লাযী আহইয়ানা বা\'দা মা আমাতানা ওয়া ইলাইহিন নুশুর',
+    fullMeaningBn: 'সকল প্রশংসা আল্লাহর যিনি আমাদের মৃত্যুর পর (ঘুম থেকে) জীবিত করলেন এবং তাঁরই কাছে পুনরুত্থান।',
+    segments: [
+      {
+        arabic: 'الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا',
+        translit: "Alhamdulillahil-ladhi ahyana ba'da ma amatana",
+        banglaTranslit: 'আলহামদুলিল্লাহিল্লাযী আহইয়ানা বা\'দা মা আমাতানা',
+        meaningEn: 'All praise is for Allah who gave us life after causing us to die',
+        meaningBn: 'সকল প্রশংসা আল্লাহর যিনি আমাদের মৃত্যুর পর আবার জীবন দিলেন',
+        words: [
+          { ar: 'الْحَمْدُ', tr: 'al-ḥamdu', en: 'praise', bn: 'প্রশংসা' },
+          { ar: 'لِلَّهِ', tr: 'lillāhi', en: 'for Allah', bn: 'আল্লাহর জন্য' },
+          { ar: 'الَّذِي', tr: 'alladhī', en: 'who', bn: 'যিনি' },
+          { ar: 'أَحْيَانَا', tr: 'aḥyānā', en: 'gave us life', bn: 'আমাদের জীবিত করলেন' },
+          { ar: 'بَعْدَ مَا', tr: "ba'da mā", en: 'after', bn: 'পরে' },
+          { ar: 'أَمَاتَنَا', tr: 'amātanā', en: 'causing us to die', bn: 'আমাদের মৃত্যু দেওয়ার' },
+        ],
+      },
+      {
+        arabic: 'وَإِلَيْهِ النُّشُورُ',
+        translit: 'wa ilayhin-nushur',
+        banglaTranslit: 'ওয়া ইলাইহিন নুশুর',
+        meaningEn: 'And to Him is the resurrection',
+        meaningBn: 'এবং তাঁরই কাছে পুনরুত্থান',
+        words: [
+          { ar: 'وَإِلَيْهِ', tr: 'wa ilayhi', en: 'and to Him', bn: 'এবং তাঁরই কাছে' },
+          { ar: 'النُّشُورُ', tr: 'an-nushūr', en: 'the resurrection', bn: 'পুনরুত্থান' },
+        ],
+      },
+    ],
+  },
+
+  'morning-protection': {
+    reference: 'আবু দাউদ · তিরমিযি',
+    fullArabic: 'اللَّهُمَّ بِكَ أَصْبَحْنَا وَبِكَ أَمْسَيْنَا وَبِكَ نَحْيَا وَبِكَ نَمُوتُ وَإِلَيْكَ النُّشُورُ',
+    fullBanglaTranslit: 'আল্লাহুম্মা বিকা আসবাহনা ওয়া বিকা আমসাইনা ওয়া বিকা নাহইয়া ওয়া বিকা নামুতু ওয়া ইলাইকান নুশুর',
+    fullMeaningBn: 'হে আল্লাহ! তোমার নামেই আমরা সকালে উপনীত হলাম, তোমার নামেই সন্ধ্যায় উপনীত হই, তোমার নামেই বাঁচি, তোমার নামেই মরি এবং তোমার কাছেই পুনরুত্থান।',
+    segments: [
+      {
+        arabic: 'اللَّهُمَّ بِكَ أَصْبَحْنَا وَبِكَ أَمْسَيْنَا',
+        translit: 'Allahumma bika asbahna wa bika amsayna',
+        banglaTranslit: 'আল্লাহুম্মা বিকা আসবাহনা ওয়া বিকা আমসাইনা',
+        meaningEn: 'O Allah, by You we enter the morning and by You we enter the evening',
+        meaningBn: 'হে আল্লাহ! তোমার নামেই আমরা সকালে ও সন্ধ্যায় উপনীত হলাম',
+        words: [
+          { ar: 'اللَّهُمَّ', tr: 'Allāhumma', en: 'O Allah', bn: 'হে আল্লাহ' },
+          { ar: 'بِكَ', tr: 'bika', en: 'by You', bn: 'তোমার নামে' },
+          { ar: 'أَصْبَحْنَا', tr: 'aṣbaḥnā', en: 'we enter the morning', bn: 'সকালে উপনীত হলাম' },
+          { ar: 'وَبِكَ', tr: 'wa bika', en: 'and by You', bn: 'এবং তোমার নামে' },
+          { ar: 'أَمْسَيْنَا', tr: 'amsaynā', en: 'we enter the evening', bn: 'সন্ধ্যায় উপনীত হই' },
+        ],
+      },
+      {
+        arabic: 'وَبِكَ نَحْيَا وَبِكَ نَمُوتُ وَإِلَيْكَ النُّشُورُ',
+        translit: 'wa bika nahya wa bika namutu wa ilayka-n-nushur',
+        banglaTranslit: 'ওয়া বিকা নাহইয়া ওয়া বিকা নামুতু ওয়া ইলাইকান নুশুর',
+        meaningEn: 'By You we live, by You we die, and to You is the resurrection',
+        meaningBn: 'তোমার নামেই বাঁচি, তোমার নামেই মরি এবং তোমার কাছেই পুনরুত্থান',
+        words: [
+          { ar: 'نَحْيَا', tr: 'naḥyā', en: 'we live', bn: 'আমরা বাঁচি' },
+          { ar: 'نَمُوتُ', tr: 'namūtu', en: 'we die', bn: 'আমরা মরি' },
+          { ar: 'وَإِلَيْكَ', tr: 'wa ilayka', en: 'and to You', bn: 'এবং তোমার কাছে' },
+          { ar: 'النُّشُورُ', tr: 'an-nushūr', en: 'the resurrection', bn: 'পুনরুত্থান' },
+        ],
+      },
+    ],
+  },
+
+  'morning-tasbih': {
+    reference: 'সহীহ মুসলিম',
+    fullArabic: 'سُبْحَانَ اللَّهِ وَبِحَمْدِهِ عَدَدَ خَلْقِهِ وَرِضَا نَفْسِهِ وَزِنَةَ عَرْشِهِ وَمِدَادَ كَلِمَاتِهِ',
+    fullBanglaTranslit: 'সুবহানাল্লাহি ওয়া বিহামদিহি আদাদা খালকিহি ওয়া রিদা নাফসিহি ওয়া যিনাতা আরশিহি ওয়া মিদাদা কালিমাতিহি',
+    fullMeaningBn: 'আল্লাহ পবিত্র তাঁর প্রশংসাসহ — তাঁর সৃষ্টির সংখ্যা অনুযায়ী, তাঁর সন্তুষ্টি অনুযায়ী, তাঁর আরশের ওজন অনুযায়ী এবং তাঁর বাণীসমূহের কালি অনুযায়ী।',
+    segments: [
+      {
+        arabic: 'سُبْحَانَ اللَّهِ وَبِحَمْدِهِ',
+        translit: 'Subhanallahi wa bihamdihi',
+        banglaTranslit: 'সুবহানাল্লাহি ওয়া বিহামদিহি',
+        meaningEn: 'Glory be to Allah and praise be to Him',
+        meaningBn: 'আল্লাহ পবিত্র এবং সকল প্রশংসা তাঁর',
+        words: [
+          { ar: 'سُبْحَانَ اللَّهِ', tr: 'Subḥānallāhi', en: 'Glory be to Allah', bn: 'আল্লাহ পবিত্র' },
+          { ar: 'وَبِحَمْدِهِ', tr: 'wa biḥamdihi', en: 'and praise be to Him', bn: 'এবং তাঁর প্রশংসা' },
+        ],
+      },
+      {
+        arabic: 'عَدَدَ خَلْقِهِ وَرِضَا نَفْسِهِ وَزِنَةَ عَرْشِهِ وَمِدَادَ كَلِمَاتِهِ',
+        translit: "adada khalqihi wa rida nafsihi wa zinata 'arshihi wa midada kalimatihi",
+        banglaTranslit: 'আদাদা খালকিহি ওয়া রিদা নাফসিহি ওয়া যিনাতা আরশিহি ওয়া মিদাদা কালিমাতিহি',
+        meaningEn: 'As many times as the number of His creation, His pleasure, the weight of His Throne, and the ink of His words',
+        meaningBn: 'তাঁর সৃষ্টির সংখ্যা, তাঁর সন্তুষ্টি, তাঁর আরশের ওজন ও তাঁর বাণীর কালি অনুযায়ী',
+        words: [
+          { ar: 'عَدَدَ خَلْقِهِ', tr: 'adada khalqihi', en: 'number of His creation', bn: 'তাঁর সৃষ্টির সংখ্যা' },
+          { ar: 'وَرِضَا نَفْسِهِ', tr: 'wa riḍā nafsihi', en: 'His pleasure', bn: 'তাঁর সন্তুষ্টি' },
+          { ar: 'وَزِنَةَ عَرْشِهِ', tr: "wa zinata 'arshihi", en: 'weight of His Throne', bn: 'তাঁর আরশের ওজন' },
+          { ar: 'وَمِدَادَ كَلِمَاتِهِ', tr: 'wa midāda kalimātihi', en: 'ink of His words', bn: 'তাঁর বাণীর কালি' },
+        ],
+      },
+    ],
+  },
+
+  'morning-dress': {
+    reference: 'আবু দাউদ · তিরমিযি',
+    fullArabic: 'الْحَمْدُ لِلَّهِ الَّذِي كَسَانِي هَذَا وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِنِّي وَلَا قُوَّةٍ',
+    fullBanglaTranslit: 'আলহামদুলিল্লাহিল্লাযী কাসানি হাযা ওয়া রাযাকানিহি মিন গাইরি হাউলিন মিন্নি ওয়ালা কুওয়্যাতিন',
+    fullMeaningBn: 'সমস্ত প্রশংসা আল্লাহর যিনি আমাকে এটি পরিয়েছেন এবং আমার কোনো শক্তি ও সামর্থ্য ছাড়াই এটি রিজিক দিয়েছেন।',
+    segments: [
+      {
+        arabic: 'الْحَمْدُ لِلَّهِ الَّذِي كَسَانِي هَذَا',
+        translit: 'Alhamdulillahil-ladhi kasani hadha',
+        banglaTranslit: 'আলহামদুলিল্লাহিল্লাযী কাসানি হাযা',
+        meaningEn: 'All praise is for Allah who clothed me with this',
+        meaningBn: 'সমস্ত প্রশংসা আল্লাহর যিনি আমাকে এটি পরিয়েছেন',
+        words: [
+          { ar: 'الْحَمْدُ لِلَّهِ', tr: 'alḥamdu lillāhi', en: 'all praise for Allah', bn: 'সমস্ত প্রশংসা আল্লাহর' },
+          { ar: 'الَّذِي', tr: 'alladhī', en: 'who', bn: 'যিনি' },
+          { ar: 'كَسَانِي', tr: 'kasānī', en: 'clothed me', bn: 'আমাকে পরিয়েছেন' },
+          { ar: 'هَذَا', tr: 'hādhā', en: 'this', bn: 'এটি' },
+        ],
+      },
+      {
+        arabic: 'وَرَزَقَنِيهِ مِنْ غَيْرِ حَوْلٍ مِنِّي وَلَا قُوَّةٍ',
+        translit: 'wa razaqanihi min ghayri hawlin minni wa la quwwatin',
+        banglaTranslit: 'ওয়া রাযাকানিহি মিন গাইরি হাউলিন মিন্নি ওয়ালা কুওয়্যাতিন',
+        meaningEn: 'And provided it for me without any power or strength from me',
+        meaningBn: 'এবং আমার কোনো শক্তি ও সামর্থ্য ছাড়াই এটি রিজিক দিয়েছেন',
+        words: [
+          { ar: 'وَرَزَقَنِيهِ', tr: 'wa razaqanīhi', en: 'and provided it for me', bn: 'এবং আমাকে এটি দিয়েছেন' },
+          { ar: 'مِنْ غَيْرِ', tr: 'min ghayri', en: 'without', bn: 'ছাড়া' },
+          { ar: 'حَوْلٍ مِنِّي', tr: 'ḥawlin minnī', en: 'any power from me', bn: 'আমার কোনো শক্তি' },
+          { ar: 'وَلَا قُوَّةٍ', tr: 'wa lā quwwatin', en: 'nor strength', bn: 'এবং না সামর্থ্য' },
+        ],
+      },
+    ],
+  },
+
+  'morning-leaving': {
+    reference: 'আবু দাউদ · তিরমিযি',
+    fullArabic: 'بِسْمِ اللَّهِ تَوَكَّلْتُ عَلَى اللَّهِ وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ',
+    fullBanglaTranslit: 'বিসমিল্লাহি তাওয়াক্কালতু আলাল্লাহি ওয়ালা হাউলা ওয়ালা কুওয়্যাতা ইল্লা বিল্লাহ',
+    fullMeaningBn: 'আল্লাহর নামে (বের হচ্ছি), আল্লাহর উপর ভরসা করলাম। আল্লাহ ছাড়া কোনো শক্তি ও সামর্থ্য নেই।',
+    segments: [
+      {
+        arabic: 'بِسْمِ اللَّهِ تَوَكَّلْتُ عَلَى اللَّهِ',
+        translit: "Bismillahi tawakkaltu 'alallahi",
+        banglaTranslit: 'বিসমিল্লাহি তাওয়াক্কালতু আলাল্লাহি',
+        meaningEn: 'In the name of Allah, I put my trust in Allah',
+        meaningBn: 'আল্লাহর নামে, আল্লাহর উপর ভরসা করলাম',
+        words: [
+          { ar: 'بِسْمِ اللَّهِ', tr: 'bismillāhi', en: 'in the name of Allah', bn: 'আল্লাহর নামে' },
+          { ar: 'تَوَكَّلْتُ', tr: 'tawakkaltu', en: 'I put my trust', bn: 'ভরসা করলাম' },
+          { ar: 'عَلَى اللَّهِ', tr: "'alallāhi", en: 'in Allah', bn: 'আল্লাহর উপর' },
+        ],
+      },
+      {
+        arabic: 'وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ',
+        translit: 'wa la hawla wa la quwwata illa billah',
+        banglaTranslit: 'ওয়ালা হাউলা ওয়ালা কুওয়্যাতা ইল্লা বিল্লাহ',
+        meaningEn: 'There is no power or strength except with Allah',
+        meaningBn: 'আল্লাহ ছাড়া কোনো শক্তি ও সামর্থ্য নেই',
+        words: [
+          { ar: 'وَلَا حَوْلَ', tr: 'wa lā ḥawla', en: 'no power', bn: 'কোনো শক্তি নেই' },
+          { ar: 'وَلَا قُوَّةَ', tr: 'wa lā quwwata', en: 'no strength', bn: 'কোনো সামর্থ্য নেই' },
+          { ar: 'إِلَّا بِاللَّهِ', tr: 'illā billāhi', en: 'except with Allah', bn: 'আল্লাহ ছাড়া' },
+        ],
+      },
+    ],
+  },
+
+  'evening-protection': {
+    reference: 'আবু দাউদ · তিরমিযি',
+    fullArabic: 'اللَّهُمَّ بِكَ أَمْسَيْنَا وَبِكَ أَصْبَحْنَا وَبِكَ نَحْيَا وَبِكَ نَمُوتُ وَإِلَيْكَ الْمَصِيرُ',
+    fullBanglaTranslit: 'আল্লাহুম্মা বিকা আমসাইনা ওয়া বিকা আসবাহনা ওয়া বিকা নাহইয়া ওয়া বিকা নামুতু ওয়া ইলাইকাল মাসির',
+    fullMeaningBn: 'হে আল্লাহ! তোমার নামেই আমরা সন্ধ্যায় উপনীত হলাম, তোমার নামেই সকালে উপনীত হই, তোমার নামেই বাঁচি, তোমার নামেই মরি এবং তোমার কাছেই প্রত্যাবর্তন।',
+    segments: [
+      {
+        arabic: 'اللَّهُمَّ بِكَ أَمْسَيْنَا وَبِكَ أَصْبَحْنَا',
+        translit: 'Allahumma bika amsayna wa bika asbahna',
+        banglaTranslit: 'আল্লাহুম্মা বিকা আমসাইনা ওয়া বিকা আসবাহনা',
+        meaningEn: 'O Allah, by You we enter the evening and by You we enter the morning',
+        meaningBn: 'হে আল্লাহ! তোমার নামেই সন্ধ্যায় ও সকালে উপনীত হলাম',
+        words: [
+          { ar: 'اللَّهُمَّ', tr: 'Allāhumma', en: 'O Allah', bn: 'হে আল্লাহ' },
+          { ar: 'بِكَ', tr: 'bika', en: 'by You', bn: 'তোমার নামে' },
+          { ar: 'أَمْسَيْنَا', tr: 'amsaynā', en: 'we enter the evening', bn: 'সন্ধ্যায় উপনীত হলাম' },
+          { ar: 'أَصْبَحْنَا', tr: 'aṣbaḥnā', en: 'we enter the morning', bn: 'সকালে উপনীত হই' },
+        ],
+      },
+      {
+        arabic: 'وَبِكَ نَحْيَا وَبِكَ نَمُوتُ وَإِلَيْكَ الْمَصِيرُ',
+        translit: 'wa bika nahya wa bika namutu wa ilaykal-masir',
+        banglaTranslit: 'ওয়া বিকা নাহইয়া ওয়া বিকা নামুতু ওয়া ইলাইকাল মাসির',
+        meaningEn: 'By You we live, by You we die, and to You is the final return',
+        meaningBn: 'তোমার নামেই বাঁচি, তোমার নামেই মরি এবং তোমার কাছেই প্রত্যাবর্তন',
+        words: [
+          { ar: 'نَحْيَا', tr: 'naḥyā', en: 'we live', bn: 'আমরা বাঁচি' },
+          { ar: 'نَمُوتُ', tr: 'namūtu', en: 'we die', bn: 'আমরা মরি' },
+          { ar: 'وَإِلَيْكَ', tr: 'wa ilayka', en: 'and to You', bn: 'এবং তোমার কাছে' },
+          { ar: 'الْمَصِيرُ', tr: 'al-maṣīr', en: 'the final return', bn: 'প্রত্যাবর্তন' },
+        ],
+      },
+    ],
+  },
+
+  'sleep-dua': {
+    reference: 'সহীহ বুখারি',
+    fullArabic: 'بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا',
+    fullBanglaTranslit: 'বিসমিকা আল্লাহুম্মা আমুতু ওয়া আহইয়া',
+    fullMeaningBn: 'হে আল্লাহ! তোমার নামেই আমি মরি (ঘুমাই) এবং তোমার নামেই জীবিত হই (জেগে উঠি)।',
+    segments: [
+      {
+        arabic: 'بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا',
+        translit: 'Bismika Allahumma amutu wa ahya',
+        banglaTranslit: 'বিসমিকা আল্লাহুম্মা আমুতু ওয়া আহইয়া',
+        meaningEn: 'In Your name, O Allah, I die and I live',
+        meaningBn: 'হে আল্লাহ! তোমার নামেই আমি মরি এবং জীবিত হই',
+        words: [
+          { ar: 'بِاسْمِكَ', tr: 'bismika', en: 'in Your name', bn: 'তোমার নামে' },
+          { ar: 'اللَّهُمَّ', tr: 'Allāhumma', en: 'O Allah', bn: 'হে আল্লাহ' },
+          { ar: 'أَمُوتُ', tr: 'amūtu', en: 'I die', bn: 'আমি মরি' },
+          { ar: 'وَأَحْيَا', tr: 'wa aḥyā', en: 'and I live', bn: 'এবং জীবিত হই' },
+        ],
+      },
+    ],
+  },
+
+  'evening-forgiveness': {
+    reference: 'আবু দাউদ · তিরমিযি',
+    fullArabic: 'اللَّهُمَّ قِنِي عَذَابَكَ يَوْمَ تَبْعَثُ عِبَادَكَ',
+    fullBanglaTranslit: 'আল্লাহুম্মা কিনি আযাবাকা ইয়াওমা তাবআসু ইবাদাক',
+    fullMeaningBn: 'হে আল্লাহ! যেদিন তুমি তোমার বান্দাদের পুনরুত্থিত করবে সেদিন তোমার আযাব থেকে আমাকে রক্ষা করো।',
+    segments: [
+      {
+        arabic: 'اللَّهُمَّ قِنِي عَذَابَكَ',
+        translit: "Allahumma qini 'adhabaka",
+        banglaTranslit: 'আল্লাহুম্মা কিনি আযাবাকা',
+        meaningEn: 'O Allah, protect me from Your punishment',
+        meaningBn: 'হে আল্লাহ! তোমার আযাব থেকে আমাকে রক্ষা করো',
+        words: [
+          { ar: 'اللَّهُمَّ', tr: 'Allāhumma', en: 'O Allah', bn: 'হে আল্লাহ' },
+          { ar: 'قِنِي', tr: 'qinī', en: 'protect me', bn: 'আমাকে রক্ষা করো' },
+          { ar: 'عَذَابَكَ', tr: "'adhabaka", en: 'Your punishment', bn: 'তোমার আযাব থেকে' },
+        ],
+      },
+      {
+        arabic: 'يَوْمَ تَبْعَثُ عِبَادَكَ',
+        translit: "yawma tab'athu 'ibadak",
+        banglaTranslit: 'ইয়াওমা তাবআসু ইবাদাক',
+        meaningEn: 'On the day You resurrect Your servants',
+        meaningBn: 'যেদিন তুমি তোমার বান্দাদের পুনরুত্থিত করবে',
+        words: [
+          { ar: 'يَوْمَ', tr: 'yawma', en: 'on the day', bn: 'যেদিন' },
+          { ar: 'تَبْعَثُ', tr: "tab'athu", en: 'You resurrect', bn: 'তুমি পুনরুত্থিত করবে' },
+          { ar: 'عِبَادَكَ', tr: "'ibādaka", en: 'Your servants', bn: 'তোমার বান্দাদের' },
+        ],
+      },
+    ],
+  },
+
+  'evening-tasbih': {
+    reference: 'সহীহ বুখারি · সহীহ মুসলিম',
+    fullArabic: 'سُبْحَانَ اللَّهِ وَبِحَمْدِهِ سُبْحَانَ اللَّهِ الْعَظِيمِ',
+    fullBanglaTranslit: 'সুবহানাল্লাহি ওয়া বিহামদিহি সুবহানাল্লাহিল আযিম',
+    fullMeaningBn: 'আল্লাহ পবিত্র তাঁর প্রশংসাসহ। মহান আল্লাহ পবিত্র।',
+    segments: [
+      {
+        arabic: 'سُبْحَانَ اللَّهِ وَبِحَمْدِهِ',
+        translit: 'Subhanallahi wa bihamdihi',
+        banglaTranslit: 'সুবহানাল্লাহি ওয়া বিহামদিহি',
+        meaningEn: 'Glory be to Allah and praise be to Him',
+        meaningBn: 'আল্লাহ পবিত্র এবং সকল প্রশংসা তাঁর',
+        words: [
+          { ar: 'سُبْحَانَ اللَّهِ', tr: 'Subḥānallāhi', en: 'Glory be to Allah', bn: 'আল্লাহ পবিত্র' },
+          { ar: 'وَبِحَمْدِهِ', tr: 'wa biḥamdihi', en: 'and praise be to Him', bn: 'এবং তাঁর প্রশংসা' },
+        ],
+      },
+      {
+        arabic: 'سُبْحَانَ اللَّهِ الْعَظِيمِ',
+        translit: "Subhanallahil-'azim",
+        banglaTranslit: 'সুবহানাল্লাহিল আযিম',
+        meaningEn: 'Glory be to Allah, the Magnificent',
+        meaningBn: 'মহান আল্লাহ পবিত্র',
+        words: [
+          { ar: 'سُبْحَانَ اللَّهِ', tr: 'Subḥānallāhi', en: 'Glory be to Allah', bn: 'আল্লাহ পবিত্র' },
+          { ar: 'الْعَظِيمِ', tr: "al-'aẓīm", en: 'the Magnificent', bn: 'মহান' },
+        ],
+      },
+    ],
+  },
+
+  'evening-kul': {
+    reference: 'আবু দাউদ · তিরমিযি',
+    fullArabic: 'قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ\nمِن شَرِّ مَا خَلَقَ\nوَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ\nوَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ\nوَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ',
+    fullBanglaTranslit: 'কুল আউযু বিরাব্বিল ফালাক। মিন শাররি মা খালাক। ওয়ামিন শাররি গাসিকিন ইযা ওয়াকাব। ওয়ামিন শাররিন নাফফাসাতি ফিল উকাদ। ওয়ামিন শাররি হাসিদিন ইযা হাসাদ।',
+    fullMeaningBn: 'বলো: আমি আশ্রয় নিচ্ছি ভোরের রবের কাছে — তিনি যা সৃষ্টি করেছেন তার অনিষ্ট থেকে, অন্ধকার রাতের অনিষ্ট থেকে যখন তা ছেয়ে পড়ে, গিঁটে ফুঁকদাত্রীদের অনিষ্ট থেকে এবং হিংসুকের অনিষ্ট থেকে যখন সে হিংসা করে।',
+    segments: [
+      {
+        arabic: 'قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ',
+        translit: "Qul a'udhu bi-rabbil-falaq",
+        banglaTranslit: 'কুল আউযু বিরাব্বিল ফালাক',
+        meaningEn: 'Say: I seek refuge in the Lord of the daybreak',
+        meaningBn: 'বলো: আমি আশ্রয় নিচ্ছি ভোরের রবের কাছে',
+        words: [
+          { ar: 'قُلْ', tr: 'qul', en: 'say', bn: 'বলো' },
+          { ar: 'أَعُوذُ', tr: "a'ūdhu", en: 'I seek refuge', bn: 'আশ্রয় নিচ্ছি' },
+          { ar: 'بِرَبِّ', tr: 'bi-rabbi', en: 'in the Lord', bn: 'রবের কাছে' },
+          { ar: 'الْفَلَقِ', tr: 'al-falaq', en: 'the daybreak', bn: 'ভোর' },
+        ],
+      },
+      {
+        arabic: 'مِن شَرِّ مَا خَلَقَ',
+        translit: 'min sharri ma khalaq',
+        banglaTranslit: 'মিন শাররি মা খালাক',
+        meaningEn: 'From the evil of what He has created',
+        meaningBn: 'তিনি যা সৃষ্টি করেছেন তার অনিষ্ট থেকে',
+        words: [
+          { ar: 'مِن شَرِّ', tr: 'min sharri', en: 'from the evil of', bn: 'অনিষ্ট থেকে' },
+          { ar: 'مَا خَلَقَ', tr: 'mā khalaqa', en: 'what He has created', bn: 'যা তিনি সৃষ্টি করেছেন' },
+        ],
+      },
+      {
+        arabic: 'وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ\nوَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ\nوَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ',
+        translit: 'wa min sharri ghasiqin idha waqab, wa min sharrin-naffasati fil-uqad, wa min sharri hasidin idha hasad',
+        banglaTranslit: 'ওয়ামিন শাররি গাসিকিন ইযা ওয়াকাব, ওয়ামিন শাররিন নাফফাসাতি ফিল উকাদ, ওয়ামিন শাররি হাসিদিন ইযা হাসাদ',
+        meaningEn: 'From the evil of darkness when it spreads, from the evil of those who blow on knots, and from the evil of the envier when he envies',
+        meaningBn: 'অন্ধকার রাতের অনিষ্ট থেকে যখন তা ছেয়ে পড়ে, গিঁটে ফুঁকদাত্রীদের অনিষ্ট থেকে এবং হিংসুকের অনিষ্ট থেকে যখন সে হিংসা করে',
+        words: [
+          { ar: 'غَاسِقٍ', tr: 'ghāsiqin', en: 'darkness', bn: 'অন্ধকার রাত' },
+          { ar: 'إِذَا وَقَبَ', tr: 'idhā waqaba', en: 'when it spreads', bn: 'যখন তা ছেয়ে পড়ে' },
+          { ar: 'النَّفَّاثَاتِ', tr: 'an-naffāthāt', en: 'those who blow on knots', bn: 'যারা গিঁটে ফুঁক দেয়' },
+          { ar: 'فِي الْعُقَدِ', tr: "fil-'uqad", en: 'on the knots', bn: 'গিঁটে' },
+          { ar: 'حَاسِدٍ', tr: 'ḥāsid', en: 'the envier', bn: 'হিংসুক' },
+          { ar: 'إِذَا حَسَدَ', tr: 'idhā ḥasada', en: 'when he envies', bn: 'যখন সে হিংসা করে' },
+        ],
+      },
+    ],
+  },
+
+  // ── QURAN ────────────────────────────────────────
+
+  falaq: {
+    reference: 'কুরআনুল কারিম (সূরা আল-ফালাক)',
+    fullArabic: 'قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ\nمِن شَرِّ مَا خَلَقَ\nوَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ\nوَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ\nوَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ',
+    fullBanglaTranslit: "কুল আউযু বিরাব্বিল ফালাক। মিন শাররি মা খালাক। ওয়ামিন শাররি গাসিকিন ইযা ওয়াকাব। ওয়ামিন শাররিন নাফফাসাতি ফিল উকাদ। ওয়ামিন শাররি হাসিদিন ইযা হাসাদ।",
+    fullMeaningBn: 'বলো: আমি আশ্রয় নিচ্ছি ভোরের রবের কাছে — তিনি যা সৃষ্টি করেছেন তার অনিষ্ট থেকে, অন্ধকার রাতের অনিষ্ট থেকে যখন তা ছেয়ে পড়ে, গিঁটে ফুঁকদাত্রীদের অনিষ্ট থেকে এবং হিংসুকের অনিষ্ট থেকে যখন সে হিংসা করে।',
+    segments: [
+      {
+        arabic: 'قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ',
+        translit: "Qul a'udhu bi-rabbil-falaq",
+        banglaTranslit: 'কুল আউযু বিরাব্বিল ফালাক',
+        meaningEn: 'Say: I seek refuge in the Lord of the daybreak',
+        meaningBn: 'বলো: আমি আশ্রয় নিচ্ছি ভোরের রবের কাছে',
+        words: [
+          { ar: 'قُلْ', tr: 'qul', en: 'say', bn: 'বলো' },
+          { ar: 'أَعُوذُ', tr: "a'ūdhu", en: 'I seek refuge', bn: 'আশ্রয় নিচ্ছি' },
+          { ar: 'بِرَبِّ', tr: 'bi-rabbi', en: 'in the Lord', bn: 'রবের কাছে' },
+          { ar: 'الْفَلَقِ', tr: 'al-falaq', en: 'the daybreak', bn: 'ভোর' },
+        ],
+      },
+      {
+        arabic: 'مِن شَرِّ مَا خَلَقَ',
+        translit: 'min sharri mā khalaqa',
+        banglaTranslit: 'মিন শাররি মা খালাক',
+        meaningEn: 'From the evil of what He has created',
+        meaningBn: 'তিনি যা সৃষ্টি করেছেন তার অনিষ্ট থেকে',
+        words: [
+          { ar: 'مِن شَرِّ', tr: 'min sharri', en: 'from the evil of', bn: 'অনিষ্ট থেকে' },
+          { ar: 'مَا خَلَقَ', tr: 'mā khalaqa', en: 'what He created', bn: 'যা তিনি সৃষ্টি করেছেন' },
+        ],
+      },
+      {
+        arabic: 'وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ',
+        translit: 'wa min sharri ghāsiqin idhā waqab',
+        banglaTranslit: 'ওয়ামিন শাররি গাসিকিন ইযা ওয়াকাব',
+        meaningEn: 'And from the evil of darkness when it spreads',
+        meaningBn: 'এবং অন্ধকার রাতের অনিষ্ট থেকে যখন তা ছেয়ে পড়ে',
+        words: [
+          { ar: 'غَاسِقٍ', tr: 'ghāsiqin', en: 'darkness', bn: 'অন্ধকার রাত' },
+          { ar: 'إِذَا وَقَبَ', tr: 'idhā waqaba', en: 'when it spreads', bn: 'যখন তা ছেয়ে পড়ে' },
+        ],
+      },
+      {
+        arabic: 'وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ',
+        translit: "wa min sharrin-naffāthāti fil-'uqad",
+        banglaTranslit: 'ওয়ামিন শাররিন নাফফাসাতি ফিল উকাদ',
+        meaningEn: 'And from the evil of those who blow on knots',
+        meaningBn: 'এবং গিঁটে ফুঁকদাত্রীদের অনিষ্ট থেকে',
+        words: [
+          { ar: 'النَّفَّاثَاتِ', tr: 'an-naffāthāt', en: 'those who blow', bn: 'যারা ফুঁক দেয়' },
+          { ar: 'فِي الْعُقَدِ', tr: "fil-'uqad", en: 'on knots', bn: 'গিঁটে' },
+        ],
+      },
+      {
+        arabic: 'وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ',
+        translit: 'wa min sharri ḥāsidin idhā ḥasad',
+        banglaTranslit: 'ওয়ামিন শাররি হাসিদিন ইযা হাসাদ',
+        meaningEn: 'And from the evil of the envier when he envies',
+        meaningBn: 'এবং হিংসুকের অনিষ্ট থেকে যখন সে হিংসা করে',
+        words: [
+          { ar: 'حَاسِدٍ', tr: 'ḥāsidin', en: 'the envier', bn: 'হিংসুক' },
+          { ar: 'إِذَا حَسَدَ', tr: 'idhā ḥasada', en: 'when he envies', bn: 'যখন সে হিংসা করে' },
+        ],
+      },
+    ],
+  },
+
+  nas: {
+    reference: 'কুরআনুল কারিম (সূরা আন-নাস)',
+    fullArabic: 'قُلْ أَعُوذُ بِرَبِّ النَّاسِ\nمَلِكِ النَّاسِ\nإِلَهِ النَّاسِ\nمِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ\nالَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ\nمِنَ الْجِنَّةِ وَالنَّاسِ',
+    fullBanglaTranslit: 'কুল আউযু বিরাব্বিন নাস। মালিকিন নাস। ইলাহিন নাস। মিন শাররিল ওয়াসওয়াসিল খান্নাস। আল্লাযি ইউওয়াসউইসু ফি সুদুরিন নাস। মিনাল জিন্নাতি ওয়ান নাস।',
+    fullMeaningBn: 'বলো: আমি আশ্রয় নিচ্ছি মানুষের রবের কাছে, মানুষের মালিকের কাছে, মানুষের ইলাহের কাছে — কুমন্ত্রণাদাতা আত্মগোপনকারীর অনিষ্ট থেকে, যে মানুষের বুকে কুমন্ত্রণা দেয়, জিন ও মানুষের মধ্য থেকে।',
+    segments: [
+      {
+        arabic: 'قُلْ أَعُوذُ بِرَبِّ النَّاسِ',
+        translit: "Qul a'udhu bi-rabbin-nās",
+        banglaTranslit: 'কুল আউযু বিরাব্বিন নাস',
+        meaningEn: 'Say: I seek refuge in the Lord of mankind',
+        meaningBn: 'বলো: আমি আশ্রয় নিচ্ছি মানুষের রবের কাছে',
+        words: [
+          { ar: 'قُلْ', tr: 'qul', en: 'say', bn: 'বলো' },
+          { ar: 'أَعُوذُ', tr: "a'ūdhu", en: 'I seek refuge', bn: 'আশ্রয় নিচ্ছি' },
+          { ar: 'بِرَبِّ النَّاسِ', tr: 'bi-rabbin-nāsi', en: 'in the Lord of mankind', bn: 'মানুষের রবের কাছে' },
+        ],
+      },
+      {
+        arabic: 'مَلِكِ النَّاسِ\nإِلَهِ النَّاسِ',
+        translit: 'malikin-nāsi ilāhin-nās',
+        banglaTranslit: 'মালিকিন নাস, ইলাহিন নাস',
+        meaningEn: 'The King of mankind, the God of mankind',
+        meaningBn: 'মানুষের মালিক, মানুষের ইলাহ',
+        words: [
+          { ar: 'مَلِكِ النَّاسِ', tr: 'malikin-nāsi', en: 'King of mankind', bn: 'মানুষের মালিক' },
+          { ar: 'إِلَهِ النَّاسِ', tr: 'ilāhin-nāsi', en: 'God of mankind', bn: 'মানুষের ইলাহ' },
+        ],
+      },
+      {
+        arabic: 'مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ\nالَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ\nمِنَ الْجِنَّةِ وَالنَّاسِ',
+        translit: 'min sharril-waswāsil-khannāsi, alladhī yuwaswisu fī sudūrin-nāsi, minal-jinnati wan-nās',
+        banglaTranslit: 'মিন শাররিল ওয়াসওয়াসিল খান্নাস, আল্লাযি ইউওয়াসউইসু ফি সুদুরিন নাস, মিনাল জিন্নাতি ওয়ান নাস',
+        meaningEn: 'From the evil of the retreating whisperer, who whispers in the breasts of mankind, from jinn and mankind',
+        meaningBn: 'আত্মগোপনকারী কুমন্ত্রণাদাতার অনিষ্ট থেকে, যে মানুষের বুকে কুমন্ত্রণা দেয়, জিন ও মানুষের মধ্য থেকে',
+        words: [
+          { ar: 'الْوَسْوَاسِ', tr: 'al-waswāsi', en: 'the whisperer', bn: 'কুমন্ত্রণাদাতা' },
+          { ar: 'الْخَنَّاسِ', tr: 'al-khannāsi', en: 'who retreats', bn: 'আত্মগোপনকারী' },
+          { ar: 'يُوَسْوِسُ', tr: 'yuwaswisu', en: 'whispers', bn: 'কুমন্ত্রণা দেয়' },
+          { ar: 'فِي صُدُورِ النَّاسِ', tr: 'fī sudūrin-nāsi', en: 'in the breasts of mankind', bn: 'মানুষের বুকে' },
+          { ar: 'مِنَ الْجِنَّةِ وَالنَّاسِ', tr: 'minal-jinnati wan-nāsi', en: 'from jinn and mankind', bn: 'জিন ও মানুষের মধ্য থেকে' },
+        ],
+      },
+    ],
+  },
+
+  'ayatul-kursi': {
+    reference: 'কুরআনুল কারিম (সূরা আল-বাকারা ২:২৫৫)',
+    fullArabic: 'اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ',
+    fullBanglaTranslit: "আল্লাহু লা ইলাহা ইল্লা হুওয়াল হাইয়্যুল কাইয়্যুম। লা তাখুযুহু সিনাতুওঁ ওয়ালা নাউম। লাহু মা ফিস সামাওয়াতি ওয়ামা ফিল আরদ। মান যাল্লাযি ইয়াশফাউ ইন্দাহু ইল্লা বি-ইযনিহি। ইয়া'লামু মা বাইনা আইদিহিম ওয়ামা খালফাহুম। ওয়ালা ইউহিতুনা বিশাইয়িম মিন ইলমিহি ইল্লা বিমা শা'আ। ওয়াসিআ কুরসিয়্যুহুস সামাওয়াতি ওয়াল আরদ। ওয়ালা ইয়াউদুহু হিফযুহুমা। ওয়া হুওয়াল আলিয়্যুল আযিম।",
+    fullMeaningBn: 'আল্লাহ — তিনি ছাড়া কোনো ইলাহ নেই, তিনি চিরঞ্জীব, সর্বসত্তার ধারক। তাঁকে তন্দ্রা বা নিদ্রা স্পর্শ করে না। আসমান ও জমিনে যা কিছু আছে সবই তাঁর। কে আছে যে তাঁর অনুমতি ছাড়া তাঁর কাছে সুপারিশ করবে? তিনি জানেন যা তাদের সামনে এবং যা তাদের পেছনে আছে। তারা তাঁর জ্ঞান থেকে কিছুই আয়ত্ত করতে পারে না, তবে তিনি যতটুকু চান ততটুকু ছাড়া। তাঁর কুরসি আসমান ও জমিন পরিব্যাপ্ত। তাদের রক্ষণাবেক্ষণ তাঁকে ক্লান্ত করে না। তিনি সর্বোচ্চ, মহামহিম।',
+    segments: [
+      {
+        arabic: 'اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ',
+        translit: 'Allāhu lā ilāha illā huwal-ḥayyul-qayyūm',
+        banglaTranslit: 'আল্লাহু লা ইলাহা ইল্লা হুওয়াল হাইয়্যুল কাইয়্যুম',
+        meaningEn: 'Allah — there is no god except Him, the Ever-Living, the Sustainer of all',
+        meaningBn: 'আল্লাহ — তিনি ছাড়া কোনো ইলাহ নেই, তিনি চিরঞ্জীব, সর্বসত্তার ধারক',
+        words: [
+          { ar: 'اللَّهُ', tr: 'Allāhu', en: 'Allah', bn: 'আল্লাহ' },
+          { ar: 'لَا إِلَهَ إِلَّا هُوَ', tr: 'lā ilāha illā huwa', en: 'no god except Him', bn: 'তিনি ছাড়া কোনো ইলাহ নেই' },
+          { ar: 'الْحَيُّ', tr: 'al-ḥayyu', en: 'the Ever-Living', bn: 'চিরঞ্জীব' },
+          { ar: 'الْقَيُّومُ', tr: 'al-qayyūmu', en: 'the Sustainer', bn: 'সর্বসত্তার ধারক' },
+        ],
+      },
+      {
+        arabic: 'لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ',
+        translit: "lā ta'khudhuhu sinatun wa lā nawm, lahū mā fis-samāwāti wa mā fil-arḍ",
+        banglaTranslit: 'লা তাখুযুহু সিনাতুওঁ ওয়ালা নাউম। লাহু মা ফিস সামাওয়াতি ওয়ামা ফিল আরদ',
+        meaningEn: 'Neither drowsiness nor sleep overtakes Him. To Him belongs whatever is in the heavens and earth',
+        meaningBn: 'তাঁকে তন্দ্রা বা নিদ্রা স্পর্শ করে না। আসমান ও জমিনে যা কিছু আছে সবই তাঁর',
+        words: [
+          { ar: 'لَا تَأْخُذُهُ', tr: "lā ta'khudhuhu", en: 'does not overtake Him', bn: 'তাঁকে স্পর্শ করে না' },
+          { ar: 'سِنَةٌ', tr: 'sinatun', en: 'drowsiness', bn: 'তন্দ্রা' },
+          { ar: 'وَلَا نَوْمٌ', tr: 'wa lā nawmun', en: 'nor sleep', bn: 'এবং না নিদ্রা' },
+          { ar: 'لَّهُ مَا فِي السَّمَاوَاتِ', tr: 'lahū mā fis-samāwāti', en: 'to Him belongs the heavens', bn: 'আসমানে যা আছে সবই তাঁর' },
+          { ar: 'وَمَا فِي الْأَرْضِ', tr: 'wa mā fil-arḍi', en: 'and the earth', bn: 'এবং জমিনে' },
+        ],
+      },
+      {
+        arabic: 'مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ',
+        translit: "man dhal-ladhī yashfa'u 'indahū illā bi-idhnih",
+        banglaTranslit: 'মান যাল্লাযি ইয়াশফাউ ইন্দাহু ইল্লা বি-ইযনিহি',
+        meaningEn: 'Who can intercede with Him except by His permission?',
+        meaningBn: 'কে আছে যে তাঁর অনুমতি ছাড়া তাঁর কাছে সুপারিশ করবে?',
+        words: [
+          { ar: 'مَن ذَا الَّذِي', tr: 'man dhal-ladhī', en: 'who is it that', bn: 'কে আছে যে' },
+          { ar: 'يَشْفَعُ', tr: "yashfa'u", en: 'intercedes', bn: 'সুপারিশ করে' },
+          { ar: 'عِندَهُ', tr: "'indahū", en: 'with Him', bn: 'তাঁর কাছে' },
+          { ar: 'إِلَّا بِإِذْنِهِ', tr: 'illā bi-idhnihi', en: 'except by His permission', bn: 'তাঁর অনুমতি ছাড়া' },
+        ],
+      },
+      {
+        arabic: 'يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ',
+        translit: "ya'lamu mā bayna aydīhim wa mā khalfahum, wa lā yuḥīṭūna bishay'im min 'ilmihī illā bimā shā'",
+        banglaTranslit: 'ইয়া\'লামু মা বাইনা আইদিহিম ওয়ামা খালফাহুম। ওয়ালা ইউহিতুনা বিশাইয়িম মিন ইলমিহি ইল্লা বিমা শা\'আ',
+        meaningEn: 'He knows what is before them and what is behind them, and they cannot encompass anything of His knowledge except what He wills',
+        meaningBn: 'তিনি জানেন যা তাদের সামনে এবং পেছনে। তারা তাঁর জ্ঞান থেকে কিছুই আয়ত্ত করতে পারে না তবে তিনি যতটুকু চান তা ছাড়া',
+        words: [
+          { ar: 'يَعْلَمُ', tr: "ya'lamu", en: 'He knows', bn: 'তিনি জানেন' },
+          { ar: 'مَا بَيْنَ أَيْدِيهِمْ', tr: 'mā bayna aydīhim', en: 'what is before them', bn: 'যা তাদের সামনে' },
+          { ar: 'وَمَا خَلْفَهُمْ', tr: 'wa mā khalfahum', en: 'and what is behind them', bn: 'এবং যা তাদের পেছনে' },
+          { ar: 'لَا يُحِيطُونَ', tr: 'lā yuḥīṭūna', en: 'they cannot encompass', bn: 'তারা আয়ত্ত করতে পারে না' },
+          { ar: 'مِّنْ عِلْمِهِ', tr: "min 'ilmihi", en: 'of His knowledge', bn: 'তাঁর জ্ঞান থেকে' },
+          { ar: 'إِلَّا بِمَا شَاءَ', tr: "illā bimā shā'a", en: 'except what He wills', bn: 'তবে তিনি যা চান' },
+        ],
+      },
+      {
+        arabic: 'وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ',
+        translit: "wasi'a kursiyyuhus-samāwāti wal-arḍa, wa lā ya'ūduhu ḥifẓuhumā, wa huwal-'aliyyul-'aẓīm",
+        banglaTranslit: 'ওয়াসিআ কুরসিয়্যুহুস সামাওয়াতি ওয়াল আরদ। ওয়ালা ইয়াউদুহু হিফযুহুমা। ওয়া হুওয়াল আলিয়্যুল আযিম',
+        meaningEn: 'His Throne extends over the heavens and earth, and their preservation does not tire Him. He is the Most High, the Magnificent',
+        meaningBn: 'তাঁর কুরসি আসমান ও জমিন পরিব্যাপ্ত। তাদের রক্ষণাবেক্ষণ তাঁকে ক্লান্ত করে না। তিনি সর্বোচ্চ, মহামহিম',
+        words: [
+          { ar: 'وَسِعَ كُرْسِيُّهُ', tr: "wasi'a kursiyyuhu", en: 'His Throne extends over', bn: 'তাঁর কুরসি পরিব্যাপ্ত' },
+          { ar: 'السَّمَاوَاتِ وَالْأَرْضَ', tr: 'as-samāwāti wal-arḍa', en: 'the heavens and earth', bn: 'আসমান ও জমিন' },
+          { ar: 'وَلَا يَئُودُهُ', tr: "wa lā ya'ūduhu", en: 'does not tire Him', bn: 'তাঁকে ক্লান্ত করে না' },
+          { ar: 'حِفْظُهُمَا', tr: 'ḥifẓuhumā', en: 'their preservation', bn: 'তাদের রক্ষণাবেক্ষণ' },
+          { ar: 'الْعَلِيُّ الْعَظِيمُ', tr: "al-'aliyyul-'aẓīm", en: 'the Most High, the Magnificent', bn: 'সর্বোচ্চ, মহামহিম' },
+        ],
+      },
+    ],
+  },
+
+  kafiroon: {
+    reference: 'কুরআনুল কারিম (সূরা আল-কাফিরুন)',
+    fullArabic: 'قُلْ يَا أَيُّهَا الْكَافِرُونَ\nلَا أَعْبُدُ مَا تَعْبُدُونَ\nوَلَا أَنتُمْ عَابِدُونَ مَا أَعْبُدُ\nوَلَا أَنَا عَابِدٌ مَّا عَبَدتُّمْ\nوَلَا أَنتُمْ عَابِدُونَ مَا أَعْبُدُ\nلَكُمْ دِينُكُمْ وَلِيَ دِينِ',
+    fullBanglaTranslit: 'কুল ইয়া আইয়্যুহাল কাফিরুন। লা আ\'বুদু মা তা\'বুদুন। ওয়ালা আনতুম আবিদুনা মা আ\'বুদ। ওয়ালা আনা আবিদুম মা আবাদতুম। ওয়ালা আনতুম আবিদুনা মা আ\'বুদ। লাকুম দিনুকুম ওয়ালিয়া দিন।',
+    fullMeaningBn: 'বলো: হে কাফিরগণ! আমি তাদের ইবাদত করি না যাদের তোমরা ইবাদত করো। এবং তোমরাও তাঁর ইবাদতকারী নও যাঁর আমি ইবাদত করি। আমি তাদের ইবাদতকারী নই যাদের তোমরা ইবাদত করেছ। এবং তোমরাও তাঁর ইবাদতকারী নও যাঁর আমি ইবাদত করি। তোমাদের জন্য তোমাদের দীন এবং আমার জন্য আমার দীন।',
+    segments: [
+      {
+        arabic: 'قُلْ يَا أَيُّهَا الْكَافِرُونَ',
+        translit: 'Qul yā ayyuhal-kāfirūn',
+        banglaTranslit: 'কুল ইয়া আইয়্যুহাল কাফিরুন',
+        meaningEn: 'Say: O you disbelievers!',
+        meaningBn: 'বলো: হে কাফিরগণ!',
+        words: [
+          { ar: 'قُلْ', tr: 'qul', en: 'say', bn: 'বলো' },
+          { ar: 'يَا أَيُّهَا', tr: 'yā ayyuhā', en: 'O you', bn: 'হে তোমরা' },
+          { ar: 'الْكَافِرُونَ', tr: 'al-kāfirūna', en: 'the disbelievers', bn: 'কাফিরগণ' },
+        ],
+      },
+      {
+        arabic: 'لَا أَعْبُدُ مَا تَعْبُدُونَ\nوَلَا أَنتُمْ عَابِدُونَ مَا أَعْبُدُ',
+        translit: "lā a'budu mā ta'budūna, wa lā antum 'ābidūna mā a'bud",
+        banglaTranslit: 'লা আ\'বুদু মা তা\'বুদুন। ওয়ালা আনতুম আবিদুনা মা আ\'বুদ',
+        meaningEn: 'I do not worship what you worship, nor do you worship what I worship',
+        meaningBn: 'আমি তাদের ইবাদত করি না যাদের তোমরা করো, এবং তোমরাও তাঁর ইবাদত করো না যাঁর আমি করি',
+        words: [
+          { ar: 'لَا أَعْبُدُ', tr: "lā a'budu", en: 'I do not worship', bn: 'আমি ইবাদত করি না' },
+          { ar: 'مَا تَعْبُدُونَ', tr: "mā ta'budūna", en: 'what you worship', bn: 'যাদের তোমরা ইবাদত করো' },
+          { ar: 'وَلَا أَنتُمْ عَابِدُونَ', tr: "wa lā antum 'ābidūna", en: 'nor do you worship', bn: 'এবং তোমরাও ইবাদতকারী নও' },
+          { ar: 'مَا أَعْبُدُ', tr: "mā a'budu", en: 'what I worship', bn: 'যাঁর আমি ইবাদত করি' },
+        ],
+      },
+      {
+        arabic: 'لَكُمْ دِينُكُمْ وَلِيَ دِينِ',
+        translit: 'lakum dīnukum wa liya dīn',
+        banglaTranslit: 'লাকুম দিনুকুম ওয়ালিয়া দিন',
+        meaningEn: 'For you is your religion, and for me is my religion',
+        meaningBn: 'তোমাদের জন্য তোমাদের দীন এবং আমার জন্য আমার দীন',
+        words: [
+          { ar: 'لَكُمْ', tr: 'lakum', en: 'for you', bn: 'তোমাদের জন্য' },
+          { ar: 'دِينُكُمْ', tr: 'dīnukum', en: 'your religion', bn: 'তোমাদের দীন' },
+          { ar: 'وَلِيَ دِينِ', tr: 'wa liya dīni', en: 'and for me is my religion', bn: 'এবং আমার জন্য আমার দীন' },
+        ],
+      },
+    ],
+  },
+
+  // ── AMAL ─────────────────────────────────────────
+
+  subhanallah: {
+    reference: 'সহীহ বুখারি · সহীহ মুসলিম',
+    fullArabic: 'سُبْحَانَ اللَّهِ وَبِحَمْدِهِ سُبْحَانَ اللَّهِ الْعَظِيمِ',
+    fullBanglaTranslit: 'সুবহানাল্লাহি ওয়া বিহামদিহি সুবহানাল্লাহিল আযিম',
+    fullMeaningBn: 'আল্লাহ পবিত্র তাঁর প্রশংসাসহ। মহান আল্লাহ পবিত্র।',
+    segments: [
+      {
+        arabic: 'سُبْحَانَ اللَّهِ وَبِحَمْدِهِ',
+        translit: 'Subḥānallāhi wa biḥamdihi',
+        banglaTranslit: 'সুবহানাল্লাহি ওয়া বিহামদিহি',
+        meaningEn: 'Glory be to Allah and praise be to Him',
+        meaningBn: 'আল্লাহ পবিত্র এবং সকল প্রশংসা তাঁর',
+        words: [
+          { ar: 'سُبْحَانَ اللَّهِ', tr: 'Subḥānallāhi', en: 'Glory be to Allah', bn: 'আল্লাহ পবিত্র' },
+          { ar: 'وَبِحَمْدِهِ', tr: 'wa biḥamdihi', en: 'and praise be to Him', bn: 'এবং তাঁর প্রশংসা' },
+        ],
+      },
+      {
+        arabic: 'سُبْحَانَ اللَّهِ الْعَظِيمِ',
+        translit: "Subḥānallāhil-'aẓīm",
+        banglaTranslit: 'সুবহানাল্লাহিল আযিম',
+        meaningEn: 'Glory be to Allah, the Magnificent',
+        meaningBn: 'মহান আল্লাহ পবিত্র',
+        words: [
+          { ar: 'سُبْحَانَ اللَّهِ', tr: 'Subḥānallāhi', en: 'Glory be to Allah', bn: 'আল্লাহ পবিত্র' },
+          { ar: 'الْعَظِيمِ', tr: "al-'aẓīmi", en: 'the Magnificent', bn: 'মহান' },
+        ],
+      },
+    ],
+  },
+
+  istighfar: {
+    reference: 'আবু দাউদ · তিরমিযি',
+    fullArabic: 'أَسْتَغْفِرُ اللَّهَ الَّذِي لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ وَأَتُوبُ إِلَيْهِ',
+    fullBanglaTranslit: 'আস্তাগফিরুল্লাহাল্লাযি লা ইলাহা ইল্লা হুওয়াল হাইয়্যুল কাইয়্যুমু ওয়া আতুবু ইলাইহি',
+    fullMeaningBn: 'আমি আল্লাহর কাছে ক্ষমা চাই যিনি ছাড়া কোনো ইলাহ নেই, যিনি চিরঞ্জীব, সর্বসত্তার ধারক, এবং আমি তাঁর কাছে তওবা করছি।',
+    segments: [
+      {
+        arabic: 'أَسْتَغْفِرُ اللَّهَ الَّذِي لَا إِلَهَ إِلَّا هُوَ',
+        translit: 'Astaghfirullāhal-ladhī lā ilāha illā huwa',
+        banglaTranslit: 'আস্তাগফিরুল্লাহাল্লাযি লা ইলাহা ইল্লা হুওয়া',
+        meaningEn: 'I seek forgiveness from Allah, there is no god except Him',
+        meaningBn: 'আমি সেই আল্লাহর কাছে ক্ষমা চাই যিনি ছাড়া কোনো ইলাহ নেই',
+        words: [
+          { ar: 'أَسْتَغْفِرُ', tr: 'astaghfiru', en: 'I seek forgiveness', bn: 'আমি ক্ষমা চাই' },
+          { ar: 'اللَّهَ', tr: 'Allāha', en: 'from Allah', bn: 'আল্লাহর কাছে' },
+          { ar: 'الَّذِي', tr: 'alladhī', en: 'who', bn: 'যিনি' },
+          { ar: 'لَا إِلَهَ إِلَّا هُوَ', tr: 'lā ilāha illā huwa', en: 'no god except Him', bn: 'তিনি ছাড়া কোনো ইলাহ নেই' },
+        ],
+      },
+      {
+        arabic: 'الْحَيُّ الْقَيُّومُ وَأَتُوبُ إِلَيْهِ',
+        translit: 'al-ḥayyul-qayyūmu wa atūbu ilayhi',
+        banglaTranslit: 'আল হাইয়্যুল কাইয়্যুমু ওয়া আতুবু ইলাইহি',
+        meaningEn: 'The Ever-Living, the Sustainer, and I repent to Him',
+        meaningBn: 'চিরঞ্জীব, সর্বসত্তার ধারক, এবং আমি তাঁর কাছে তওবা করছি',
+        words: [
+          { ar: 'الْحَيُّ', tr: 'al-ḥayyu', en: 'the Ever-Living', bn: 'চিরঞ্জীব' },
+          { ar: 'الْقَيُّومُ', tr: 'al-qayyūmu', en: 'the Sustainer', bn: 'সর্বসত্তার ধারক' },
+          { ar: 'وَأَتُوبُ إِلَيْهِ', tr: 'wa atūbu ilayhi', en: 'and I repent to Him', bn: 'এবং তাঁর কাছে তওবা করছি' },
+        ],
+      },
+    ],
+  },
+
+  'durood-simple': {
+    reference: 'সহীহ বুখারি · সহীহ মুসলিম',
+    fullArabic: 'اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ',
+    fullBanglaTranslit: 'আল্লাহুম্মা সাল্লি আলা মুহাম্মাদ',
+    fullMeaningBn: 'হে আল্লাহ! মুহাম্মাদের উপর রহমত বর্ষণ করো।',
+    segments: [
+      {
+        arabic: 'اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ',
+        translit: 'Allāhumma ṣalli alā Muḥammad',
+        banglaTranslit: 'আল্লাহুম্মা সাল্লি আলা মুহাম্মাদ',
+        meaningEn: 'O Allah, send blessings upon Muhammad',
+        meaningBn: 'হে আল্লাহ! মুহাম্মাদের উপর রহমত বর্ষণ করো',
+        words: [
+          { ar: 'اللَّهُمَّ', tr: 'Allāhumma', en: 'O Allah', bn: 'হে আল্লাহ' },
+          { ar: 'صَلِّ', tr: 'ṣalli', en: 'send blessings', bn: 'রহমত বর্ষণ করো' },
+          { ar: 'عَلَى', tr: "'alā", en: 'upon', bn: 'উপর' },
+          { ar: 'مُحَمَّدٍ', tr: 'Muḥammadin', en: 'Muhammad', bn: 'মুহাম্মাদ' },
+        ],
+      },
+    ],
+  },
+
+  alhamdulillah: {
+    reference: 'কুরআনুল কারিম (সূরা আল-ফাতিহা ১:২)',
+    fullArabic: 'الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ',
+    fullBanglaTranslit: 'আলহামদুলিল্লাহি রাব্বিল আলামিন',
+    fullMeaningBn: 'সমস্ত প্রশংসা আল্লাহর যিনি সমগ্র জগতের রব।',
+    segments: [
+      {
+        arabic: 'الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ',
+        translit: 'Alḥamdu lillāhi rabbil-ālamīn',
+        banglaTranslit: 'আলহামদুলিল্লাহি রাব্বিল আলামিন',
+        meaningEn: 'All praise is for Allah, Lord of all the worlds',
+        meaningBn: 'সমস্ত প্রশংসা আল্লাহর যিনি সমগ্র জগতের রব',
+        words: [
+          { ar: 'الْحَمْدُ', tr: 'al-ḥamdu', en: 'all praise', bn: 'সমস্ত প্রশংসা' },
+          { ar: 'لِلَّهِ', tr: 'lillāhi', en: 'for Allah', bn: 'আল্লাহর জন্য' },
+          { ar: 'رَبِّ', tr: 'rabbi', en: 'Lord', bn: 'রব' },
+          { ar: 'الْعَالَمِينَ', tr: 'al-ālamīna', en: 'of all the worlds', bn: 'সমগ্র জগতের' },
         ],
       },
     ],
