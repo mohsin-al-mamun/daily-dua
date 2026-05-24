@@ -782,7 +782,7 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
         ],
       },
       {
-        arabic: 'لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ',
+        arabic: 'لَا تَأْخُذُهُۥ سِنَةٌۭ وَلَا نَوْمٌۭ',
         translit: 'lā taʾkhudhuhu sinatun wa lā nawm',
         banglaTranslit: 'লা তা\'খুযুহু সিনাতুওঁ ওয়ালা নাউম',
         meaningBn: 'তাঁকে তন্দ্রা ও নিদ্রা স্পর্শ করে না',
@@ -794,7 +794,7 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
         ],
       },
       {
-        arabic: 'لَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ',
+        arabic: 'لَّهُۥ مَا فِى ٱلسَّمَٰوَٰتِ وَمَا فِى ٱلْأَرْضِ',
         translit: 'lahu mā fis-samāwāti wa mā fil-ard',
         banglaTranslit: 'লাহু মা ফিস্ সামাওয়াতি ওয়ামা ফিল আরদ্ব',
         meaningBn: 'আসমান ও জমিনে যা কিছু আছে সব তাঁরই',
@@ -806,7 +806,7 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
         ],
       },
       {
-        arabic: 'وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ وَلَا يَئُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ',
+        arabic: 'وَسِعَ كُرْسِيُّهُ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضَ ۖ وَلَا يَـُٔودُهُۥ حِفْظُهُمَا ۚ وَهُوَ ٱلْعَلِىُّ ٱلْعَظِيمُ',
         translit: 'wasiʿa kursiyyuhus-samāwāti wal-arda wa lā yaʾūduhu hifẓuhumā wa huwal-ʿAliyyul-ʿAẓīm',
         banglaTranslit: 'ওয়াসিআ কুরসিয়্যুহুস সামাওয়াতি ওয়াল আরদ্ব, ওয়ালা ইয়াউদুহু হিফজুহুমা, ওয়া হুওয়াল আলিয়্যুল আযিম',
         meaningBn: 'তাঁর কুরসি আসমান ও জমিন পরিবেষ্টন করে আছে। এ দুটো রক্ষণাবেক্ষণ তাঁকে ক্লান্ত করে না। তিনি সর্বোচ্চ, সর্বমহান',
