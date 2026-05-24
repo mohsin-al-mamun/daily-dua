@@ -1,3 +1,5 @@
+import Q from './quran-arabic.json';
+
 export type Word = { ar: string; tr: string; en: string; bn: string };
 
 export type Segment = {
@@ -344,12 +346,12 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
 
   fatiha: {
     reference: 'সূরা আল-ফাতিহা · আয়াত ১–৭ · মাক্কী সূরা',
-    fullArabic: 'بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ ۝١\nالْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ ۝٢\nالرَّحْمَنِ الرَّحِيمِ ۝٣\nمَالِكِ يَوْمِ الدِّينِ ۝٤\nإِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ ۝٥\nاهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ ۝٦\nصِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ ۝٧',
+    fullArabic: Q.fatiha.join('\n'),
     fullBanglaTranslit: "বিসমিল্লাহির রাহমানির রাহিম। আলহামদু লিল্লাহি রব্বিল আলামিন। আর্রাহমানির রাহিম। মালিকি ইয়াওমিদ্দিন। ইয়্যাকা না'বুদু ওয়া ইয়্যাকা নাস্তাইন। ইহদিনাস্ সিরাতাল মুস্তাকিম। সিরাতাল্লাযিনা আন'আমতা আলাইহিম, গাইরিল মাগযুবি আলাইহিম ওয়ালাদ দ্বাল্লিন।",
     fullMeaningBn: 'পরম করুণাময় অসীম দয়ালু আল্লাহর নামে। সমস্ত প্রশংসা আল্লাহর জন্য, যিনি সমগ্র সৃষ্টির পালনকর্তা। যিনি পরম করুণাময়, অসীম দয়ালু। যিনি বিচার দিনের মালিক। আমরা কেবল আপনারই ইবাদত করি এবং কেবল আপনার কাছেই সাহায্য চাই। আমাদের সরল পথ দেখান — তাদের পথ যাদের উপর আপনি অনুগ্রহ করেছেন, তাদের পথ নয় যাদের উপর ক্রোধ হয়েছে এবং যারা পথভ্রষ্ট।',
     segments: [
       {
-        arabic: 'بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ ۝١',
+        arabic: Q.fatiha[0],
         translit: 'Bismillāhir-Rahmānir-Rahīm',
         banglaTranslit: 'বিসমিল্লাহির রাহমানির রাহিম',
         meaningBn: 'পরম করুণাময় অসীম দয়ালু আল্লাহর নামে',
@@ -362,7 +364,7 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
         ],
       },
       {
-        arabic: 'الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ ۝٢',
+        arabic: Q.fatiha[1],
         translit: 'Alhamdu lillāhi Rabbil-ālamīn',
         banglaTranslit: 'আলহামদু লিল্লাহি রব্বিল আলামিন',
         meaningBn: 'সমস্ত প্রশংসা আল্লাহর জন্য, যিনি সমগ্র সৃষ্টির পালনকর্তা',
@@ -375,7 +377,7 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
         ],
       },
       {
-        arabic: 'الرَّحْمَنِ الرَّحِيمِ ۝٣',
+        arabic: Q.fatiha[2],
         translit: 'Ar-Rahmānir-Rahīm',
         banglaTranslit: 'আর্রাহমানির রাহিম',
         meaningBn: 'যিনি পরম করুণাময়, অসীম দয়ালু',
@@ -386,7 +388,7 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
         ],
       },
       {
-        arabic: 'مَالِكِ يَوْمِ الدِّينِ ۝٤',
+        arabic: Q.fatiha[3],
         translit: 'Māliki yawmid-dīn',
         banglaTranslit: 'মালিকি ইয়াওমিদ্দিন',
         meaningBn: 'যিনি বিচার দিনের মালিক',
@@ -398,7 +400,7 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
         ],
       },
       {
-        arabic: 'إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ ۝٥',
+        arabic: Q.fatiha[4],
         translit: "Iyyāka na'budu wa iyyāka nasta'īn",
         banglaTranslit: "ইয়্যাকা না'বুদু ওয়া ইয়্যাকা নাস্তাইন",
         meaningBn: 'আমরা কেবল আপনারই ইবাদত করি এবং কেবল আপনার কাছেই সাহায্য চাই',
@@ -411,7 +413,7 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
         ],
       },
       {
-        arabic: 'اهْدِنَا الصِّرَاطَ الْمُسْتَقِيمَ ۝٦',
+        arabic: Q.fatiha[5],
         translit: 'Ihdinassirātal mustaqīm',
         banglaTranslit: 'ইহদিনাস্ সিরাতাল মুস্তাকিম',
         meaningBn: 'আমাদের সরল পথ দেখান',
@@ -423,7 +425,7 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
         ],
       },
       {
-        arabic: 'صِرَاطَ الَّذِينَ أَنْعَمْتَ عَلَيْهِمْ غَيْرِ الْمَغْضُوبِ عَلَيْهِمْ وَلَا الضَّالِّينَ ۝٧',
+        arabic: Q.fatiha[6],
         translit: "Sirātal-ladhīna an'amta alayhim ghayril maghdhūbi alayhim wa lad-dhāllīn",
         banglaTranslit: "সিরাতাল্লাযিনা আন'আমতা আলাইহিম, গাইরিল মাগযুবি আলাইহিম ওয়ালাদ দ্বাল্লিন",
         meaningBn: 'তাদের পথ যাদের উপর আপনি অনুগ্রহ করেছেন, তাদের পথ নয় যাদের উপর ক্রোধ হয়েছে এবং যারা পথভ্রষ্ট',
@@ -442,12 +444,12 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
 
   ikhlas: {
     reference: 'সূরা আল-ইখলাস · আয়াত ১–৪ · মাক্কী সূরা',
-    fullArabic: 'قُلْ هُوَ اللَّهُ أَحَدٌ ۝١\nاللَّهُ الصَّمَدُ ۝٢\nلَمْ يَلِدْ وَلَمْ يُولَدْ ۝٣\nوَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ ۝٤',
+    fullArabic: [Q.bismillah, ...Q.ikhlas].join('\n'),
     fullBanglaTranslit: 'কুল হুওয়াল্লাহু আহাদ। আল্লাহুস্ সামাদ। লাম ইয়ালিদ ওয়ালাম ইউলাদ। ওয়ালাম ইয়াকুল্লাহু কুফুওয়ান আহাদ।',
     fullMeaningBn: 'বলুন, তিনি আল্লাহ, একক। আল্লাহ চিরস্থায়ী ও সকলের আশ্রয়। তিনি জন্ম দেননি এবং জন্ম নেননি। এবং তাঁর সমকক্ষ কেউ নেই।',
     segments: [
       {
-        arabic: 'قُلْ هُوَ اللَّهُ أَحَدٌ ۝١',
+        arabic: Q.ikhlas[0],
         translit: 'Qul huwallāhu ahad',
         banglaTranslit: 'কুল হুওয়াল্লাহু আহাদ',
         meaningBn: 'বলুন, তিনি আল্লাহ, একক',
@@ -460,7 +462,7 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
         ],
       },
       {
-        arabic: 'اللَّهُ الصَّمَدُ ۝٢',
+        arabic: Q.ikhlas[1],
         translit: 'Allāhus-Samad',
         banglaTranslit: 'আল্লাহুস্ সামাদ',
         meaningBn: 'আল্লাহ চিরস্থায়ী, সকলের আশ্রয়স্থল',
@@ -471,7 +473,7 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
         ],
       },
       {
-        arabic: 'لَمْ يَلِدْ وَلَمْ يُولَدْ ۝٣',
+        arabic: Q.ikhlas[2],
         translit: 'Lam yalid wa lam yūlad',
         banglaTranslit: 'লাম ইয়ালিদ ওয়ালাম ইউলাদ',
         meaningBn: 'তিনি জন্ম দেননি এবং জন্ম নেননি',
@@ -484,7 +486,7 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
         ],
       },
       {
-        arabic: 'وَلَمْ يَكُنْ لَهُ كُفُوًا أَحَدٌ ۝٤',
+        arabic: Q.ikhlas[3],
         translit: 'Wa lam yakun lahū kufuwan ahad',
         banglaTranslit: 'ওয়ালাম ইয়াকুল্লাহু কুফুওয়ান আহাদ',
         meaningBn: 'এবং তাঁর সমকক্ষ কেউ নেই',
@@ -762,12 +764,12 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
 
   'ayah-kursi-after': {
     reference: 'সূরা আল-বাক্বারাহ · আয়াত ২৫৫ · নাসাই',
-    fullArabic: 'اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ،\nلَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ،\nلَهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ،\nمَنْ ذَا الَّذِي يَشْفَعُ عِنْدَهُ إِلَّا بِإِذْنِهِ،\nيَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ،\nوَلَا يُحِيطُونَ بِشَيْءٍ مِنْ عِلْمِهِ إِلَّا بِمَا شَاءَ،\nوَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ،\nوَلَا يَئُودُهُ حِفْظُهُمَا وَهُوَ الْعَلِيُّ الْعَظِيمُ',
+    fullArabic: Q.ayatulKursi,
     fullBanglaTranslit: "আল্লাহু লা ইলাহা ইল্লা হুওয়াল হাইয়্যুল কাইয়্যুম। লা তা'খুযুহু সিনাতুওঁ ওয়ালা নাউম। লাহু মা ফিস্ সামাওয়াতি ওয়ামা ফিল আরদ্ব। মান যাল্লাযি ইয়াশফাউ ইন্দাহু ইল্লা বিইযনিহি। ইয়া'লামু মা বাইনা আইদিহিম ওয়ামা খালফাহুম। ওয়ালা ইউহিতুনা বিশাইয়িম মিন ইলমিহি ইল্লা বিমা শাআ। ওয়াসিআ কুরসিয়্যুহুস সামাওয়াতি ওয়াল আরদ্ব। ওয়ালা ইয়াউদুহু হিফজুহুমা ওয়া হুওয়াল আলিয়্যুল আযিম।",
     fullMeaningBn: 'আল্লাহ — তিনি ছাড়া কোনো ইলাহ নেই, তিনি চিরঞ্জীব, সর্বসত্তার ধারক। তাঁকে তন্দ্রা ও নিদ্রা স্পর্শ করে না। আসমান ও জমিনে যা কিছু আছে সব তাঁরই। তাঁর অনুমতি ছাড়া কে তাঁর কাছে সুপারিশ করবে? তিনি জানেন যা তাদের সামনে ও পেছনে আছে। তাঁর ইলমের কিছুই তারা আয়ত্ত করতে পারে না, তিনি যতটুকু ইচ্ছা করেন তা ছাড়া। তাঁর কুরসি আসমান ও জমিন পরিবেষ্টন করে আছে। এ দুটো রক্ষণাবেক্ষণ তাঁকে ক্লান্ত করে না। তিনি সর্বোচ্চ, সর্বমহান।',
     segments: [
       {
-        arabic: 'اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ',
+        arabic: 'ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ ٱلْحَىُّ ٱلْقَيُّومُ',
         translit: 'Allāhu lā ilāha illā huwal-Hayyul-Qayyūm',
         banglaTranslit: 'আল্লাহু লা ইলাহা ইল্লা হুওয়াল হাইয়্যুল কাইয়্যুম',
         meaningBn: 'আল্লাহ — তিনি ছাড়া কোনো ইলাহ নেই, তিনি চিরঞ্জীব, সর্বসত্তার ধারক',
@@ -1148,12 +1150,12 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
 
   'evening-kul': {
     reference: 'আবু দাউদ · তিরমিযি',
-    fullArabic: 'قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ\nمِن شَرِّ مَا خَلَقَ\nوَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ\nوَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ\nوَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ',
+    fullArabic: [Q.bismillah, ...Q.falaq, Q.bismillah, ...Q.nas].join('\n'),
     fullBanglaTranslit: 'কুল আউযু বিরাব্বিল ফালাক। মিন শাররি মা খালাক। ওয়ামিন শাররি গাসিকিন ইযা ওয়াকাব। ওয়ামিন শাররিন নাফফাসাতি ফিল উকাদ। ওয়ামিন শাররি হাসিদিন ইযা হাসাদ।',
     fullMeaningBn: 'বলো: আমি আশ্রয় নিচ্ছি ভোরের রবের কাছে — তিনি যা সৃষ্টি করেছেন তার অনিষ্ট থেকে, অন্ধকার রাতের অনিষ্ট থেকে যখন তা ছেয়ে পড়ে, গিঁটে ফুঁকদাত্রীদের অনিষ্ট থেকে এবং হিংসুকের অনিষ্ট থেকে যখন সে হিংসা করে।',
     segments: [
       {
-        arabic: 'قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ',
+        arabic: Q.falaq[0],
         translit: "Qul a'udhu bi-rabbil-falaq",
         banglaTranslit: 'কুল আউযু বিরাব্বিল ফালাক',
         meaningEn: 'Say: I seek refuge in the Lord of the daybreak',
@@ -1166,7 +1168,7 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
         ],
       },
       {
-        arabic: 'مِن شَرِّ مَا خَلَقَ',
+        arabic: Q.falaq[1],
         translit: 'min sharri ma khalaq',
         banglaTranslit: 'মিন শাররি মা খালাক',
         meaningEn: 'From the evil of what He has created',
@@ -1177,7 +1179,7 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
         ],
       },
       {
-        arabic: 'وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ\nوَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ\nوَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ',
+        arabic: [Q.falaq[2], Q.falaq[3], Q.falaq[4]].join('\n'),
         translit: 'wa min sharri ghasiqin idha waqab, wa min sharrin-naffasati fil-uqad, wa min sharri hasidin idha hasad',
         banglaTranslit: 'ওয়ামিন শাররি গাসিকিন ইযা ওয়াকাব, ওয়ামিন শাররিন নাফফাসাতি ফিল উকাদ, ওয়ামিন শাররি হাসিদিন ইযা হাসাদ',
         meaningEn: 'From the evil of darkness when it spreads, from the evil of those who blow on knots, and from the evil of the envier when he envies',
@@ -1198,12 +1200,12 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
 
   falaq: {
     reference: 'কুরআনুল কারিম (সূরা আল-ফালাক)',
-    fullArabic: 'قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ\nمِن شَرِّ مَا خَلَقَ\nوَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ\nوَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ\nوَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ',
+    fullArabic: [Q.bismillah, ...Q.falaq].join('\n'),
     fullBanglaTranslit: "কুল আউযু বিরাব্বিল ফালাক। মিন শাররি মা খালাক। ওয়ামিন শাররি গাসিকিন ইযা ওয়াকাব। ওয়ামিন শাররিন নাফফাসাতি ফিল উকাদ। ওয়ামিন শাররি হাসিদিন ইযা হাসাদ।",
     fullMeaningBn: 'বলো: আমি আশ্রয় নিচ্ছি ভোরের রবের কাছে — তিনি যা সৃষ্টি করেছেন তার অনিষ্ট থেকে, অন্ধকার রাতের অনিষ্ট থেকে যখন তা ছেয়ে পড়ে, গিঁটে ফুঁকদাত্রীদের অনিষ্ট থেকে এবং হিংসুকের অনিষ্ট থেকে যখন সে হিংসা করে।',
     segments: [
       {
-        arabic: 'قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ',
+        arabic: Q.falaq[0],
         translit: "Qul a'udhu bi-rabbil-falaq",
         banglaTranslit: 'কুল আউযু বিরাব্বিল ফালাক',
         meaningEn: 'Say: I seek refuge in the Lord of the daybreak',
@@ -1216,7 +1218,7 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
         ],
       },
       {
-        arabic: 'مِن شَرِّ مَا خَلَقَ',
+        arabic: Q.falaq[1],
         translit: 'min sharri mā khalaqa',
         banglaTranslit: 'মিন শাররি মা খালাক',
         meaningEn: 'From the evil of what He has created',
@@ -1227,7 +1229,7 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
         ],
       },
       {
-        arabic: 'وَمِن شَرِّ غَاسِقٍ إِذَا وَقَبَ',
+        arabic: Q.falaq[2],
         translit: 'wa min sharri ghāsiqin idhā waqab',
         banglaTranslit: 'ওয়ামিন শাররি গাসিকিন ইযা ওয়াকাব',
         meaningEn: 'And from the evil of darkness when it spreads',
@@ -1238,7 +1240,7 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
         ],
       },
       {
-        arabic: 'وَمِن شَرِّ النَّفَّاثَاتِ فِي الْعُقَدِ',
+        arabic: Q.falaq[3],
         translit: "wa min sharrin-naffāthāti fil-'uqad",
         banglaTranslit: 'ওয়ামিন শাররিন নাফফাসাতি ফিল উকাদ',
         meaningEn: 'And from the evil of those who blow on knots',
@@ -1249,7 +1251,7 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
         ],
       },
       {
-        arabic: 'وَمِن شَرِّ حَاسِدٍ إِذَا حَسَدَ',
+        arabic: Q.falaq[4],
         translit: 'wa min sharri ḥāsidin idhā ḥasad',
         banglaTranslit: 'ওয়ামিন শাররি হাসিদিন ইযা হাসাদ',
         meaningEn: 'And from the evil of the envier when he envies',
@@ -1264,12 +1266,12 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
 
   nas: {
     reference: 'কুরআনুল কারিম (সূরা আন-নাস)',
-    fullArabic: 'قُلْ أَعُوذُ بِرَبِّ النَّاسِ\nمَلِكِ النَّاسِ\nإِلَهِ النَّاسِ\nمِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ\nالَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ\nمِنَ الْجِنَّةِ وَالنَّاسِ',
+    fullArabic: [Q.bismillah, ...Q.nas].join('\n'),
     fullBanglaTranslit: 'কুল আউযু বিরাব্বিন নাস। মালিকিন নাস। ইলাহিন নাস। মিন শাররিল ওয়াসওয়াসিল খান্নাস। আল্লাযি ইউওয়াসউইসু ফি সুদুরিন নাস। মিনাল জিন্নাতি ওয়ান নাস।',
     fullMeaningBn: 'বলো: আমি আশ্রয় নিচ্ছি মানুষের রবের কাছে, মানুষের মালিকের কাছে, মানুষের ইলাহের কাছে — কুমন্ত্রণাদাতা আত্মগোপনকারীর অনিষ্ট থেকে, যে মানুষের বুকে কুমন্ত্রণা দেয়, জিন ও মানুষের মধ্য থেকে।',
     segments: [
       {
-        arabic: 'قُلْ أَعُوذُ بِرَبِّ النَّاسِ',
+        arabic: Q.nas[0],
         translit: "Qul a'udhu bi-rabbin-nās",
         banglaTranslit: 'কুল আউযু বিরাব্বিন নাস',
         meaningEn: 'Say: I seek refuge in the Lord of mankind',
@@ -1281,7 +1283,7 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
         ],
       },
       {
-        arabic: 'مَلِكِ النَّاسِ\nإِلَهِ النَّاسِ',
+        arabic: [Q.nas[1], Q.nas[2]].join('\n'),
         translit: 'malikin-nāsi ilāhin-nās',
         banglaTranslit: 'মালিকিন নাস, ইলাহিন নাস',
         meaningEn: 'The King of mankind, the God of mankind',
@@ -1292,7 +1294,7 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
         ],
       },
       {
-        arabic: 'مِن شَرِّ الْوَسْوَاسِ الْخَنَّاسِ\nالَّذِي يُوَسْوِسُ فِي صُدُورِ النَّاسِ\nمِنَ الْجِنَّةِ وَالنَّاسِ',
+        arabic: [Q.nas[3], Q.nas[4], Q.nas[5]].join('\n'),
         translit: 'min sharril-waswāsil-khannāsi, alladhī yuwaswisu fī sudūrin-nāsi, minal-jinnati wan-nās',
         banglaTranslit: 'মিন শাররিল ওয়াসওয়াসিল খান্নাস, আল্লাযি ইউওয়াসউইসু ফি সুদুরিন নাস, মিনাল জিন্নাতি ওয়ান নাস',
         meaningEn: 'From the evil of the retreating whisperer, who whispers in the breasts of mankind, from jinn and mankind',
@@ -1310,12 +1312,12 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
 
   'ayatul-kursi': {
     reference: 'কুরআনুল কারিম (সূরা আল-বাকারা ২:২৫৫)',
-    fullArabic: 'اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ ۗ مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ ۚ يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ ۚ وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ',
+    fullArabic: Q.ayatulKursi,
     fullBanglaTranslit: "আল্লাহু লা ইলাহা ইল্লা হুওয়াল হাইয়্যুল কাইয়্যুম। লা তাখুযুহু সিনাতুওঁ ওয়ালা নাউম। লাহু মা ফিস সামাওয়াতি ওয়ামা ফিল আরদ। মান যাল্লাযি ইয়াশফাউ ইন্দাহু ইল্লা বি-ইযনিহি। ইয়া'লামু মা বাইনা আইদিহিম ওয়ামা খালফাহুম। ওয়ালা ইউহিতুনা বিশাইয়িম মিন ইলমিহি ইল্লা বিমা শা'আ। ওয়াসিআ কুরসিয়্যুহুস সামাওয়াতি ওয়াল আরদ। ওয়ালা ইয়াউদুহু হিফযুহুমা। ওয়া হুওয়াল আলিয়্যুল আযিম।",
     fullMeaningBn: 'আল্লাহ — তিনি ছাড়া কোনো ইলাহ নেই, তিনি চিরঞ্জীব, সর্বসত্তার ধারক। তাঁকে তন্দ্রা বা নিদ্রা স্পর্শ করে না। আসমান ও জমিনে যা কিছু আছে সবই তাঁর। কে আছে যে তাঁর অনুমতি ছাড়া তাঁর কাছে সুপারিশ করবে? তিনি জানেন যা তাদের সামনে এবং যা তাদের পেছনে আছে। তারা তাঁর জ্ঞান থেকে কিছুই আয়ত্ত করতে পারে না, তবে তিনি যতটুকু চান ততটুকু ছাড়া। তাঁর কুরসি আসমান ও জমিন পরিব্যাপ্ত। তাদের রক্ষণাবেক্ষণ তাঁকে ক্লান্ত করে না। তিনি সর্বোচ্চ, মহামহিম।',
     segments: [
       {
-        arabic: 'اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ',
+        arabic: 'ٱللَّهُ لَآ إِلَٰهَ إِلَّا هُوَ ٱلْحَىُّ ٱلْقَيُّومُ',
         translit: 'Allāhu lā ilāha illā huwal-ḥayyul-qayyūm',
         banglaTranslit: 'আল্লাহু লা ইলাহা ইল্লা হুওয়াল হাইয়্যুল কাইয়্যুম',
         meaningEn: 'Allah — there is no god except Him, the Ever-Living, the Sustainer of all',
@@ -1328,7 +1330,7 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
         ],
       },
       {
-        arabic: 'لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ ۚ لَّهُ مَا فِي السَّمَاوَاتِ وَمَا فِي الْأَرْضِ',
+        arabic: 'لَا تَأْخُذُهُۥ سِنَةٌۭ وَلَا نَوْمٌۭ ۚ لَّهُۥ مَا فِى ٱلسَّمَٰوَٰتِ وَمَا فِى ٱلْأَرْضِ',
         translit: "lā ta'khudhuhu sinatun wa lā nawm, lahū mā fis-samāwāti wa mā fil-arḍ",
         banglaTranslit: 'লা তাখুযুহু সিনাতুওঁ ওয়ালা নাউম। লাহু মা ফিস সামাওয়াতি ওয়ামা ফিল আরদ',
         meaningEn: 'Neither drowsiness nor sleep overtakes Him. To Him belongs whatever is in the heavens and earth',
@@ -1342,7 +1344,7 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
         ],
       },
       {
-        arabic: 'مَن ذَا الَّذِي يَشْفَعُ عِندَهُ إِلَّا بِإِذْنِهِ',
+        arabic: 'مَن ذَا ٱلَّذِى يَشْفَعُ عِندَهُۥٓ إِلَّا بِإِذْنِهِۦ',
         translit: "man dhal-ladhī yashfa'u 'indahū illā bi-idhnih",
         banglaTranslit: 'মান যাল্লাযি ইয়াশফাউ ইন্দাহু ইল্লা বি-ইযনিহি',
         meaningEn: 'Who can intercede with Him except by His permission?',
@@ -1355,7 +1357,7 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
         ],
       },
       {
-        arabic: 'يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَيْءٍ مِّنْ عِلْمِهِ إِلَّا بِمَا شَاءَ',
+        arabic: 'يَعْلَمُ مَا بَيْنَ أَيْدِيهِمْ وَمَا خَلْفَهُمْ ۖ وَلَا يُحِيطُونَ بِشَىْءٍۢ مِّنْ عِلْمِهِۦٓ إِلَّا بِمَا شَآءَ',
         translit: "ya'lamu mā bayna aydīhim wa mā khalfahum, wa lā yuḥīṭūna bishay'im min 'ilmihī illā bimā shā'",
         banglaTranslit: 'ইয়া\'লামু মা বাইনা আইদিহিম ওয়ামা খালফাহুম। ওয়ালা ইউহিতুনা বিশাইয়িম মিন ইলমিহি ইল্লা বিমা শা\'আ',
         meaningEn: 'He knows what is before them and what is behind them, and they cannot encompass anything of His knowledge except what He wills',
@@ -1370,7 +1372,7 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
         ],
       },
       {
-        arabic: 'وَسِعَ كُرْسِيُّهُ السَّمَاوَاتِ وَالْأَرْضَ ۖ وَلَا يَئُودُهُ حِفْظُهُمَا ۚ وَهُوَ الْعَلِيُّ الْعَظِيمُ',
+        arabic: 'وَسِعَ كُرْسِيُّهُ ٱلسَّمَٰوَٰتِ وَٱلْأَرْضَ ۖ وَلَا يَـُٔودُهُۥ حِفْظُهُمَا ۚ وَهُوَ ٱلْعَلِىُّ ٱلْعَظِيمُ',
         translit: "wasi'a kursiyyuhus-samāwāti wal-arḍa, wa lā ya'ūduhu ḥifẓuhumā, wa huwal-'aliyyul-'aẓīm",
         banglaTranslit: 'ওয়াসিআ কুরসিয়্যুহুস সামাওয়াতি ওয়াল আরদ। ওয়ালা ইয়াউদুহু হিফযুহুমা। ওয়া হুওয়াল আলিয়্যুল আযিম',
         meaningEn: 'His Throne extends over the heavens and earth, and their preservation does not tire Him. He is the Most High, the Magnificent',
@@ -1388,12 +1390,12 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
 
   kafiroon: {
     reference: 'কুরআনুল কারিম (সূরা আল-কাফিরুন)',
-    fullArabic: 'قُلْ يَا أَيُّهَا الْكَافِرُونَ\nلَا أَعْبُدُ مَا تَعْبُدُونَ\nوَلَا أَنتُمْ عَابِدُونَ مَا أَعْبُدُ\nوَلَا أَنَا عَابِدٌ مَّا عَبَدتُّمْ\nوَلَا أَنتُمْ عَابِدُونَ مَا أَعْبُدُ\nلَكُمْ دِينُكُمْ وَلِيَ دِينِ',
+    fullArabic: [Q.bismillah, ...Q.kafiroon].join('\n'),
     fullBanglaTranslit: 'কুল ইয়া আইয়্যুহাল কাফিরুন। লা আ\'বুদু মা তা\'বুদুন। ওয়ালা আনতুম আবিদুনা মা আ\'বুদ। ওয়ালা আনা আবিদুম মা আবাদতুম। ওয়ালা আনতুম আবিদুনা মা আ\'বুদ। লাকুম দিনুকুম ওয়ালিয়া দিন।',
     fullMeaningBn: 'বলো: হে কাফিরগণ! আমি তাদের ইবাদত করি না যাদের তোমরা ইবাদত করো। এবং তোমরাও তাঁর ইবাদতকারী নও যাঁর আমি ইবাদত করি। আমি তাদের ইবাদতকারী নই যাদের তোমরা ইবাদত করেছ। এবং তোমরাও তাঁর ইবাদতকারী নও যাঁর আমি ইবাদত করি। তোমাদের জন্য তোমাদের দীন এবং আমার জন্য আমার দীন।',
     segments: [
       {
-        arabic: 'قُلْ يَا أَيُّهَا الْكَافِرُونَ',
+        arabic: Q.kafiroon[0],
         translit: 'Qul yā ayyuhal-kāfirūn',
         banglaTranslit: 'কুল ইয়া আইয়্যুহাল কাফিরুন',
         meaningEn: 'Say: O you disbelievers!',
@@ -1405,7 +1407,7 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
         ],
       },
       {
-        arabic: 'لَا أَعْبُدُ مَا تَعْبُدُونَ\nوَلَا أَنتُمْ عَابِدُونَ مَا أَعْبُدُ',
+        arabic: [Q.kafiroon[1], Q.kafiroon[2], Q.kafiroon[3], Q.kafiroon[4]].join('\n'),
         translit: "lā a'budu mā ta'budūna, wa lā antum 'ābidūna mā a'bud",
         banglaTranslit: 'লা আ\'বুদু মা তা\'বুদুন। ওয়ালা আনতুম আবিদুনা মা আ\'বুদ',
         meaningEn: 'I do not worship what you worship, nor do you worship what I worship',
@@ -1418,7 +1420,7 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
         ],
       },
       {
-        arabic: 'لَكُمْ دِينُكُمْ وَلِيَ دِينِ',
+        arabic: Q.kafiroon[5],
         translit: 'lakum dīnukum wa liya dīn',
         banglaTranslit: 'লাকুম দিনুকুম ওয়ালিয়া দিন',
         meaningEn: 'For you is your religion, and for me is my religion',
