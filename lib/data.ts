@@ -1525,12 +1525,12 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
 
   alhamdulillah: {
     reference: 'কুরআনুল কারিম (সূরা আল-ফাতিহা ১:২)',
-    fullArabic: 'الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ',
+    fullArabic: Q.fatiha[1],
     fullBanglaTranslit: 'আলহামদুলিল্লাহি রাব্বিল আলামিন',
     fullMeaningBn: 'সমস্ত প্রশংসা আল্লাহর যিনি সমগ্র জগতের রব।',
     segments: [
       {
-        arabic: 'الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ',
+        arabic: Q.fatiha[1],
         translit: 'Alḥamdu lillāhi rabbil-ālamīn',
         banglaTranslit: 'আলহামদুলিল্লাহি রাব্বিল আলামিন',
         meaningEn: 'All praise is for Allah, Lord of all the worlds',
