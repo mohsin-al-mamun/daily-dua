@@ -79,6 +79,18 @@ export default function CategoryClient({
       <main className="main-wrap">
         {filteredDuas.length > 0 ? (
           <div className="cards-grid">
+            {cat.id === 'after-salat' && !q && (
+              <Link className="dua-card read-all-card" href={`/category/${cat.id}/all`}>
+                <div className="card-top">
+                  <div className="ra-card-icon">📜</div>
+                </div>
+                <div className="card-btm">
+                  <div className="card-title-bn">ধারাবাহিক পাঠ</div>
+                  <div className="card-title-ar" style={{ color: 'var(--gold)' }}>একসাথে সব দুআ পড়ুন</div>
+                  <div className="card-read">শুরু করুন <span aria-hidden="true">→</span></div>
+                </div>
+              </Link>
+            )}
             {filteredDuas.map((dua) => (
               <Link key={dua.id} className="dua-card" href={`/dua/${dua.id}`}>
                 <div className="card-top">
