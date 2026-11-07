@@ -45,6 +45,8 @@ export const DUAS: DuaMeta[] = [
   { id: 'ruku',         cat: 'salat',   titleAr: 'دعاء الركوع',           titleBn: 'রুকুর তাসবিহ',             firstLine: 'سُبْحَانَ رَبِّيَ الْعَظِيمِ' },
   { id: 'sijdah',       cat: 'salat',   titleAr: 'دعاء السجود',           titleBn: 'সিজদার তাসবিহ',            firstLine: 'سُبْحَانَ رَبِّيَ الْأَعْلَى' },
   { id: 'qiyam',        cat: 'salat',   titleAr: 'دعاء الاستفتاح',        titleBn: 'সানা',                     firstLine: 'سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ وَتَبَارَكَ اسْمُكَ' },
+  { id: 'dua-qunut', cat: 'salat', titleAr: 'دعاء القنوت', titleBn: 'দুআ কুনূত (বিতর)', firstLine: 'اللَّهُمَّ إِنَّا نَسْتَعِينُكَ وَنَسْتَغْفِرُكَ' },
+  { id: 'dua-qunut-hasan', cat: 'salat', titleAr: 'دعاء القنوت (حديث الحسن)', titleBn: 'দুআ কুনূত (হাসান ইবনে আলী রা.)', firstLine: 'اللَّهُمَّ اهْدِنِي فِيمَنْ هَدَيْتَ' },
   // Quran
   { id: 'fatiha',       cat: 'quran',   titleAr: 'الفاتحة',               titleBn: 'সূরা আল-ফাতিহা',          firstLine: 'بِسْمِ اللَّهِ الرَّحْمَنِ الرَّحِيمِ' },
   { id: 'ikhlas',       cat: 'quran',   titleAr: 'الإخلاص',               titleBn: 'সূরা আল-ইখলাস',           firstLine: 'قُلْ هُوَ اللَّهُ أَحَدٌ' },
@@ -2056,6 +2058,213 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
       },
     ],
   },
+  'dua-qunut': {
+    reference: 'বিতর নামাজের ৩য় রাকাতে পঠিত (হানাফি মাযহাব) · সাহাবী উমর রা. থেকে বর্ণিত আছার',
+    fullArabic: 'اللَّهُمَّ إِنَّا نَسْتَعِينُكَ وَنَسْتَغْفِرُكَ\nوَنُؤْمِنُ بِكَ وَنَتَوَكَّلُ عَلَيْكَ\nوَنُثْنِي عَلَيْكَ الْخَيْرَ وَنَشْكُرُكَ وَلَا نَكْفُرُكَ\nوَنَخْلَعُ وَنَتْرُكُ مَنْ يَفْجُرُكَ\nاللَّهُمَّ إِيَّاكَ نَعْبُدُ وَلَكَ نُصَلِّي وَنَسْجُدُ\nوَإِلَيْكَ نَسْعَى وَنَحْفِدُ\nوَنَرْجُو رَحْمَتَكَ وَنَخْشَى عَذَابَكَ\nإِنَّ عَذَابَكَ بِالْكُفَّارِ مُلْحِقٌ',
+    fullBanglaTranslit: 'আল্লাহুম্মা ইন্না নাস্তাঈনুকা ওয়া নাস্তাগফিরুকা ওয়া নুমিনু বিকা ওয়া নাতাওয়াক্কালু আলাইকা ওয়া নুসনী আলাইকাল খাইরা ওয়া নাশকুরুকা ওয়া লা নাকফুরুকা ওয়া নাখলাউ ওয়া নাতরুকু মাই ইয়াফজুরুকা আল্লাহুম্মা ইইয়্যাকা নাবুদু ওয়া লাকা নুসাল্লী ওয়া নাসজুদু ওয়া ইলাইকা নাসআ ওয়া নাহফিদু ওয়া নারজু রাহমাতাকা ওয়া নাখশা আযাবাকা ইন্না আযাবাকা বিল কুফফারি মুলহিক',
+    fullMeaningBn: 'হে আল্লাহ! আমরা আপনার কাছে সাহায্য চাই এবং ক্ষমা প্রার্থনা করি আপনার প্রতি ঈমান রাখি এবং আপনার উপর ভরসা করি উত্তমভাবে আপনার প্রশংসা করি, আপনার শুকরিয়া আদায় করি এবং আপনার অকৃতজ্ঞ হই না যারা আপনার নাফরমানি করে তাদের আমরা ত্যাগ ও পরিহার করি হে আল্লাহ! আমরা কেবল আপনারই ইবাদত করি, আপনারই জন্য নামাজ পড়ি ও সিজদা করি আপনার দিকেই আমরা ছুটে যাই ও দ্রুত অগ্রসর হই আপনার রহমতের আশা করি এবং আপনার আযাবকে ভয় করি নিশ্চয়ই আপনার আযাব কাফিরদের উপর পতিত হবে',
+    segments: [
+      {
+        arabic: 'اللَّهُمَّ إِنَّا نَسْتَعِينُكَ وَنَسْتَغْفِرُكَ',
+        translit: 'Allāhumma innā nastaʿīnuka wa nastaghfiruka',
+        banglaTranslit: 'আল্লাহুম্মা ইন্না নাস্তাঈনুকা ওয়া নাস্তাগফিরুকা',
+        meaningBn: 'হে আল্লাহ! আমরা আপনার কাছে সাহায্য চাই এবং ক্ষমা প্রার্থনা করি',
+        meaningEn: 'O Allah, we seek Your help and Your forgiveness',
+        words: [
+          { ar: 'اللَّهُمَّ', tr: 'Allāhumma', en: 'O Allah', bn: 'হে আল্লাহ' },
+          { ar: 'إِنَّا', tr: 'innā', en: 'indeed we', bn: 'নিশ্চয়ই আমরা' },
+          { ar: 'نَسْتَعِينُكَ', tr: 'nastaʿīnuka', en: 'we seek Your help', bn: 'আমরা আপনার সাহায্য চাই' },
+          { ar: 'وَنَسْتَغْفِرُكَ', tr: 'wa nastaghfiruka', en: 'and we seek Your forgiveness', bn: 'এবং আপনার কাছে ক্ষমা চাই' },
+        ],
+      },
+      {
+        arabic: 'وَنُؤْمِنُ بِكَ وَنَتَوَكَّلُ عَلَيْكَ',
+        translit: 'Wa nuʾminu bika wa natawakkalu ʿalayka',
+        banglaTranslit: 'ওয়া নুমিনু বিকা ওয়া নাতাওয়াক্কালু আলাইকা',
+        meaningBn: 'আপনার প্রতি ঈমান রাখি এবং আপনার উপর ভরসা করি',
+        meaningEn: 'We believe in You and place our trust in You',
+        words: [
+          { ar: 'وَنُؤْمِنُ بِكَ', tr: 'wa nuʾminu bika', en: 'and we believe in You', bn: 'এবং আপনার প্রতি ঈমান রাখি' },
+          { ar: 'وَنَتَوَكَّلُ عَلَيْكَ', tr: 'wa natawakkalu ʿalayka', en: 'and we rely on You', bn: 'এবং আপনার উপর ভরসা করি' },
+        ],
+      },
+      {
+        arabic: 'وَنُثْنِي عَلَيْكَ الْخَيْرَ وَنَشْكُرُكَ وَلَا نَكْفُرُكَ',
+        translit: 'Wa nuthnī ʿalaykal-khayra wa nashkuruka wa lā nakfuruka',
+        banglaTranslit: 'ওয়া নুসনী আলাইকাল খাইরা ওয়া নাশকুরুকা ওয়া লা নাকফুরুকা',
+        meaningBn: 'উত্তমভাবে আপনার প্রশংসা করি, আপনার শুকরিয়া আদায় করি এবং আপনার অকৃতজ্ঞ হই না',
+        meaningEn: 'We praise You with all good, thank You, and are never ungrateful to You',
+        words: [
+          { ar: 'وَنُثْنِي عَلَيْكَ الْخَيْرَ', tr: 'wa nuthnī ʿalaykal-khayra', en: 'and we praise You with good', bn: 'এবং উত্তমভাবে আপনার প্রশংসা করি' },
+          { ar: 'وَنَشْكُرُكَ', tr: 'wa nashkuruka', en: 'and we thank You', bn: 'এবং আপনার শুকরিয়া আদায় করি' },
+          { ar: 'وَلَا نَكْفُرُكَ', tr: 'wa lā nakfuruka', en: 'and we are not ungrateful to You', bn: 'এবং আপনার অকৃতজ্ঞ হই না' },
+        ],
+      },
+      {
+        arabic: 'وَنَخْلَعُ وَنَتْرُكُ مَنْ يَفْجُرُكَ',
+        translit: 'Wa nakhlaʿu wa natruku man yafjuruka',
+        banglaTranslit: 'ওয়া নাখলাউ ওয়া নাতরুকু মাই ইয়াফজুরুকা',
+        meaningBn: 'যারা আপনার নাফরমানি করে তাদের আমরা ত্যাগ ও পরিহার করি',
+        meaningEn: 'We cast off and abandon whoever disobeys You',
+        words: [
+          { ar: 'وَنَخْلَعُ', tr: 'wa nakhlaʿu', en: 'and we cast off', bn: 'এবং আমরা বর্জন করি' },
+          { ar: 'وَنَتْرُكُ', tr: 'wa natruku', en: 'and we leave', bn: 'এবং পরিত্যাগ করি' },
+          { ar: 'مَنْ يَفْجُرُكَ', tr: 'man yafjuruka', en: 'whoever disobeys You', bn: 'যে আপনার নাফরমানি করে' },
+        ],
+      },
+      {
+        arabic: 'اللَّهُمَّ إِيَّاكَ نَعْبُدُ وَلَكَ نُصَلِّي وَنَسْجُدُ',
+        translit: 'Allāhumma iyyāka naʿbudu wa laka nuṣallī wa nasjudu',
+        banglaTranslit: 'আল্লাহুম্মা ইইয়্যাকা নাবুদু ওয়া লাকা নুসাল্লী ওয়া নাসজুদু',
+        meaningBn: 'হে আল্লাহ! আমরা কেবল আপনারই ইবাদত করি, আপনারই জন্য নামাজ পড়ি ও সিজদা করি',
+        meaningEn: 'O Allah, You alone we worship; for You we pray and prostrate',
+        words: [
+          { ar: 'اللَّهُمَّ', tr: 'Allāhumma', en: 'O Allah', bn: 'হে আল্লাহ' },
+          { ar: 'إِيَّاكَ نَعْبُدُ', tr: 'iyyāka naʿbudu', en: 'You alone we worship', bn: 'আমরা কেবল আপনারই ইবাদত করি' },
+          { ar: 'وَلَكَ نُصَلِّي', tr: 'wa laka nuṣallī', en: 'and for You we pray', bn: 'এবং আপনারই জন্য নামাজ পড়ি' },
+          { ar: 'وَنَسْجُدُ', tr: 'wa nasjudu', en: 'and we prostrate', bn: 'এবং সিজদা করি' },
+        ],
+      },
+      {
+        arabic: 'وَإِلَيْكَ نَسْعَى وَنَحْفِدُ',
+        translit: 'Wa ilayka nasʿā wa naḥfidu',
+        banglaTranslit: 'ওয়া ইলাইকা নাসআ ওয়া নাহফিদু',
+        meaningBn: 'আপনার দিকেই আমরা ছুটে যাই ও দ্রুত অগ্রসর হই',
+        meaningEn: 'And toward You we hasten and strive',
+        words: [
+          { ar: 'وَإِلَيْكَ', tr: 'wa ilayka', en: 'and to You', bn: 'এবং আপনার দিকে' },
+          { ar: 'نَسْعَى', tr: 'nasʿā', en: 'we hasten', bn: 'আমরা ছুটে যাই' },
+          { ar: 'وَنَحْفِدُ', tr: 'wa naḥfidu', en: 'and we hurry in service', bn: 'এবং দ্রুত অগ্রসর হই' },
+        ],
+      },
+      {
+        arabic: 'وَنَرْجُو رَحْمَتَكَ وَنَخْشَى عَذَابَكَ',
+        translit: 'Wa narjū raḥmataka wa nakhshā ʿadhābaka',
+        banglaTranslit: 'ওয়া নারজু রাহমাতাকা ওয়া নাখশা আযাবাকা',
+        meaningBn: 'আপনার রহমতের আশা করি এবং আপনার আযাবকে ভয় করি',
+        meaningEn: 'We hope for Your mercy and fear Your punishment',
+        words: [
+          { ar: 'وَنَرْجُو رَحْمَتَكَ', tr: 'wa narjū raḥmataka', en: 'and we hope for Your mercy', bn: 'এবং আপনার রহমতের আশা করি' },
+          { ar: 'وَنَخْشَى عَذَابَكَ', tr: 'wa nakhshā ʿadhābaka', en: 'and we fear Your punishment', bn: 'এবং আপনার আযাবকে ভয় করি' },
+        ],
+      },
+      {
+        arabic: 'إِنَّ عَذَابَكَ بِالْكُفَّارِ مُلْحِقٌ',
+        translit: 'Inna ʿadhābaka bil-kuffāri mulḥiqun',
+        banglaTranslit: 'ইন্না আযাবাকা বিল কুফফারি মুলহিক',
+        meaningBn: 'নিশ্চয়ই আপনার আযাব কাফিরদের উপর পতিত হবে',
+        meaningEn: 'Indeed Your punishment will overtake the disbelievers',
+        words: [
+          { ar: 'إِنَّ عَذَابَكَ', tr: 'inna ʿadhābaka', en: 'indeed Your punishment', bn: 'নিশ্চয়ই আপনার আযাব' },
+          { ar: 'بِالْكُفَّارِ', tr: 'bil-kuffāri', en: 'upon the disbelievers', bn: 'কাফিরদের উপর' },
+          { ar: 'مُلْحِقٌ', tr: 'mulḥiqun', en: 'will overtake', bn: 'পতিত হবে' },
+        ],
+      },
+    ],
+  },
+
+  'dua-qunut-hasan': {
+    reference: 'আবু দাউদ ১৪২৫ · তিরমিযি ৪৬৪ · নাসায়ি — নবী ﷺ হাসান ইবনে আলী রা.-কে বিতরের জন্য শিখিয়েছেন',
+    fullArabic: 'اللَّهُمَّ اهْدِنِي فِيمَنْ هَدَيْتَ\nوَعَافِنِي فِيمَنْ عَافَيْتَ\nوَتَوَلَّنِي فِيمَنْ تَوَلَّيْتَ\nوَبَارِكْ لِي فِيمَا أَعْطَيْتَ\nوَقِنِي شَرَّ مَا قَضَيْتَ\nفَإِنَّكَ تَقْضِي وَلَا يُقْضَى عَلَيْكَ\nوَإِنَّهُ لَا يَذِلُّ مَنْ وَالَيْتَ\nتَبَارَكْتَ رَبَّنَا وَتَعَالَيْتَ',
+    fullBanglaTranslit: 'আল্লাহুম্মাহদিনী ফীমান হাদাইতা ওয়া আফিনী ফীমান আফাইতা ওয়া তাওয়াল্লানী ফীমান তাওয়াল্লাইতা ওয়া বারিক লী ফীমা আতাইতা ওয়া কিনী শাররা মা কাযাইতা ফাইন্নাকা তাকযী ওয়া লা ইউকযা আলাইকা ওয়া ইন্নাহু লা ইয়াযিল্লু মান ওয়ালাইতা তাবারাকতা রাব্বানা ওয়া তাআলাইতা',
+    fullMeaningBn: 'হে আল্লাহ! যাদের আপনি হিদায়াত দিয়েছেন তাদের মধ্যে আমাকেও হিদায়াত দিন যাদের আপনি নিরাপত্তা দিয়েছেন তাদের মধ্যে আমাকেও নিরাপত্তা দিন যাদের আপনি অভিভাবকত্ব দিয়েছেন তাদের মধ্যে আমারও অভিভাবক হোন আপনি আমাকে যা দিয়েছেন তাতে বরকত দান করুন আপনি যা ফয়সালা করেছেন তার অনিষ্ট থেকে আমাকে রক্ষা করুন কারণ আপনিই ফয়সালা করেন, আপনার উপর কেউ ফয়সালা করতে পারে না আপনি যাকে বন্ধু বানিয়েছেন সে কখনো অপমানিত হয় না হে আমাদের রব! আপনি বরকতময় ও সর্বোচ্চ মর্যাদাবান',
+    segments: [
+      {
+        arabic: 'اللَّهُمَّ اهْدِنِي فِيمَنْ هَدَيْتَ',
+        translit: 'Allāhumma ihdinī fīman hadayta',
+        banglaTranslit: 'আল্লাহুম্মাহদিনী ফীমান হাদাইতা',
+        meaningBn: 'হে আল্লাহ! যাদের আপনি হিদায়াত দিয়েছেন তাদের মধ্যে আমাকেও হিদায়াত দিন',
+        meaningEn: 'O Allah, guide me among those You have guided',
+        words: [
+          { ar: 'اللَّهُمَّ', tr: 'Allāhumma', en: 'O Allah', bn: 'হে আল্লাহ' },
+          { ar: 'اهْدِنِي', tr: 'ihdinī', en: 'guide me', bn: 'আমাকে হিদায়াত দিন' },
+          { ar: 'فِيمَنْ هَدَيْتَ', tr: 'fīman hadayta', en: 'among those You guided', bn: 'যাদের আপনি হিদায়াত দিয়েছেন তাদের মধ্যে' },
+        ],
+      },
+      {
+        arabic: 'وَعَافِنِي فِيمَنْ عَافَيْتَ',
+        translit: 'Wa ʿāfinī fīman ʿāfayta',
+        banglaTranslit: 'ওয়া আফিনী ফীমান আফাইতা',
+        meaningBn: 'যাদের আপনি নিরাপত্তা দিয়েছেন তাদের মধ্যে আমাকেও নিরাপত্তা দিন',
+        meaningEn: 'Grant me well-being among those You have granted well-being',
+        words: [
+          { ar: 'وَعَافِنِي', tr: 'wa ʿāfinī', en: 'and grant me well-being', bn: 'এবং আমাকে নিরাপত্তা দিন' },
+          { ar: 'فِيمَنْ عَافَيْتَ', tr: 'fīman ʿāfayta', en: 'among those You granted well-being', bn: 'যাদের আপনি নিরাপত্তা দিয়েছেন তাদের মধ্যে' },
+        ],
+      },
+      {
+        arabic: 'وَتَوَلَّنِي فِيمَنْ تَوَلَّيْتَ',
+        translit: 'Wa tawallanī fīman tawallayta',
+        banglaTranslit: 'ওয়া তাওয়াল্লানী ফীমান তাওয়াল্লাইতা',
+        meaningBn: 'যাদের আপনি অভিভাবকত্ব দিয়েছেন তাদের মধ্যে আমারও অভিভাবক হোন',
+        meaningEn: 'Take me into Your care among those You have taken into Your care',
+        words: [
+          { ar: 'وَتَوَلَّنِي', tr: 'wa tawallanī', en: 'and take charge of me', bn: 'এবং আমার অভিভাবক হোন' },
+          { ar: 'فِيمَنْ تَوَلَّيْتَ', tr: 'fīman tawallayta', en: 'among those You took charge of', bn: 'যাদের আপনি অভিভাবকত্ব দিয়েছেন তাদের মধ্যে' },
+        ],
+      },
+      {
+        arabic: 'وَبَارِكْ لِي فِيمَا أَعْطَيْتَ',
+        translit: 'Wa bārik lī fīmā aʿṭayta',
+        banglaTranslit: 'ওয়া বারিক লী ফীমা আতাইতা',
+        meaningBn: 'আপনি আমাকে যা দিয়েছেন তাতে বরকত দান করুন',
+        meaningEn: 'And bless me in what You have given',
+        words: [
+          { ar: 'وَبَارِكْ لِي', tr: 'wa bārik lī', en: 'and bless for me', bn: 'এবং আমাকে বরকত দিন' },
+          { ar: 'فِيمَا أَعْطَيْتَ', tr: 'fīmā aʿṭayta', en: 'in what You have given', bn: 'আপনি যা দিয়েছেন তাতে' },
+        ],
+      },
+      {
+        arabic: 'وَقِنِي شَرَّ مَا قَضَيْتَ',
+        translit: 'Wa qinī sharra mā qaḍayta',
+        banglaTranslit: 'ওয়া কিনী শাররা মা কাযাইতা',
+        meaningBn: 'আপনি যা ফয়সালা করেছেন তার অনিষ্ট থেকে আমাকে রক্ষা করুন',
+        meaningEn: 'And protect me from the evil of what You have decreed',
+        words: [
+          { ar: 'وَقِنِي', tr: 'wa qinī', en: 'and protect me', bn: 'এবং আমাকে রক্ষা করুন' },
+          { ar: 'شَرَّ', tr: 'sharra', en: 'from the evil of', bn: 'অনিষ্ট থেকে' },
+          { ar: 'مَا قَضَيْتَ', tr: 'mā qaḍayta', en: 'what You decreed', bn: 'আপনি যা ফয়সালা করেছেন' },
+        ],
+      },
+      {
+        arabic: 'فَإِنَّكَ تَقْضِي وَلَا يُقْضَى عَلَيْكَ',
+        translit: 'Fa-innaka taqḍī wa lā yuqḍā ʿalayka',
+        banglaTranslit: 'ফাইন্নাকা তাকযী ওয়া লা ইউকযা আলাইকা',
+        meaningBn: 'কারণ আপনিই ফয়সালা করেন, আপনার উপর কেউ ফয়সালা করতে পারে না',
+        meaningEn: 'For You decree, and none can decree against You',
+        words: [
+          { ar: 'فَإِنَّكَ', tr: 'fa-innaka', en: 'for indeed You', bn: 'কারণ নিশ্চয়ই আপনি' },
+          { ar: 'تَقْضِي', tr: 'taqḍī', en: 'decree', bn: 'ফয়সালা করেন' },
+          { ar: 'وَلَا يُقْضَى عَلَيْكَ', tr: 'wa lā yuqḍā ʿalayka', en: 'and none decrees over You', bn: 'এবং আপনার উপর কেউ ফয়সালা করতে পারে না' },
+        ],
+      },
+      {
+        arabic: 'وَإِنَّهُ لَا يَذِلُّ مَنْ وَالَيْتَ',
+        translit: 'Wa innahu lā yadhillu man wālayta',
+        banglaTranslit: 'ওয়া ইন্নাহু লা ইয়াযিল্লু মান ওয়ালাইতা',
+        meaningBn: 'আপনি যাকে বন্ধু বানিয়েছেন সে কখনো অপমানিত হয় না',
+        meaningEn: 'And whoever You befriend is never humiliated',
+        words: [
+          { ar: 'وَإِنَّهُ', tr: 'wa innahu', en: 'and indeed', bn: 'এবং নিশ্চয়ই' },
+          { ar: 'لَا يَذِلُّ', tr: 'lā yadhillu', en: 'is never humiliated', bn: 'কখনো অপমানিত হয় না' },
+          { ar: 'مَنْ وَالَيْتَ', tr: 'man wālayta', en: 'whom You befriend', bn: 'আপনি যাকে বন্ধু বানিয়েছেন' },
+        ],
+      },
+      {
+        arabic: 'تَبَارَكْتَ رَبَّنَا وَتَعَالَيْتَ',
+        translit: 'Tabārakta rabbanā wa taʿālayta',
+        banglaTranslit: 'তাবারাকতা রাব্বানা ওয়া তাআলাইতা',
+        meaningBn: 'হে আমাদের রব! আপনি বরকতময় ও সর্বোচ্চ মর্যাদাবান',
+        meaningEn: 'Blessed are You, our Lord, and Exalted',
+        words: [
+          { ar: 'تَبَارَكْتَ', tr: 'tabārakta', en: 'blessed are You', bn: 'আপনি বরকতময়' },
+          { ar: 'رَبَّنَا', tr: 'rabbanā', en: 'our Lord', bn: 'হে আমাদের রব' },
+          { ar: 'وَتَعَالَيْتَ', tr: 'wa taʿālayta', en: 'and exalted', bn: 'এবং সর্বোচ্চ মর্যাদাবান' },
+        ],
+      },
+    ],
+  },
+
 };
 
 // Copies shown in 'durud-istighfar' reuse the original's detail
