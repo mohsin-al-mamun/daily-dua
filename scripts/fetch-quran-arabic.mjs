@@ -45,7 +45,7 @@ function makeBismillahStripper(bismillahText) {
 
 console.log('Fetching Quranic Arabic from api.alquran.cloud...');
 
-const [fatihaRaw, ikhlasRaw, falaqRaw, nasRaw, kafiroonRaw, ayatulKursi, ayah7_23, ayah23_118, ayah33_56] = await Promise.all([
+const [fatihaRaw, ikhlasRaw, falaqRaw, nasRaw, kafiroonRaw, ayatulKursi, ayah7_23, ayah23_118, ayah33_56, ayah3_173, ayah21_87, ayah2_201] = await Promise.all([
   fetchSurah(1),
   fetchSurah(112),
   fetchSurah(113),
@@ -55,6 +55,9 @@ const [fatihaRaw, ikhlasRaw, falaqRaw, nasRaw, kafiroonRaw, ayatulKursi, ayah7_2
   fetchAyah(7, 23),
   fetchAyah(23, 118),
   fetchAyah(33, 56),
+  fetchAyah(3, 173),
+  fetchAyah(21, 87),
+  fetchAyah(2, 201),
 ]);
 
 // Fatiha ayah[0] is purely the Bismillah — use it as the strip reference
@@ -70,7 +73,7 @@ const falaq = extractBismillah(falaqRaw);
 const nas = extractBismillah(nasRaw);
 const kafiroon = extractBismillah(kafiroonRaw);
 
-const out = { bismillah, fatiha, ikhlas, falaq, nas, kafiroon, ayatulKursi, ayah7_23, ayah23_118, ayah33_56 };
+const out = { bismillah, fatiha, ikhlas, falaq, nas, kafiroon, ayatulKursi, ayah7_23, ayah23_118, ayah33_56, ayah3_173, ayah21_87, ayah2_201 };
 
 writeFileSync(OUT, JSON.stringify(out, null, 2), 'utf8');
 console.log('Written → lib/quran-arabic.json');

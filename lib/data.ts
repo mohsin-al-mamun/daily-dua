@@ -55,9 +55,21 @@ export const DUAS: DuaMeta[] = [
   { id: 'ayatul-kursi', cat: 'quran',   titleAr: 'آية الكرسي',             titleBn: 'আয়াতুল কুরসি',            firstLine: 'اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ' },
   { id: 'kafiroon',     cat: 'quran',   titleAr: 'الكافرون',               titleBn: 'সূরা আল-কাফিরুন',         firstLine: 'قُلْ يَا أَيُّهَا الْكَافِرُونَ' },
   // Amal
-  { id: 'subhanallah',  cat: 'amal',    titleAr: 'التسبيح',               titleBn: 'তাসবিহ',                   firstLine: 'سُبْحَانَ اللَّهِ وَبِحَمْدِهِ سُبْحَانَ اللَّهِ الْعَظِيمِ' },
-  { id: 'kalima',       cat: 'amal',    titleAr: 'الكلمة الطيبة',          titleBn: 'কালিমা তাইয়্যেবা',        firstLine: 'لَا إِلَهَ إِلَّا اللَّهُ مُحَمَّدٌ رَسُولُ اللَّهِ' },
-  { id: 'alhamdulillah',cat: 'amal',    titleAr: 'الحمد لله',              titleBn: 'আলহামদুলিল্লাহ',           firstLine: 'الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ' },
+  { id: 'subhanallah',  cat: 'amal',    titleAr: 'التسبيح',               titleBn: 'তাসবিহ',                   firstLine: 'سُبْحَانَ اللَّهِ وَبِحَمْدِهِ سُبْحَانَ اللَّهِ الْعَظِيمِ', group: 'amal' },
+  { id: 'kalima',       cat: 'amal',    titleAr: 'الكلمة الطيبة',          titleBn: 'প্রথম কালিমা — তাইয়্যেবা',        firstLine: 'لَا إِلَهَ إِلَّا اللَّهُ مُحَمَّدٌ رَسُولُ اللَّهِ', group: 'kalima' },
+  { id: 'kalima-shahadat', cat: 'amal', group: 'kalima', titleAr: 'كلمة الشهادة', titleBn: 'দ্বিতীয় কালিমা — শাহাদাত', firstLine: 'أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ' },
+  { id: 'kalima-tamjid', cat: 'amal', group: 'kalima', titleAr: 'كلمة التمجيد', titleBn: 'তৃতীয় কালিমা — তামজীদ', firstLine: 'سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ وَلَا إِلَهَ إِلَّا اللَّهُ وَاللَّهُ أَكْبَرُ' },
+  { id: 'kalima-tawhid', cat: 'amal', group: 'kalima', titleAr: 'كلمة التوحيد', titleBn: 'চতুর্থ কালিমা — তাওহীদ', firstLine: 'لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ' },
+  { id: 'kalima-istighfar', cat: 'amal', group: 'kalima', titleAr: 'كلمة الاستغفار', titleBn: 'পঞ্চম কালিমা — ইস্তিগফার', firstLine: 'أَسْتَغْفِرُ اللَّهَ رَبِّي مِنْ كُلِّ ذَنْبٍ أَذْنَبْتُهُ' },
+  { id: 'kalima-radd-kufr', cat: 'amal', group: 'kalima', titleAr: 'كلمة رد الكفر', titleBn: 'ষষ্ঠ কালিমা — রদ্দে কুফর', firstLine: 'اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ أَنْ أُشْرِكَ بِكَ شَيْئًا وَأَنَا أَعْلَمُ بِهِ' },
+  { id: 'alhamdulillah',cat: 'amal',    titleAr: 'الحمد لله',              titleBn: 'আলহামদুলিল্লাহ',           firstLine: 'الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ', group: 'amal' },
+  { id: 'la-hawla', cat: 'amal', titleAr: 'لا حول ولا قوة إلا بالله', titleBn: 'লা হাওলা ওয়ালা কুওয়াতা ইল্লা বিল্লাহ', firstLine: 'لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ', group: 'amal' },
+  { id: 'baqiyat-salihat', cat: 'amal', titleAr: 'الباقيات الصالحات', titleBn: 'চার প্রিয় যিকির', firstLine: 'سُبْحَانَ اللَّهِ، وَالْحَمْدُ لِلَّهِ، وَلَا إِلَهَ إِلَّا اللَّهُ، وَاللَّهُ أَكْبَرُ', group: 'amal' },
+  { id: 'hasbunallah', cat: 'amal', titleAr: 'حسبنا الله ونعم الوكيل', titleBn: 'হাসবুনাল্লাহু ওয়া নিমাল ওয়াকীল', firstLine: 'حَسْبُنَا اللَّهُ وَنِعْمَ الْوَكِيلُ', group: 'amal' },
+  { id: 'dua-yunus', cat: 'amal', titleAr: 'دعاء يونس عليه السلام', titleBn: 'ইউনুস (আ.)-এর দুআ', firstLine: 'لَّآ إِلَٰهَ إِلَّآ أَنتَ سُبْحَٰنَكَ إِنِّى كُنتُ مِنَ ٱلظَّٰلِمِينَ', group: 'amal' },
+  { id: 'rabbana-atina', cat: 'amal', titleAr: 'ربنا آتنا في الدنيا حسنة', titleBn: 'রাব্বানা আতিনা ফিদ দুনিয়া হাসানাহ', firstLine: 'رَبَّنَآ ءَاتِنَا فِى ٱلدُّنْيَا حَسَنَةًۭ وَفِى ٱلْءَاخِرَةِ حَسَنَةًۭ', group: 'amal' },
+  { id: 'bismillah-la-yadurru', cat: 'amal', titleAr: 'بسم الله الذي لا يضر مع اسمه شيء', titleBn: 'সকাল-সন্ধ্যার সুরক্ষার যিকির', firstLine: 'بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ', group: 'amal' },
+  { id: 'radiytu-billah', cat: 'amal', titleAr: 'رضيت بالله ربا', titleBn: 'রাদীতু বিল্লাহি রাব্বা', firstLine: 'رَضِيتُ بِاللَّهِ رَبًّا، وَبِالْإِسْلَامِ دِينًا، وَبِمُحَمَّدٍ رَسُولًا', group: 'amal' },
   // Morning
   { id: 'morning-wakeup',     cat: 'masnun', titleAr: 'دعاء الاستيقاظ',  titleBn: 'ঘুম থেকে উঠার দুআ',    firstLine: 'الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا' },
   { id: 'morning-protection', cat: 'masnun', titleAr: 'دعاء الصباح',      titleBn: 'সকালের সুরক্ষার দুআ',  firstLine: 'اللَّهُمَّ بِكَ أَصْبَحْنَا وَبِكَ أَمْسَيْنَا' },
@@ -124,11 +136,19 @@ const W3356 = Q.ayah33_56.split(' ');
 
 // Optional sub-groups inside a category (order = display order)
 export const CAT_GROUPS: Record<string, { id: string; bn: string; en: string }[]> = {
+  amal: [
+    { id: 'kalima', bn: 'ছয় কালিমা', en: 'The Six Kalimas' },
+    { id: 'amal',   bn: 'অন্যান্য আমল ও যিকির', en: 'Other Deeds & Dhikr' },
+  ],
   'durud-istighfar': [
     { id: 'istighfar', bn: 'ইস্তিগফার', en: 'Seeking Forgiveness' },
     { id: 'durud',     bn: 'দরূদ',       en: 'Salawat upon the Prophet ﷺ' },
   ],
 };
+const W3173 = Q.ayah3_173.split(' ');
+const W2187 = Q.ayah21_87.split(' ');
+const W2201 = Q.ayah2_201.split(' ');
+
 
 export const DETAIL_MAP: Record<string, DuaDetail> = {
   tashahhud: {
@@ -2260,6 +2280,577 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
           { ar: 'تَبَارَكْتَ', tr: 'tabārakta', en: 'blessed are You', bn: 'আপনি বরকতময়' },
           { ar: 'رَبَّنَا', tr: 'rabbanā', en: 'our Lord', bn: 'হে আমাদের রব' },
           { ar: 'وَتَعَالَيْتَ', tr: 'wa taʿālayta', en: 'and exalted', bn: 'এবং সর্বোচ্চ মর্যাদাবান' },
+        ],
+      },
+    ],
+  },
+
+  'la-hawla': {
+    reference: 'সহীহ বুখারি ৪২০৫ · সহীহ মুসলিম ২৭০৪',
+    fullArabic: 'لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ',
+    fullBanglaTranslit: 'লা হাওলা ওয়ালা কুওয়াতা ইল্লা বিল্লাহ',
+    fullMeaningBn: 'আল্লাহর সাহায্য ছাড়া (মন্দ থেকে ফেরার) কোনো উপায় নেই এবং (ভালো কাজের) কোনো শক্তিও নেই',
+    segments: [
+      {
+        arabic: 'لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ',
+        translit: 'Lā ḥawla wa lā quwwata illā billāh',
+        banglaTranslit: 'লা হাওলা ওয়ালা কুওয়াতা ইল্লা বিল্লাহ',
+        meaningBn: 'আল্লাহর সাহায্য ছাড়া (মন্দ থেকে ফেরার) কোনো উপায় নেই এবং (ভালো কাজের) কোনো শক্তিও নেই',
+        meaningEn: 'There is no power and no strength except with Allah',
+        words: [
+          { ar: 'لَا حَوْلَ', tr: 'lā ḥawla', en: 'there is no power', bn: 'কোনো উপায় বা সামর্থ্য নেই' },
+          { ar: 'وَلَا قُوَّةَ', tr: 'wa lā quwwata', en: 'and no strength', bn: 'এবং কোনো শক্তি নেই' },
+          { ar: 'إِلَّا بِاللَّهِ', tr: 'illā billāh', en: 'except with Allah', bn: 'আল্লাহর সাহায্য ছাড়া' },
+        ],
+      },
+    ],
+  },
+
+  'baqiyat-salihat': {
+    reference: 'সহীহ মুসলিম ২১৩৭ · সহীহ মুসলিম ২৬৯৫',
+    fullArabic: 'سُبْحَانَ اللَّهِ\nوَالْحَمْدُ لِلَّهِ\nوَلَا إِلَهَ إِلَّا اللَّهُ\nوَاللَّهُ أَكْبَرُ',
+    fullBanglaTranslit: 'সুবহানাল্লাহ ওয়াল হামদু লিল্লাহ ওয়া লা ইলাহা ইল্লাল্লাহ ওয়াল্লাহু আকবার',
+    fullMeaningBn: 'আল্লাহ পবিত্র, সমস্ত প্রশংসা আল্লাহর, আল্লাহ ছাড়া কোনো ইলাহ নেই এবং আল্লাহ সর্বমহান।',
+    segments: [
+      {
+        arabic: 'سُبْحَانَ اللَّهِ',
+        translit: 'Subḥānallāh',
+        banglaTranslit: 'সুবহানাল্লাহ',
+        meaningBn: 'আল্লাহ পবিত্র',
+        meaningEn: 'Glory be to Allah',
+        words: [
+          { ar: 'سُبْحَانَ', tr: 'subḥāna', en: 'glory be', bn: 'পবিত্রতা' },
+          { ar: 'اللَّهِ', tr: 'Allāh', en: 'Allah', bn: 'আল্লাহর' },
+        ],
+      },
+      {
+        arabic: 'وَالْحَمْدُ لِلَّهِ',
+        translit: 'Wal-ḥamdu lillāh',
+        banglaTranslit: 'ওয়াল হামদু লিল্লাহ',
+        meaningBn: 'এবং সমস্ত প্রশংসা আল্লাহর',
+        meaningEn: 'And all praise is for Allah',
+        words: [
+          { ar: 'وَالْحَمْدُ', tr: 'wal-ḥamdu', en: 'and all praise', bn: 'এবং সমস্ত প্রশংসা' },
+          { ar: 'لِلَّهِ', tr: 'lillāh', en: 'is for Allah', bn: 'আল্লাহর জন্য' },
+        ],
+      },
+      {
+        arabic: 'وَلَا إِلَهَ إِلَّا اللَّهُ',
+        translit: 'Wa lā ilāha illallāh',
+        banglaTranslit: 'ওয়া লা ইলাহা ইল্লাল্লাহ',
+        meaningBn: 'এবং আল্লাহ ছাড়া কোনো ইলাহ নেই',
+        meaningEn: 'And there is no god but Allah',
+        words: [
+          { ar: 'وَلَا إِلَهَ', tr: 'wa lā ilāha', en: 'and there is no god', bn: 'এবং কোনো ইলাহ নেই' },
+          { ar: 'إِلَّا اللَّهُ', tr: 'illallāh', en: 'except Allah', bn: 'আল্লাহ ছাড়া' },
+        ],
+      },
+      {
+        arabic: 'وَاللَّهُ أَكْبَرُ',
+        translit: 'Wallāhu akbar',
+        banglaTranslit: 'ওয়াল্লাহু আকবার',
+        meaningBn: 'এবং আল্লাহ সর্বমহান',
+        meaningEn: 'And Allah is the Greatest',
+        words: [
+          { ar: 'وَاللَّهُ', tr: 'wallāhu', en: 'and Allah', bn: 'এবং আল্লাহ' },
+          { ar: 'أَكْبَرُ', tr: 'akbar', en: 'the Greatest', bn: 'সর্বমহান' },
+        ],
+      },
+    ],
+  },
+
+  'hasbunallah': {
+    reference: 'কুরআনুল কারিম (সূরা আলে ইমরান ৩:১৭৩) · সহীহ বুখারি ৪৫৬৩',
+    fullArabic: [sl(W3173, 13, 17)].join('\n'),
+    fullBanglaTranslit: 'হাসবুনাল্লাহু ওয়া নিমাল ওয়াকীল',
+    fullMeaningBn: 'আল্লাহই আমাদের জন্য যথেষ্ট এবং তিনি কতই না উত্তম কর্মবিধায়ক',
+    segments: [
+      {
+        arabic: sl(W3173, 13, 17),
+        translit: 'Ḥasbunallāhu wa niʿmal-wakīl',
+        banglaTranslit: 'হাসবুনাল্লাহু ওয়া নিমাল ওয়াকীল',
+        meaningBn: 'আল্লাহই আমাদের জন্য যথেষ্ট এবং তিনি কতই না উত্তম কর্মবিধায়ক',
+        meaningEn: 'Allah is sufficient for us, and He is the best Disposer of affairs',
+        words: [
+          { ar: sl(W3173, 13, 14), tr: 'ḥasbunā', en: 'sufficient for us', bn: 'আমাদের জন্য যথেষ্ট' },
+          { ar: sl(W3173, 14, 15), tr: 'Allāhu', en: 'Allah', bn: 'আল্লাহ' },
+          { ar: sl(W3173, 15, 16), tr: 'wa niʿma', en: 'and what an excellent', bn: 'এবং কতই উত্তম' },
+          { ar: sl(W3173, 16, 17), tr: 'al-wakīl', en: 'Disposer of affairs', bn: 'কর্মবিধায়ক' },
+        ],
+      },
+    ],
+  },
+
+  'dua-yunus': {
+    reference: 'কুরআনুল কারিম (সূরা আল-আম্বিয়া ২১:৮৭) · জামে তিরমিযি ৩৫০৫',
+    fullArabic: [sl(W2187, 14, 18), sl(W2187, 18, 19), sl(W2187, 19, 23)].join('\n'),
+    fullBanglaTranslit: 'লা ইলাহা ইল্লা আনতা সুবহানাকা ইন্নী কুনতু মিনায যালিমীন',
+    fullMeaningBn: 'আপনি ছাড়া কোনো ইলাহ নেই, আপনি পবিত্র; নিশ্চয়ই আমি জালিমদের অন্তর্ভুক্ত ছিলাম।',
+    segments: [
+      {
+        arabic: sl(W2187, 14, 18),
+        translit: 'Lā ilāha illā anta',
+        banglaTranslit: 'লা ইলাহা ইল্লা আনতা',
+        meaningBn: 'আপনি ছাড়া কোনো ইলাহ নেই',
+        meaningEn: 'There is no god but You',
+        words: [
+          { ar: sl(W2187, 14, 16), tr: 'lā ilāha', en: 'there is no god', bn: 'কোনো ইলাহ নেই' },
+          { ar: sl(W2187, 16, 18), tr: 'illā anta', en: 'except You', bn: 'আপনি ছাড়া' },
+        ],
+      },
+      {
+        arabic: sl(W2187, 18, 19),
+        translit: 'Subḥānaka',
+        banglaTranslit: 'সুবহানাকা',
+        meaningBn: 'আপনি পবিত্র',
+        meaningEn: 'Glory be to You',
+        words: [
+          { ar: sl(W2187, 18, 19), tr: 'subḥānaka', en: 'glory be to You', bn: 'আপনি পবিত্র' },
+        ],
+      },
+      {
+        arabic: sl(W2187, 19, 23),
+        translit: 'Innī kuntu minaẓ-ẓālimīn',
+        banglaTranslit: 'ইন্নী কুনতু মিনায যালিমীন',
+        meaningBn: 'নিশ্চয়ই আমি জালিমদের অন্তর্ভুক্ত ছিলাম',
+        meaningEn: 'Indeed, I was among the wrongdoers',
+        words: [
+          { ar: sl(W2187, 19, 20), tr: 'innī', en: 'indeed I', bn: 'নিশ্চয়ই আমি' },
+          { ar: sl(W2187, 20, 21), tr: 'kuntu', en: 'I was', bn: 'আমি ছিলাম' },
+          { ar: sl(W2187, 21, 23), tr: 'minaẓ-ẓālimīn', en: 'among the wrongdoers', bn: 'জালিমদের অন্তর্ভুক্ত' },
+        ],
+      },
+    ],
+  },
+
+  'rabbana-atina': {
+    reference: 'কুরআনুল কারিম (সূরা আল-বাকারা ২:২০১) · সহীহ বুখারি ৪৫২২ · সহীহ মুসলিম ২৬৯০',
+    fullArabic: [sl(W2201, 3, 8), sl(W2201, 8, 11), sl(W2201, 11, 14)].join('\n'),
+    fullBanglaTranslit: 'রাব্বানা আতিনা ফিদ দুনিয়া হাসানাহ ওয়া ফিল আখিরাতি হাসানাহ ওয়া কিনা আযাবান নার',
+    fullMeaningBn: 'হে আমাদের রব! আমাদের দুনিয়ায় কল্যাণ দিন এবং আখিরাতেও কল্যাণ দিন এবং আমাদের জাহান্নামের আযাব থেকে রক্ষা করুন',
+    segments: [
+      {
+        arabic: sl(W2201, 3, 8),
+        translit: 'Rabbanā ātinā fid-dunyā ḥasanah',
+        banglaTranslit: 'রাব্বানা আতিনা ফিদ দুনিয়া হাসানাহ',
+        meaningBn: 'হে আমাদের রব! আমাদের দুনিয়ায় কল্যাণ দিন',
+        meaningEn: 'Our Lord, give us good in this world',
+        words: [
+          { ar: sl(W2201, 3, 4), tr: 'rabbanā', en: 'our Lord', bn: 'হে আমাদের রব' },
+          { ar: sl(W2201, 4, 5), tr: 'ātinā', en: 'give us', bn: 'আমাদের দিন' },
+          { ar: sl(W2201, 5, 7), tr: 'fid-dunyā', en: 'in this world', bn: 'দুনিয়ায়' },
+          { ar: sl(W2201, 7, 8), tr: 'ḥasanah', en: 'good', bn: 'কল্যাণ' },
+        ],
+      },
+      {
+        arabic: sl(W2201, 8, 11),
+        translit: 'Wa fil-ākhirati ḥasanah',
+        banglaTranslit: 'ওয়া ফিল আখিরাতি হাসানাহ',
+        meaningBn: 'এবং আখিরাতেও কল্যাণ দিন',
+        meaningEn: 'and good in the Hereafter',
+        words: [
+          { ar: sl(W2201, 8, 10), tr: 'wa fil-ākhirati', en: 'and in the Hereafter', bn: 'এবং আখিরাতে' },
+          { ar: sl(W2201, 10, 11), tr: 'ḥasanah', en: 'good', bn: 'কল্যাণ' },
+        ],
+      },
+      {
+        arabic: sl(W2201, 11, 14),
+        translit: 'Wa qinā ʿadhāban-nār',
+        banglaTranslit: 'ওয়া কিনা আযাবান নার',
+        meaningBn: 'এবং আমাদের জাহান্নামের আযাব থেকে রক্ষা করুন',
+        meaningEn: 'and protect us from the punishment of the Fire',
+        words: [
+          { ar: sl(W2201, 11, 12), tr: 'wa qinā', en: 'and protect us', bn: 'এবং আমাদের রক্ষা করুন' },
+          { ar: sl(W2201, 12, 14), tr: 'ʿadhāban-nār', en: 'from the punishment of the Fire', bn: 'জাহান্নামের আযাব থেকে' },
+        ],
+      },
+    ],
+  },
+
+  'bismillah-la-yadurru': {
+    reference: 'সুনানে আবু দাউদ ৫০৮৮ · জামে তিরমিযি ৩৩৮৮',
+    fullArabic: 'بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ\nفِي الْأَرْضِ وَلَا فِي السَّمَاءِ\nوَهُوَ السَّمِيعُ الْعَلِيمُ',
+    fullBanglaTranslit: 'বিসমিল্লাহিল্লাযী লা ইয়াদুররু মাআ ইসমিহী শাইউন ফিল আরদি ওয়া লা ফিস সামাই ওয়া হুওয়াস সামীউল আলীম',
+    fullMeaningBn: 'আল্লাহর নামে, যাঁর নামের সাথে পৃথিবীতে ও আসমানে কোনো কিছু ক্ষতি করতে পারে না; আর তিনি সর্বশ্রোতা, সর্বজ্ঞ।',
+    segments: [
+      {
+        arabic: 'بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ',
+        translit: 'Bismillāhil-ladhī lā yaḍurru maʿa ismihi shayʾun',
+        banglaTranslit: 'বিসমিল্লাহিল্লাযী লা ইয়াদুররু মাআ ইসমিহী শাইউন',
+        meaningBn: 'আল্লাহর নামে, যাঁর নামের সাথে কোনো কিছু ক্ষতি করতে পারে না',
+        meaningEn: 'In the name of Allah, with whose name nothing can cause harm',
+        words: [
+          { ar: 'بِسْمِ اللَّهِ', tr: 'bismillāhi', en: 'in the name of Allah', bn: 'আল্লাহর নামে' },
+          { ar: 'الَّذِي', tr: 'alladhī', en: 'the One who', bn: 'যিনি' },
+          { ar: 'لَا يَضُرُّ', tr: 'lā yaḍurru', en: 'does not harm', bn: 'ক্ষতি করে না' },
+          { ar: 'مَعَ اسْمِهِ', tr: 'maʿa ismihi', en: 'with His name', bn: 'তাঁর নামের সাথে' },
+          { ar: 'شَيْءٌ', tr: 'shayʾun', en: 'anything', bn: 'কোনো কিছু' },
+        ],
+      },
+      {
+        arabic: 'فِي الْأَرْضِ وَلَا فِي السَّمَاءِ',
+        translit: 'Fil-arḍi wa lā fis-samāʾ',
+        banglaTranslit: 'ফিল আরদি ওয়া লা ফিস সামাই',
+        meaningBn: 'পৃথিবীতে ও আসমানে',
+        meaningEn: 'on earth or in the heavens',
+        words: [
+          { ar: 'فِي الْأَرْضِ', tr: 'fil-arḍi', en: 'on the earth', bn: 'পৃথিবীতে' },
+          { ar: 'وَلَا فِي السَّمَاءِ', tr: 'wa lā fis-samāʾi', en: 'nor in the heavens', bn: 'এবং আসমানেও না' },
+        ],
+      },
+      {
+        arabic: 'وَهُوَ السَّمِيعُ الْعَلِيمُ',
+        translit: 'Wa huwas-Samīʿul-ʿAlīm',
+        banglaTranslit: 'ওয়া হুওয়াস সামীউল আলীম',
+        meaningBn: 'আর তিনি সর্বশ্রোতা, সর্বজ্ঞ',
+        meaningEn: 'And He is the All-Hearing, the All-Knowing',
+        words: [
+          { ar: 'وَهُوَ', tr: 'wa huwa', en: 'and He', bn: 'এবং তিনি' },
+          { ar: 'السَّمِيعُ', tr: 'as-Samīʿ', en: 'the All-Hearing', bn: 'সর্বশ্রোতা' },
+          { ar: 'الْعَلِيمُ', tr: 'al-ʿAlīm', en: 'the All-Knowing', bn: 'সর্বজ্ঞ' },
+        ],
+      },
+    ],
+  },
+
+  'radiytu-billah': {
+    reference: 'সুনানে আবু দাউদ ১৫২৯ · সহীহ মুসলিম ১৮৮৪ · সহীহ মুসলিম ৩৮৬',
+    fullArabic: 'رَضِيتُ بِاللَّهِ رَبًّا\nوَبِالْإِسْلَامِ دِينًا\nوَبِمُحَمَّدٍ رَسُولًا',
+    fullBanglaTranslit: 'রাদীতু বিল্লাহি রাব্বা ওয়া বিল ইসলামি দীনা ওয়া বি মুহাম্মাদিন রাসূলা',
+    fullMeaningBn: 'আমি আল্লাহকে রব হিসেবে পেয়ে সন্তুষ্ট এবং ইসলামকে দীন হিসেবে পেয়ে এবং মুহাম্মাদ ﷺ-কে রাসূল হিসেবে পেয়ে',
+    segments: [
+      {
+        arabic: 'رَضِيتُ بِاللَّهِ رَبًّا',
+        translit: 'Raḍītu billāhi rabbā',
+        banglaTranslit: 'রাদীতু বিল্লাহি রাব্বা',
+        meaningBn: 'আমি আল্লাহকে রব হিসেবে পেয়ে সন্তুষ্ট',
+        meaningEn: 'I am pleased with Allah as my Lord',
+        words: [
+          { ar: 'رَضِيتُ', tr: 'raḍītu', en: 'I am pleased', bn: 'আমি সন্তুষ্ট' },
+          { ar: 'بِاللَّهِ', tr: 'billāhi', en: 'with Allah', bn: 'আল্লাহকে নিয়ে' },
+          { ar: 'رَبًّا', tr: 'rabbā', en: 'as Lord', bn: 'রব হিসেবে' },
+        ],
+      },
+      {
+        arabic: 'وَبِالْإِسْلَامِ دِينًا',
+        translit: 'Wa bil-islāmi dīnā',
+        banglaTranslit: 'ওয়া বিল ইসলামি দীনা',
+        meaningBn: 'এবং ইসলামকে দীন হিসেবে পেয়ে',
+        meaningEn: 'and with Islam as my religion',
+        words: [
+          { ar: 'وَبِالْإِسْلَامِ', tr: 'wa bil-islāmi', en: 'and with Islam', bn: 'এবং ইসলামকে নিয়ে' },
+          { ar: 'دِينًا', tr: 'dīnā', en: 'as religion', bn: 'দীন হিসেবে' },
+        ],
+      },
+      {
+        arabic: 'وَبِمُحَمَّدٍ رَسُولًا',
+        translit: 'Wa bi-Muḥammadin rasūlā',
+        banglaTranslit: 'ওয়া বি মুহাম্মাদিন রাসূলা',
+        meaningBn: 'এবং মুহাম্মাদ ﷺ-কে রাসূল হিসেবে পেয়ে',
+        meaningEn: 'and with Muhammad as my Messenger',
+        words: [
+          { ar: 'وَبِمُحَمَّدٍ', tr: 'wa bi-Muḥammadin', en: 'and with Muhammad', bn: 'এবং মুহাম্মাদকে নিয়ে' },
+          { ar: 'رَسُولًا', tr: 'rasūlā', en: 'as Messenger', bn: 'রাসূল হিসেবে' },
+        ],
+      },
+    ],
+  },
+
+  'kalima-shahadat': {
+    reference: 'প্রচলিত দ্বিতীয় কালিমা · সহীহ মুসলিম ২৩৪ (ওযুর পর শাহাদাত)',
+    fullArabic: 'أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ\nوَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ',
+    fullBanglaTranslit: 'আশহাদু আল লা ইলাহা ইল্লাল্লাহু ওয়াহদাহু লা শারীকা লাহু ওয়া আশহাদু আন্না মুহাম্মাদান আবদুহু ওয়া রাসূলুহু',
+    fullMeaningBn: 'আমি সাক্ষ্য দিচ্ছি, আল্লাহ ছাড়া কোনো ইলাহ নেই; তিনি এক, তাঁর কোনো শরিক নেই। এবং আমি সাক্ষ্য দিচ্ছি, মুহাম্মাদ ﷺ তাঁর বান্দা ও রাসূল।',
+    segments: [
+      {
+        arabic: 'أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ',
+        translit: 'Ashhadu an lā ilāha illallāhu waḥdahu lā sharīka lah',
+        banglaTranslit: 'আশহাদু আল লা ইলাহা ইল্লাল্লাহু ওয়াহদাহু লা শারীকা লাহু',
+        meaningBn: 'আমি সাক্ষ্য দিচ্ছি, আল্লাহ ছাড়া কোনো ইলাহ নেই; তিনি এক, তাঁর কোনো শরিক নেই',
+        meaningEn: 'I bear witness that there is no god but Allah, alone, with no partner',
+        words: [
+          { ar: 'أَشْهَدُ', tr: 'ashhadu', en: 'I bear witness', bn: 'আমি সাক্ষ্য দিচ্ছি' },
+          { ar: 'أَنْ لَا إِلَهَ', tr: 'an lā ilāha', en: 'that there is no god', bn: 'যে কোনো ইলাহ নেই' },
+          { ar: 'إِلَّا اللَّهُ', tr: 'illallāhu', en: 'except Allah', bn: 'আল্লাহ ছাড়া' },
+          { ar: 'وَحْدَهُ', tr: 'waḥdahu', en: 'alone', bn: 'তিনি একক' },
+          { ar: 'لَا شَرِيكَ لَهُ', tr: 'lā sharīka lahu', en: 'He has no partner', bn: 'তাঁর কোনো শরিক নেই' },
+        ],
+      },
+      {
+        arabic: 'وَأَشْهَدُ أَنَّ مُحَمَّدًا عَبْدُهُ وَرَسُولُهُ',
+        translit: 'Wa ashhadu anna Muḥammadan ʿabduhu wa rasūluh',
+        banglaTranslit: 'ওয়া আশহাদু আন্না মুহাম্মাদান আবদুহু ওয়া রাসূলুহু',
+        meaningBn: 'এবং আমি সাক্ষ্য দিচ্ছি, মুহাম্মাদ ﷺ তাঁর বান্দা ও রাসূল',
+        meaningEn: 'And I bear witness that Muhammad is His servant and Messenger',
+        words: [
+          { ar: 'وَأَشْهَدُ', tr: 'wa ashhadu', en: 'and I bear witness', bn: 'এবং আমি সাক্ষ্য দিচ্ছি' },
+          { ar: 'أَنَّ مُحَمَّدًا', tr: 'anna Muḥammadan', en: 'that Muhammad', bn: 'যে মুহাম্মাদ' },
+          { ar: 'عَبْدُهُ', tr: 'ʿabduhu', en: 'is His servant', bn: 'তাঁর বান্দা' },
+          { ar: 'وَرَسُولُهُ', tr: 'wa rasūluhu', en: 'and His Messenger', bn: 'এবং তাঁর রাসূল' },
+        ],
+      },
+    ],
+  },
+
+  'kalima-tamjid': {
+    reference: 'প্রচলিত তৃতীয় কালিমা · সহীহ মুসলিম ২১৩৭ · সহীহ বুখারি ৪২০৫',
+    fullArabic: 'سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ\nوَلَا إِلَهَ إِلَّا اللَّهُ وَاللَّهُ أَكْبَرُ\nوَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ الْعَلِيِّ الْعَظِيمِ',
+    fullBanglaTranslit: 'সুবহানাল্লাহি ওয়াল হামদুলিল্লাহ ওয়া লা ইলাহা ইল্লাল্লাহু ওয়াল্লাহু আকবার ওয়া লা হাওলা ওয়ালা কুওয়াতা ইল্লা বিল্লাহিল আলিয়্যিল আযীম',
+    fullMeaningBn: 'আল্লাহ পবিত্র এবং সমস্ত প্রশংসা আল্লাহর; আল্লাহ ছাড়া কোনো ইলাহ নেই, আল্লাহ সর্বমহান। মহান, সর্বোচ্চ আল্লাহর সাহায্য ছাড়া কোনো উপায় ও শক্তি নেই।',
+    segments: [
+      {
+        arabic: 'سُبْحَانَ اللَّهِ وَالْحَمْدُ لِلَّهِ',
+        translit: 'Subḥānallāhi wal-ḥamdu lillāh',
+        banglaTranslit: 'সুবহানাল্লাহি ওয়াল হামদুলিল্লাহ',
+        meaningBn: 'আল্লাহ পবিত্র এবং সমস্ত প্রশংসা আল্লাহর',
+        meaningEn: 'Glory be to Allah and all praise is for Allah',
+        words: [
+          { ar: 'سُبْحَانَ اللَّهِ', tr: 'subḥānallāhi', en: 'glory be to Allah', bn: 'আল্লাহ পবিত্র' },
+          { ar: 'وَالْحَمْدُ لِلَّهِ', tr: 'wal-ḥamdu lillāh', en: 'and all praise is for Allah', bn: 'এবং সমস্ত প্রশংসা আল্লাহর' },
+        ],
+      },
+      {
+        arabic: 'وَلَا إِلَهَ إِلَّا اللَّهُ وَاللَّهُ أَكْبَرُ',
+        translit: 'Wa lā ilāha illallāhu wallāhu akbar',
+        banglaTranslit: 'ওয়া লা ইলাহা ইল্লাল্লাহু ওয়াল্লাহু আকবার',
+        meaningBn: 'এবং আল্লাহ ছাড়া কোনো ইলাহ নেই, আল্লাহ সর্বমহান',
+        meaningEn: 'And there is no god but Allah, and Allah is the Greatest',
+        words: [
+          { ar: 'وَلَا إِلَهَ إِلَّا اللَّهُ', tr: 'wa lā ilāha illallāh', en: 'and there is no god but Allah', bn: 'এবং আল্লাহ ছাড়া কোনো ইলাহ নেই' },
+          { ar: 'وَاللَّهُ أَكْبَرُ', tr: 'wallāhu akbar', en: 'and Allah is the Greatest', bn: 'এবং আল্লাহ সর্বমহান' },
+        ],
+      },
+      {
+        arabic: 'وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ الْعَلِيِّ الْعَظِيمِ',
+        translit: 'Wa lā ḥawla wa lā quwwata illā billāhil-ʿAliyyil-ʿAẓīm',
+        banglaTranslit: 'ওয়া লা হাওলা ওয়ালা কুওয়াতা ইল্লা বিল্লাহিল আলিয়্যিল আযীম',
+        meaningBn: 'মহান, সর্বোচ্চ আল্লাহর সাহায্য ছাড়া কোনো উপায় ও শক্তি নেই',
+        meaningEn: 'There is no power and no strength except with Allah, the Most High, the Magnificent',
+        words: [
+          { ar: 'وَلَا حَوْلَ', tr: 'wa lā ḥawla', en: 'and there is no power', bn: 'এবং কোনো উপায় নেই' },
+          { ar: 'وَلَا قُوَّةَ', tr: 'wa lā quwwata', en: 'and no strength', bn: 'এবং কোনো শক্তি নেই' },
+          { ar: 'إِلَّا بِاللَّهِ', tr: 'illā billāh', en: 'except with Allah', bn: 'আল্লাহর সাহায্য ছাড়া' },
+          { ar: 'الْعَلِيِّ', tr: 'al-ʿAliyyi', en: 'the Most High', bn: 'সর্বোচ্চ' },
+          { ar: 'الْعَظِيمِ', tr: 'al-ʿAẓīm', en: 'the Magnificent', bn: 'মহান' },
+        ],
+      },
+    ],
+  },
+
+  'kalima-tawhid': {
+    reference: 'প্রচলিত চতুর্থ কালিমা · জামে তিরমিযি ৩৪২৮ · সহীহ বুখারি ৩২৯৩ (অংশবিশেষ)',
+    fullArabic: 'لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ\nلَهُ الْمُلْكُ وَلَهُ الْحَمْدُ\nيُحْيِي وَيُمِيتُ\nوَهُوَ حَيٌّ لَا يَمُوتُ أَبَدًا أَبَدًا\nذُو الْجَلَالِ وَالْإِكْرَامِ\nبِيَدِهِ الْخَيْرُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ',
+    fullBanglaTranslit: 'লা ইলাহা ইল্লাল্লাহু ওয়াহদাহু লা শারীকা লাহু লাহুল মুলকু ওয়া লাহুল হামদু ইউহয়ী ওয়া ইউমীতু ওয়া হুওয়া হাইয়্যুল লা ইয়ামূতু আবাদান আবাদা যুল জালালি ওয়াল ইকরাম বিইয়াদিহিল খাইর ওয়া হুওয়া আলা কুল্লি শাইয়িন কাদীর',
+    fullMeaningBn: 'আল্লাহ ছাড়া কোনো ইলাহ নেই; তিনি এক, তাঁর কোনো শরিক নেই। রাজত্ব তাঁরই এবং প্রশংসাও তাঁরই। তিনি জীবন দেন ও মৃত্যু দেন। আর তিনি চিরঞ্জীব, কখনো মরবেন না। তিনি মহিমা ও সম্মানের অধিকারী। সকল কল্যাণ তাঁর হাতে এবং তিনি সবকিছুর উপর ক্ষমতাবান।',
+    segments: [
+      {
+        arabic: 'لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ',
+        translit: 'Lā ilāha illallāhu waḥdahu lā sharīka lah',
+        banglaTranslit: 'লা ইলাহা ইল্লাল্লাহু ওয়াহদাহু লা শারীকা লাহু',
+        meaningBn: 'আল্লাহ ছাড়া কোনো ইলাহ নেই; তিনি এক, তাঁর কোনো শরিক নেই',
+        meaningEn: 'There is no god but Allah, alone, with no partner',
+        words: [
+          { ar: 'لَا إِلَهَ', tr: 'lā ilāha', en: 'there is no god', bn: 'কোনো ইলাহ নেই' },
+          { ar: 'إِلَّا اللَّهُ', tr: 'illallāhu', en: 'except Allah', bn: 'আল্লাহ ছাড়া' },
+          { ar: 'وَحْدَهُ', tr: 'waḥdahu', en: 'alone', bn: 'তিনি একক' },
+          { ar: 'لَا شَرِيكَ لَهُ', tr: 'lā sharīka lahu', en: 'He has no partner', bn: 'তাঁর কোনো শরিক নেই' },
+        ],
+      },
+      {
+        arabic: 'لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ',
+        translit: 'Lahul-mulku wa lahul-ḥamd',
+        banglaTranslit: 'লাহুল মুলকু ওয়া লাহুল হামদু',
+        meaningBn: 'রাজত্ব তাঁরই এবং প্রশংসাও তাঁরই',
+        meaningEn: 'His is the dominion and His is the praise',
+        words: [
+          { ar: 'لَهُ الْمُلْكُ', tr: 'lahul-mulku', en: 'to Him belongs the dominion', bn: 'রাজত্ব তাঁরই' },
+          { ar: 'وَلَهُ الْحَمْدُ', tr: 'wa lahul-ḥamd', en: 'and to Him belongs the praise', bn: 'এবং প্রশংসাও তাঁরই' },
+        ],
+      },
+      {
+        arabic: 'يُحْيِي وَيُمِيتُ',
+        translit: 'Yuḥyī wa yumīt',
+        banglaTranslit: 'ইউহয়ী ওয়া ইউমীতু',
+        meaningBn: 'তিনি জীবন দেন ও মৃত্যু দেন',
+        meaningEn: 'He gives life and causes death',
+        words: [
+          { ar: 'يُحْيِي', tr: 'yuḥyī', en: 'He gives life', bn: 'তিনি জীবন দেন' },
+          { ar: 'وَيُمِيتُ', tr: 'wa yumīt', en: 'and causes death', bn: 'এবং মৃত্যু দেন' },
+        ],
+      },
+      {
+        arabic: 'وَهُوَ حَيٌّ لَا يَمُوتُ أَبَدًا أَبَدًا',
+        translit: 'Wa huwa ḥayyun lā yamūtu abadan abadā',
+        banglaTranslit: 'ওয়া হুওয়া হাইয়্যুল লা ইয়ামূতু আবাদান আবাদা',
+        meaningBn: 'আর তিনি চিরঞ্জীব; কখনো মরবেন না',
+        meaningEn: 'And He is Ever-Living and never dies',
+        words: [
+          { ar: 'وَهُوَ', tr: 'wa huwa', en: 'and He', bn: 'আর তিনি' },
+          { ar: 'حَيٌّ', tr: 'ḥayyun', en: 'Ever-Living', bn: 'চিরঞ্জীব' },
+          { ar: 'لَا يَمُوتُ', tr: 'lā yamūtu', en: 'does not die', bn: 'মরবেন না' },
+          { ar: 'أَبَدًا أَبَدًا', tr: 'abadan abadā', en: 'ever and ever', bn: 'কখনোই' },
+        ],
+      },
+      {
+        arabic: 'ذُو الْجَلَالِ وَالْإِكْرَامِ',
+        translit: 'Dhul-jalāli wal-ikrām',
+        banglaTranslit: 'যুল জালালি ওয়াল ইকরাম',
+        meaningBn: 'মহিমা ও সম্মানের অধিকারী',
+        meaningEn: 'Possessor of majesty and honor',
+        words: [
+          { ar: 'ذُو الْجَلَالِ', tr: 'dhul-jalāli', en: 'Possessor of majesty', bn: 'মহিমার অধিকারী' },
+          { ar: 'وَالْإِكْرَامِ', tr: 'wal-ikrām', en: 'and honor', bn: 'ও সম্মানের' },
+        ],
+      },
+      {
+        arabic: 'بِيَدِهِ الْخَيْرُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ',
+        translit: 'Biyadihil-khayr wa huwa ʿalā kulli shayʾin qadīr',
+        banglaTranslit: 'বিইয়াদিহিল খাইর ওয়া হুওয়া আলা কুল্লি শাইয়িন কাদীর',
+        meaningBn: 'সকল কল্যাণ তাঁর হাতে এবং তিনি সবকিছুর উপর ক্ষমতাবান',
+        meaningEn: 'In His hand is all good and He has power over all things',
+        words: [
+          { ar: 'بِيَدِهِ الْخَيْرُ', tr: 'biyadihil-khayr', en: 'in His hand is all good', bn: 'সকল কল্যাণ তাঁর হাতে' },
+          { ar: 'وَهُوَ', tr: 'wa huwa', en: 'and He', bn: 'এবং তিনি' },
+          { ar: 'عَلَى كُلِّ شَيْءٍ', tr: 'ʿalā kulli shayʾin', en: 'over all things', bn: 'সবকিছুর উপর' },
+          { ar: 'قَدِيرٌ', tr: 'qadīr', en: 'is Able', bn: 'ক্ষমতাবান' },
+        ],
+      },
+    ],
+  },
+
+  'kalima-istighfar': {
+    reference: 'প্রচলিত পঞ্চম কালিমা · ইস্তিগফারের প্রচলিত সংকলিত রূপ',
+    fullArabic: 'أَسْتَغْفِرُ اللَّهَ رَبِّي مِنْ كُلِّ ذَنْبٍ أَذْنَبْتُهُ\nعَمَدًا أَوْ خَطَأً سِرًّا أَوْ عَلَانِيَةً\nوَأَتُوبُ إِلَيْهِ مِنَ الذَّنْبِ الَّذِي أَعْلَمُ وَمِنَ الذَّنْبِ الَّذِي لَا أَعْلَمُ\nإِنَّكَ أَنْتَ عَلَّامُ الْغُيُوبِ وَسَتَّارُ الْعُيُوبِ وَغَفَّارُ الذُّنُوبِ\nوَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ الْعَلِيِّ الْعَظِيمِ',
+    fullBanglaTranslit: 'আস্তাগফিরুল্লাহা রাব্বী মিন কুল্লি যামবিন আযনাবতুহু আমাদান আও খাতাআন সিররান আও আলানিয়াতান ওয়া আতুবু ইলাইহি মিনায যামবিল্লাযী আ’লামু ওয়া মিনায যামবিল্লাযী লা আ’লাম ইন্নাকা আনতা আল্লামুল গুয়ূবি ওয়া সাত্তারুল উয়ূবি ওয়া গাফফারুয যুনূব ওয়া লা হাওলা ওয়ালা কুওয়াতা ইল্লা বিল্লাহিল আলিয়্যিল আযীম',
+    fullMeaningBn: 'আমি আমার রব আল্লাহর কাছে আমার করা সব গুনাহ থেকে ক্ষমা চাই, ইচ্ছাকৃত বা ভুলে, গোপনে বা প্রকাশ্যে। আমি তাঁর কাছে তওবা করি সেই গুনাহ থেকে যা আমি জানি এবং যা আমি জানি না। নিশ্চয়ই আপনি অদৃশ্যের মহাজ্ঞানী, দোষ গোপনকারী এবং গুনাহ ক্ষমাকারী। মহান, সর্বোচ্চ আল্লাহর সাহায্য ছাড়া কোনো উপায় ও শক্তি নেই।',
+    segments: [
+      {
+        arabic: 'أَسْتَغْفِرُ اللَّهَ رَبِّي مِنْ كُلِّ ذَنْبٍ أَذْنَبْتُهُ',
+        translit: 'Astaghfirullāha rabbī min kulli dhanbin adhnabtuhu',
+        banglaTranslit: 'আস্তাগফিরুল্লাহা রাব্বী মিন কুল্লি যামবিন আযনাবতুহু',
+        meaningBn: 'আমি আমার রব আল্লাহর কাছে আমার করা সব গুনাহ থেকে ক্ষমা চাই',
+        meaningEn: 'I seek forgiveness from Allah, my Lord, for every sin I have committed',
+        words: [
+          { ar: 'أَسْتَغْفِرُ', tr: 'astaghfiru', en: 'I seek forgiveness', bn: 'আমি ক্ষমা চাই' },
+          { ar: 'اللَّهَ رَبِّي', tr: 'Allāha rabbī', en: 'from Allah, my Lord', bn: 'আমার রব আল্লাহর কাছে' },
+          { ar: 'مِنْ كُلِّ ذَنْبٍ', tr: 'min kulli dhanbin', en: 'from every sin', bn: 'সব গুনাহ থেকে' },
+          { ar: 'أَذْنَبْتُهُ', tr: 'adhnabtuhu', en: 'I committed', bn: 'যা আমি করেছি' },
+        ],
+      },
+      {
+        arabic: 'عَمَدًا أَوْ خَطَأً سِرًّا أَوْ عَلَانِيَةً',
+        translit: 'ʿAmadan aw khaṭaʾan sirran aw ʿalāniyah',
+        banglaTranslit: 'আমাদান আও খাতাআন সিররান আও আলানিয়াতান',
+        meaningBn: 'ইচ্ছাকৃত বা ভুলে, গোপনে বা প্রকাশ্যে',
+        meaningEn: 'Intentionally or by mistake, secretly or openly',
+        words: [
+          { ar: 'عَمَدًا', tr: 'ʿamadan', en: 'intentionally', bn: 'ইচ্ছাকৃতভাবে' },
+          { ar: 'أَوْ خَطَأً', tr: 'aw khaṭaʾan', en: 'or by mistake', bn: 'অথবা ভুলে' },
+          { ar: 'سِرًّا', tr: 'sirran', en: 'secretly', bn: 'গোপনে' },
+          { ar: 'أَوْ عَلَانِيَةً', tr: 'aw ʿalāniyatan', en: 'or openly', bn: 'অথবা প্রকাশ্যে' },
+        ],
+      },
+      {
+        arabic: 'وَأَتُوبُ إِلَيْهِ مِنَ الذَّنْبِ الَّذِي أَعْلَمُ وَمِنَ الذَّنْبِ الَّذِي لَا أَعْلَمُ',
+        translit: 'Wa atūbu ilayhi minadh-dhanbil-ladhī aʿlamu wa minadh-dhanbil-ladhī lā aʿlam',
+        banglaTranslit: 'ওয়া আতুবু ইলাইহি মিনায যামবিল্লাযী আ’লামু ওয়া মিনায যামবিল্লাযী লা আ’লাম',
+        meaningBn: 'এবং আমি তাঁর কাছে তওবা করি সেই গুনাহ থেকে যা আমি জানি এবং যা আমি জানি না',
+        meaningEn: 'And I repent to Him from the sin that I know and the sin that I do not know',
+        words: [
+          { ar: 'وَأَتُوبُ إِلَيْهِ', tr: 'wa atūbu ilayhi', en: 'and I repent to Him', bn: 'এবং আমি তাঁর কাছে তওবা করি' },
+          { ar: 'مِنَ الذَّنْبِ الَّذِي أَعْلَمُ', tr: 'minadh-dhanbil-ladhī aʿlamu', en: 'from the sin I know', bn: 'যে গুনাহ আমি জানি তা থেকে' },
+          { ar: 'وَمِنَ الذَّنْبِ الَّذِي لَا أَعْلَمُ', tr: 'wa minadh-dhanbil-ladhī lā aʿlamu', en: 'and from the sin I do not know', bn: 'এবং যা আমি জানি না তা থেকে' },
+        ],
+      },
+      {
+        arabic: 'إِنَّكَ أَنْتَ عَلَّامُ الْغُيُوبِ وَسَتَّارُ الْعُيُوبِ وَغَفَّارُ الذُّنُوبِ',
+        translit: 'Innaka anta ʿallāmul-ghuyūbi wa sattārul-ʿuyūbi wa ghaffārudh-dhunūb',
+        banglaTranslit: 'ইন্নাকা আনতা আল্লামুল গুয়ূবি ওয়া সাত্তারুল উয়ূবি ওয়া গাফফারুয যুনূব',
+        meaningBn: 'নিশ্চয়ই আপনি অদৃশ্যের মহাজ্ঞানী, দোষ গোপনকারী এবং গুনাহ ক্ষমাকারী',
+        meaningEn: 'Indeed You are the Knower of the unseen, the Concealer of faults and the Forgiver of sins',
+        words: [
+          { ar: 'إِنَّكَ أَنْتَ', tr: 'innaka anta', en: 'indeed You are', bn: 'নিশ্চয়ই আপনি' },
+          { ar: 'عَلَّامُ الْغُيُوبِ', tr: 'ʿallāmul-ghuyūb', en: 'Knower of the unseen', bn: 'অদৃশ্যের মহাজ্ঞানী' },
+          { ar: 'وَسَتَّارُ الْعُيُوبِ', tr: 'wa sattārul-ʿuyūb', en: 'and Concealer of faults', bn: 'এবং দোষ গোপনকারী' },
+          { ar: 'وَغَفَّارُ الذُّنُوبِ', tr: 'wa ghaffārudh-dhunūb', en: 'and Forgiver of sins', bn: 'এবং গুনাহ ক্ষমাকারী' },
+        ],
+      },
+      {
+        arabic: 'وَلَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ الْعَلِيِّ الْعَظِيمِ',
+        translit: 'Wa lā ḥawla wa lā quwwata illā billāhil-ʿAliyyil-ʿAẓīm',
+        banglaTranslit: 'ওয়া লা হাওলা ওয়ালা কুওয়াতা ইল্লা বিল্লাহিল আলিয়্যিল আযীম',
+        meaningBn: 'মহান, সর্বোচ্চ আল্লাহর সাহায্য ছাড়া কোনো উপায় ও শক্তি নেই',
+        meaningEn: 'There is no power and no strength except with Allah, the Most High, the Magnificent',
+        words: [
+          { ar: 'وَلَا حَوْلَ وَلَا قُوَّةَ', tr: 'wa lā ḥawla wa lā quwwata', en: 'there is no power and no strength', bn: 'কোনো উপায় ও শক্তি নেই' },
+          { ar: 'إِلَّا بِاللَّهِ', tr: 'illā billāh', en: 'except with Allah', bn: 'আল্লাহর সাহায্য ছাড়া' },
+          { ar: 'الْعَلِيِّ الْعَظِيمِ', tr: 'al-ʿAliyyil-ʿAẓīm', en: 'the Most High, the Magnificent', bn: 'সর্বোচ্চ, মহান' },
+        ],
+      },
+    ],
+  },
+
+  'kalima-radd-kufr': {
+    reference: 'প্রচলিত ষষ্ঠ কালিমা · প্রথম অংশ: আল-আদাবুল মুফরাদ ৭১৬',
+    fullArabic: 'اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ أَنْ أُشْرِكَ بِكَ شَيْئًا وَأَنَا أَعْلَمُ بِهِ\nوَأَسْتَغْفِرُكَ لِمَا لَا أَعْلَمُ بِهِ\nتُبْتُ عَنْهُ وَتَبَرَّأْتُ مِنَ الْكُفْرِ وَالشِّرْكِ وَالْكَذِبِ وَالْغِيبَةِ وَالْبِدْعَةِ وَالنَّمِيمَةِ وَالْفَوَاحِشِ وَالْبُهْتَانِ وَالْمَعَاصِي كُلِّهَا\nوَأَسْلَمْتُ وَأَقُولُ لَا إِلَهَ إِلَّا اللَّهُ مُحَمَّدٌ رَسُولُ اللَّهِ',
+    fullBanglaTranslit: 'আল্লাহুম্মা ইন্নী আউযু বিকা মিন আন উশরিকা বিকা শাইআন ওয়া আনা আ’লামু বিহী ওয়া আস্তাগফিরুকা লিমা লা আ’লামু বিহী তুবতু আনহু ওয়া তাবাররাতু মিনাল কুফরি ওয়াশ শিরকি ওয়াল কাযিবি ওয়াল গীবাতি ওয়াল বিদআতি ওয়ান নামীমাতি ওয়াল ফাওয়াহিশি ওয়াল বুহতানি ওয়াল মাআসী কুল্লিহা ওয়া আসলামতু ওয়া আকূলু লা ইলাহা ইল্লাল্লাহু মুহাম্মাদুর রাসূলুল্লাহ',
+    fullMeaningBn: 'হে আল্লাহ! আমি জেনেশুনে আপনার সাথে কোনো কিছুকে শরিক করা থেকে আপনার আশ্রয় চাই এবং যা না জেনে করেছি তার জন্য আপনার কাছে ক্ষমা চাই। আমি তা থেকে তওবা করলাম এবং কুফর, শিরক, মিথ্যা, গীবত, বিদআত, চোগলখুরি, অশ্লীলতা, অপবাদ ও সব গুনাহ থেকে নিজেকে মুক্ত করলাম। আমি ইসলাম গ্রহণ করলাম এবং বলছি: আল্লাহ ছাড়া কোনো ইলাহ নেই, মুহাম্মাদ ﷺ আল্লাহর রাসূল।',
+    segments: [
+      {
+        arabic: 'اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنْ أَنْ أُشْرِكَ بِكَ شَيْئًا وَأَنَا أَعْلَمُ بِهِ',
+        translit: 'Allāhumma innī aʿūdhu bika min an ushrika bika shayʾan wa ana aʿlamu bih',
+        banglaTranslit: 'আল্লাহুম্মা ইন্নী আউযু বিকা মিন আন উশরিকা বিকা শাইআন ওয়া আনা আ’লামু বিহী',
+        meaningBn: 'হে আল্লাহ! আমি জেনেশুনে আপনার সাথে কোনো কিছুকে শরিক করা থেকে আপনার আশ্রয় চাই',
+        meaningEn: 'O Allah, I seek refuge in You from knowingly associating anything with You',
+        words: [
+          { ar: 'اللَّهُمَّ', tr: 'Allāhumma', en: 'O Allah', bn: 'হে আল্লাহ' },
+          { ar: 'إِنِّي أَعُوذُ بِكَ', tr: 'innī aʿūdhu bika', en: 'I seek refuge in You', bn: 'আমি আপনার আশ্রয় চাই' },
+          { ar: 'مِنْ أَنْ أُشْرِكَ بِكَ شَيْئًا', tr: 'min an ushrika bika shayʾan', en: 'from associating anything with You', bn: 'আপনার সাথে কিছু শরিক করা থেকে' },
+          { ar: 'وَأَنَا أَعْلَمُ بِهِ', tr: 'wa ana aʿlamu bihi', en: 'while I know it', bn: 'জেনেশুনে' },
+        ],
+      },
+      {
+        arabic: 'وَأَسْتَغْفِرُكَ لِمَا لَا أَعْلَمُ بِهِ',
+        translit: 'Wa astaghfiruka limā lā aʿlamu bih',
+        banglaTranslit: 'ওয়া আস্তাগফিরুকা লিমা লা আ’লামু বিহী',
+        meaningBn: 'এবং যা না জেনে করেছি তার জন্য আপনার কাছে ক্ষমা চাই',
+        meaningEn: 'And I seek Your forgiveness for what I do not know',
+        words: [
+          { ar: 'وَأَسْتَغْفِرُكَ', tr: 'wa astaghfiruka', en: 'and I seek Your forgiveness', bn: 'এবং আপনার কাছে ক্ষমা চাই' },
+          { ar: 'لِمَا لَا أَعْلَمُ بِهِ', tr: 'limā lā aʿlamu bihi', en: 'for what I do not know', bn: 'যা আমি জানি না তার জন্য' },
+        ],
+      },
+      {
+        arabic: 'تُبْتُ عَنْهُ وَتَبَرَّأْتُ مِنَ الْكُفْرِ وَالشِّرْكِ وَالْكَذِبِ وَالْغِيبَةِ وَالْبِدْعَةِ وَالنَّمِيمَةِ وَالْفَوَاحِشِ وَالْبُهْتَانِ وَالْمَعَاصِي كُلِّهَا',
+        translit: 'Tubtu ʿanhu wa tabarraʾtu minal-kufri wash-shirki wal-kadhibi wal-ghībati wal-bidʿati wan-namīmati wal-fawāḥishi wal-buhtāni wal-maʿāṣī kullihā',
+        banglaTranslit: 'তুবতু আনহু ওয়া তাবাররাতু মিনাল কুফরি ওয়াশ শিরকি ওয়াল কাযিবি ওয়াল গীবাতি ওয়াল বিদআতি ওয়ান নামীমাতি ওয়াল ফাওয়াহিশি ওয়াল বুহতানি ওয়াল মাআসী কুল্লিহা',
+        meaningBn: 'আমি তা থেকে তওবা করলাম এবং কুফর, শিরক, মিথ্যা, গীবত, বিদআত, চোগলখুরি, অশ্লীলতা, অপবাদ ও সব গুনাহ থেকে নিজেকে মুক্ত করলাম',
+        meaningEn: 'I repent from it and free myself from disbelief, polytheism, lying, backbiting, innovation, slander, indecency, false accusation and all sins',
+        words: [
+          { ar: 'تُبْتُ عَنْهُ', tr: 'tubtu ʿanhu', en: 'I repent from it', bn: 'আমি তা থেকে তওবা করলাম' },
+          { ar: 'وَتَبَرَّأْتُ', tr: 'wa tabarraʾtu', en: 'and I free myself', bn: 'এবং নিজেকে মুক্ত করলাম' },
+          { ar: 'مِنَ الْكُفْرِ', tr: 'minal-kufri', en: 'from disbelief', bn: 'কুফর থেকে' },
+          { ar: 'وَالشِّرْكِ', tr: 'wash-shirki', en: 'and polytheism', bn: 'এবং শিরক' },
+          { ar: 'وَالْكَذِبِ', tr: 'wal-kadhibi', en: 'and lying', bn: 'এবং মিথ্যা' },
+          { ar: 'وَالْغِيبَةِ', tr: 'wal-ghībati', en: 'and backbiting', bn: 'এবং গীবত' },
+          { ar: 'وَالْبِدْعَةِ', tr: 'wal-bidʿati', en: 'and innovation', bn: 'এবং বিদআত' },
+          { ar: 'وَالنَّمِيمَةِ', tr: 'wan-namīmati', en: 'and slander', bn: 'এবং চোগলখুরি' },
+          { ar: 'وَالْفَوَاحِشِ', tr: 'wal-fawāḥishi', en: 'and indecencies', bn: 'এবং অশ্লীলতা' },
+          { ar: 'وَالْبُهْتَانِ', tr: 'wal-buhtāni', en: 'and false accusation', bn: 'এবং অপবাদ' },
+          { ar: 'وَالْمَعَاصِي كُلِّهَا', tr: 'wal-maʿāṣī kullihā', en: 'and all sins', bn: 'এবং সব গুনাহ' },
+        ],
+      },
+      {
+        arabic: 'وَأَسْلَمْتُ وَأَقُولُ لَا إِلَهَ إِلَّا اللَّهُ مُحَمَّدٌ رَسُولُ اللَّهِ',
+        translit: 'Wa aslamtu wa aqūlu lā ilāha illallāhu Muḥammadur-rasūlullāh',
+        banglaTranslit: 'ওয়া আসলামতু ওয়া আকূলু লা ইলাহা ইল্লাল্লাহু মুহাম্মাদুর রাসূলুল্লাহ',
+        meaningBn: 'আমি ইসলাম গ্রহণ করলাম এবং বলছি: আল্লাহ ছাড়া কোনো ইলাহ নেই, মুহাম্মাদ ﷺ আল্লাহর রাসূল',
+        meaningEn: 'I have submitted and I say: there is no god but Allah, Muhammad is the Messenger of Allah',
+        words: [
+          { ar: 'وَأَسْلَمْتُ', tr: 'wa aslamtu', en: 'and I submitted', bn: 'এবং আমি ইসলাম গ্রহণ করলাম' },
+          { ar: 'وَأَقُولُ', tr: 'wa aqūlu', en: 'and I say', bn: 'এবং আমি বলছি' },
+          { ar: 'لَا إِلَهَ إِلَّا اللَّهُ', tr: 'lā ilāha illallāh', en: 'there is no god but Allah', bn: 'আল্লাহ ছাড়া কোনো ইলাহ নেই' },
+          { ar: 'مُحَمَّدٌ رَسُولُ اللَّهِ', tr: 'Muḥammadur-rasūlullāh', en: 'Muhammad is the Messenger of Allah', bn: 'মুহাম্মাদ ﷺ আল্লাহর রাসূল' },
         ],
       },
     ],

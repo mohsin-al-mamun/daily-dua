@@ -911,3 +911,25 @@ body {
   .name-hero-ar { font-size: 44px; }
   .name-page { padding: 20px 14px 40px; }
 }
+
+/* ── AMAL GUIDE (dua page) ───────────────────────── */
+.amal-guide { display: flex; flex-direction: column; gap: 14px; margin: 18px 0 22px; }
+.amal-box {
+  background: var(--card-bg); border: 1px solid var(--border); border-radius: 12px;
+  padding: 16px 18px; box-shadow: 0 2px 8px var(--shadow-card);
+}
+.amal-fazilat { background: var(--green-pale); }
+.amal-title {
+  font-size: 15px; font-weight: 700; color: var(--green-mid);
+  margin-bottom: 10px; padding-bottom: 8px; border-bottom: 1px solid var(--border);
+}
+[data-theme="dark"] .amal-title { color: var(--gold-light); }
+.amal-howto { margin: 0; padding-left: 22px; list-style: disc outside; display: flex; flex-direction: column; gap: 8px; }
+
+.amal-howto li::marker { color: var(--green-mid); }
+.amal-howto li { font-size: 14.5px; line-height: 1.8; color: var(--text); }
+.amal-list { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 12px; }
+.amal-list li { display: flex; flex-direction: column; gap: 2px; font-size: 14.5px; line-height: 1.8; color: var(--text); }
+.amal-src { font-size: 12px; font-weight: 700; color: var(--blue); }
+.amal-story-title { font-size: 14px; font-weight: 700; color: var(--blue); margin-bottom: 4px; }
+.amal-story { font-size: 14.5px; line-height: 1.9; color: var(--text); margin: 0; }

@@ -3,6 +3,7 @@
 import { useEffect, useRef, useState } from 'react';
 import type { DuaMeta, DuaDetail, Word } from '@/lib/data';
 import { CAT_LABELS } from '@/lib/data';
+import type { AmalInfo } from '@/lib/amal';
 
 const BN = '০১২৩৪৫৬৭৮৯';
 function toBn(n: number) {
@@ -11,7 +12,15 @@ function toBn(n: number) {
 
 type TooltipState = { word: Word; x: number; y: number } | null;
 
-export default function DuaReader({ meta, detail }: { meta: DuaMeta; detail: DuaDetail | null }) {
+export default function DuaReader({
+  meta,
+  detail,
+  amal = null,
+}: {
+  meta: DuaMeta;
+  detail: DuaDetail | null;
+  amal?: AmalInfo | null;
+}) {
   const [fontSize, setFontSize] = useState(28);
   const [bookmarks, setBookmarks] = useState<Record<string, boolean>>({});
   const [tooltip, setTooltip] = useState<TooltipState>(null);
@@ -148,6 +157,36 @@ export default function DuaReader({ meta, detail }: { meta: DuaMeta; detail: Dua
                 <div className="fac-reference">{detail.reference}</div>
               )}
             </div>
+
+            {/* AMAL GUIDE */}
+            {amal && (
+              <div className="amal-guide">
+                <div className="amal-box">
+                  <div className="amal-title">✅ কীভাবে আমল করবেন</div>
+                  <ul className="amal-howto">
+                    {amal.howTo.map((t, i) => <li key={i}>{t}</li>)}
+                  </ul>
+                </div>
+                <div className="amal-box amal-fazilat">
+                  <div className="amal-title">🌟 ফজিলত</div>
+                  <ul className="amal-list">
+                    {amal.fazilat.map((f) => (
+                      <li key={f.src}>
+                        <span className="amal-src">{f.src}</span>
+                        <span>{f.textBn}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                {amal.story && (
+                  <div className="amal-box">
+                    <div className="amal-title">📖 ঘটনা</div>
+                    <div className="amal-story-title">{amal.story.title}</div>
+                    <p className="amal-story">{amal.story.textBn}</p>
+                  </div>
+                )}
+              </div>
+            )}
 
             {/* SEGMENT CARDS */}
             {detail.segments.map((seg, i) => (
