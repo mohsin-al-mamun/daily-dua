@@ -162,6 +162,17 @@ export default function HomeClient({ duas, cats }: { duas: DuaMeta[]; cats: Cate
               </Link>
             );
           })}
+          <Link className="cat-hero-card" href="/names">
+            <div className="chc-top">
+              <div className="chc-icon">✨</div>
+            </div>
+            <div className="chc-btm">
+              <div className="chc-title-bn">আল্লাহর ৯৯ নাম</div>
+              <div className="chc-sub">Asmaul Husna</div>
+              <div className="chc-count">{toBn(99)}টি নাম ও অর্থ</div>
+              <div className="chc-cta">দেখুন →</div>
+            </div>
+          </Link>
         </div>
       )}
 
