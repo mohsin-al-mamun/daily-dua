@@ -25,6 +25,7 @@ export type DuaMeta = {
   titleAr: string;
   titleBn: string;
   firstLine: string;
+  group?: string;
 };
 
 export type Category = {
@@ -53,9 +54,7 @@ export const DUAS: DuaMeta[] = [
   { id: 'kafiroon',     cat: 'quran',   titleAr: 'الكافرون',               titleBn: 'সূরা আল-কাফিরুন',         firstLine: 'قُلْ يَا أَيُّهَا الْكَافِرُونَ' },
   // Amal
   { id: 'subhanallah',  cat: 'amal',    titleAr: 'التسبيح',               titleBn: 'তাসবিহ',                   firstLine: 'سُبْحَانَ اللَّهِ وَبِحَمْدِهِ سُبْحَانَ اللَّهِ الْعَظِيمِ' },
-  { id: 'istighfar',    cat: 'amal',    titleAr: 'الاستغفار',              titleBn: 'ইস্তেগফার',                firstLine: 'أَسْتَغْفِرُ اللَّهَ الَّذِي لَا إِلَهَ إِلَّا هُوَ' },
   { id: 'kalima',       cat: 'amal',    titleAr: 'الكلمة الطيبة',          titleBn: 'কালিমা তাইয়্যেবা',        firstLine: 'لَا إِلَهَ إِلَّا اللَّهُ مُحَمَّدٌ رَسُولُ اللَّهِ' },
-  { id: 'durood-simple',cat: 'amal',    titleAr: 'الصلاة على النبي',       titleBn: 'দরূদ শরিফ সংক্ষিপ্ত',     firstLine: 'اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ' },
   { id: 'alhamdulillah',cat: 'amal',    titleAr: 'الحمد لله',              titleBn: 'আলহামদুলিল্লাহ',           firstLine: 'الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ' },
   // Morning
   { id: 'morning-wakeup',     cat: 'masnun', titleAr: 'دعاء الاستيقاظ',  titleBn: 'ঘুম থেকে উঠার দুআ',    firstLine: 'الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا' },
@@ -78,11 +77,29 @@ export const DUAS: DuaMeta[] = [
   { id: 'ayah-kursi-after',cat: 'after-salat', titleAr: 'آية الكرسي بعد الصلاة', titleBn: 'আয়াতুল কুরসি (নামাজের পর)', firstLine: 'اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ' },
   { id: 'after-salat-dua', cat: 'after-salat', titleAr: 'دعاء بعد الصلاة',       titleBn: 'নামাজের পর বিশেষ দুআ',      firstLine: 'اللَّهُمَّ أَعِنِّي عَلَى ذِكْرِكَ وَشُكْرِكَ' },
   { id: 'la-manea',        cat: 'after-salat', titleAr: 'لا مانع لما أعطيت',     titleBn: 'লা মানিআ দুআ',               firstLine: 'اللَّهُمَّ لَا مَانِعَ لِمَا أَعْطَيْتَ' },
+  // Durud & Istighfar
+  // Copies of entries that also live in other categories (share the same detail)
+  { id: 'darud-di', cat: 'durud-istighfar', titleAr: 'الصلاة الإبراهيمية',   titleBn: 'দরূদ ইব্রাহিম',            firstLine: 'اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ', group: 'durud' },
+  { id: 'durood-after-di', cat: 'durud-istighfar', titleAr: 'الصلاة على النبي',       titleBn: 'দরূদ শরীফ',                  firstLine: 'اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ', group: 'durud' },
+  { id: 'istighfar-salat-di', cat: 'durud-istighfar', titleAr: 'الاستغفار بعد الصلاة', titleBn: 'ইস্তিগফার (নামাজের পর)',      firstLine: 'أَسْتَغْفِرُ اللَّهَ', group: 'istighfar' },
+  { id: 'istighfar',    cat: 'durud-istighfar',  titleAr: 'الاستغفار',              titleBn: 'ইস্তেগফার',                firstLine: 'أَسْتَغْفِرُ اللَّهَ الَّذِي لَا إِلَهَ إِلَّا هُوَ', group: 'istighfar' },
+  { id: 'durood-simple',cat: 'durud-istighfar',  titleAr: 'الصلاة على النبي',       titleBn: 'দরূদ শরিফ সংক্ষিপ্ত',     firstLine: 'اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ', group: 'durud' },
+  { id: 'sayyidul-istighfar', cat: 'durud-istighfar', titleAr: 'سيد الاستغفار', titleBn: 'সাইয়্যিদুল ইস্তিগফার', firstLine: 'اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ', group: 'istighfar' },
+  { id: 'astaghfirullah-atubu', cat: 'durud-istighfar', titleAr: 'أستغفر الله وأتوب إليه', titleBn: 'আস্তাগফিরুল্লাহ ওয়া আতুবু ইলাইহি', firstLine: 'أَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ', group: 'istighfar' },
+  { id: 'rabbighfir-li-wa-tub', cat: 'durud-istighfar', titleAr: 'رب اغفر لي وتب علي', titleBn: 'রাব্বিগফির লী ওয়া তুব আলাইয়্যা', firstLine: 'رَبِّ اغْفِرْ لِي وَتُبْ عَلَيَّ', group: 'istighfar' },
+  { id: 'allahumma-afuwwun', cat: 'durud-istighfar', titleAr: 'اللهم إنك عفو', titleBn: 'আল্লাহুম্মা ইন্নাকা আফুওউন', firstLine: 'اللَّهُمَّ إِنَّكَ عُفُوٌّ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي', group: 'istighfar' },
+  { id: 'rabbana-zalamna', cat: 'durud-istighfar', titleAr: 'ربنا ظلمنا أنفسنا', titleBn: 'রাব্বানা যালামনা (আদম আ.-এর দুআ)', firstLine: 'رَبَّنَا ظَلَمْنَا أَنفُسَنَا وَإِن لَّمْ تَغْفِرْ لَنَا', group: 'istighfar' },
+  { id: 'rabbighfir-warham', cat: 'durud-istighfar', titleAr: 'رب اغفر وارحم', titleBn: 'রাব্বিগফির ওয়ারহাম', firstLine: 'رَّبِّ ٱغْفِرْ وَٱرْحَمْ وَأَنتَ خَيْرُ ٱلرَّٰحِمِينَ', group: 'istighfar' },
+  { id: 'durud-azwaj', cat: 'durud-istighfar', titleAr: 'الصلاة على النبي وأزواجه وذريته', titleBn: 'দরূদ (স্ত্রীগণ ও বংশধরসহ)', firstLine: 'اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى أَزْوَاجِهِ وَذُرِّيَّتِهِ', group: 'durud' },
+  { id: 'durud-abdika', cat: 'durud-istighfar', titleAr: 'الصلاة على النبي عبدك ورسولك', titleBn: 'দরূদ (আবদিকা ওয়া রাসূলিকা)', firstLine: 'اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ عَبْدِكَ وَرَسُولِكَ', group: 'durud' },
+  { id: 'durud-fil-alamin', cat: 'durud-istighfar', titleAr: 'الصلاة الإبراهيمية (في العالمين)', titleBn: 'দরূদ (ফিল আলামীন সহ)', firstLine: 'اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ', group: 'durud' },
+  { id: 'durud-ayah', cat: 'durud-istighfar', titleAr: 'آية الصلاة على النبي', titleBn: 'দরূদের আয়াত (সূরা আহযাব)', firstLine: 'إِنَّ ٱللَّهَ وَمَلَٰٓئِكَتَهُۥ يُصَلُّونَ عَلَى ٱلنَّبِىِّ', group: 'durud' },
 ];
 
 export const CATS: Category[] = [
   { id: 'salat',       icon: '🕌', titleBn: 'নামাজের দুআ',    sub: 'Prayers of Salat'           },
   { id: 'after-salat', icon: '🤲', titleBn: 'নামাজের পর দুআ', sub: 'Post-Prayer Supplications'  },
+  { id: 'durud-istighfar', icon: '🤍', titleBn: 'দরূদ ও ইস্তিগফার', sub: 'Durud & Istighfar' },
   { id: 'quran',       icon: '📖', titleBn: 'কুরআনের সূরা',  sub: 'Surahs of the Quran'        },
   { id: 'amal',        icon: '🕊️', titleBn: 'আমল ও ফজিলত',        sub: 'Deeds & Virtues'      },
   { id: 'masnun',      icon: '📿', titleBn: 'বিভিন্ন মাসনুন দোয়া', sub: 'Various Masnoon Duas' },
@@ -94,6 +111,21 @@ export const CAT_LABELS: Record<string, CatLabel> = {
   amal:          { bn: 'আমল ও ফজিলত',        en: 'Deeds & Virtues'           },
   masnun:        { bn: 'বিভিন্ন মাসনুন দোয়া', en: 'Various Masnoon Duas'      },
   'after-salat': { bn: 'নামাজের পর দুআ',     en: 'Post-Prayer Supplications' },
+  'durud-istighfar': { bn: 'দরূদ ও ইস্তিগফার', en: 'Durud & Istighfar' },
+};
+
+// Slice helper for Quranic verses split into words
+const sl = (w: string[], a: number, b: number) => w.slice(a, b).join(' ');
+const W723 = Q.ayah7_23.replace(/^قَالَا\s+/, '').split(' ');
+const W2318 = Q.ayah23_118.split(' ').slice(1).join(' ').split(' ');
+const W3356 = Q.ayah33_56.split(' ');
+
+// Optional sub-groups inside a category (order = display order)
+export const CAT_GROUPS: Record<string, { id: string; bn: string; en: string }[]> = {
+  'durud-istighfar': [
+    { id: 'istighfar', bn: 'ইস্তিগফার', en: 'Seeking Forgiveness' },
+    { id: 'durud',     bn: 'দরূদ',       en: 'Salawat upon the Prophet ﷺ' },
+  ],
 };
 
 export const DETAIL_MAP: Record<string, DuaDetail> = {
@@ -1544,4 +1576,489 @@ export const DETAIL_MAP: Record<string, DuaDetail> = {
       },
     ],
   },
+
+  'sayyidul-istighfar': {
+    reference: 'সহীহ বুখারি ৬৩০৬ · সকাল-সন্ধ্যায় পঠনীয়',
+    fullArabic: 'اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ\nخَلَقْتَنِي وَأَنَا عَبْدُكَ\nوَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ\nأَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ\nأَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ وَأَبُوءُ بِذَنْبِي\nفَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ',
+    fullBanglaTranslit: 'আল্লাহুম্মা আনতা রাব্বী লা ইলাহা ইল্লা আনতা খালাকতানী ওয়া আনা আবদুকা ওয়া আনা আলা আহদিকা ওয়া ওয়াদিকা মাসতাতাতু আউযু বিকা মিন শাররি মা সানাতু আবূউ লাকা বিনিমাতিকা আলাইয়্যা ওয়া আবূউ বিযাম্বী ফাগফির লী ফাইন্নাহু লা ইয়াগফিরুয যুনুবা ইল্লা আনতা',
+    fullMeaningBn: 'হে আল্লাহ! আপনি আমার রব, আপনি ছাড়া কোনো ইলাহ নেই আপনি আমাকে সৃষ্টি করেছেন এবং আমি আপনার বান্দা আমি যথাসাধ্য আপনার অঙ্গীকার ও প্রতিশ্রুতির উপর প্রতিষ্ঠিত আছি আমি যা করেছি তার অনিষ্ট থেকে আপনার কাছে আশ্রয় চাই আমার প্রতি আপনার নেয়ামত স্বীকার করছি এবং আমার গুনাহ স্বীকার করছি অতএব আমাকে ক্ষমা করুন; কারণ আপনি ছাড়া আর কেউ গুনাহ ক্ষমা করতে পারে না',
+    segments: [
+      {
+        arabic: 'اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ',
+        translit: 'Allāhumma anta rabbī lā ilāha illā anta',
+        banglaTranslit: 'আল্লাহুম্মা আনতা রাব্বী লা ইলাহা ইল্লা আনতা',
+        meaningBn: 'হে আল্লাহ! আপনি আমার রব, আপনি ছাড়া কোনো ইলাহ নেই',
+        meaningEn: 'O Allah, You are my Lord; there is no god but You',
+        words: [
+          { ar: 'اللَّهُمَّ', tr: 'Allāhumma', en: 'O Allah', bn: 'হে আল্লাহ' },
+          { ar: 'أَنْتَ', tr: 'anta', en: 'You', bn: 'আপনি' },
+          { ar: 'رَبِّي', tr: 'rabbī', en: 'my Lord', bn: 'আমার রব' },
+          { ar: 'لَا إِلَهَ', tr: 'lā ilāha', en: 'there is no god', bn: 'কোনো ইলাহ নেই' },
+          { ar: 'إِلَّا أَنْتَ', tr: 'illā anta', en: 'except You', bn: 'আপনি ছাড়া' },
+        ],
+      },
+      {
+        arabic: 'خَلَقْتَنِي وَأَنَا عَبْدُكَ',
+        translit: 'Khalaqtanī wa ana ʿabduka',
+        banglaTranslit: 'খালাকতানী ওয়া আনা আবদুকা',
+        meaningBn: 'আপনি আমাকে সৃষ্টি করেছেন এবং আমি আপনার বান্দা',
+        meaningEn: 'You created me and I am Your servant',
+        words: [
+          { ar: 'خَلَقْتَنِي', tr: 'khalaqtanī', en: 'You created me', bn: 'আপনি আমাকে সৃষ্টি করেছেন' },
+          { ar: 'وَأَنَا', tr: 'wa ana', en: 'and I am', bn: 'এবং আমি' },
+          { ar: 'عَبْدُكَ', tr: 'ʿabduka', en: 'Your servant', bn: 'আপনার বান্দা' },
+        ],
+      },
+      {
+        arabic: 'وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ',
+        translit: 'Wa ana ʿalā ʿahdika wa waʿdika mastaṭaʿtu',
+        banglaTranslit: 'ওয়া আনা আলা আহদিকা ওয়া ওয়াদিকা মাসতাতাতু',
+        meaningBn: 'আমি যথাসাধ্য আপনার অঙ্গীকার ও প্রতিশ্রুতির উপর প্রতিষ্ঠিত আছি',
+        meaningEn: 'I hold to Your covenant and promise as best I can',
+        words: [
+          { ar: 'وَأَنَا عَلَى', tr: 'wa ana ʿalā', en: 'and I am upon', bn: 'এবং আমি আছি' },
+          { ar: 'عَهْدِكَ', tr: 'ʿahdika', en: 'Your covenant', bn: 'আপনার অঙ্গীকার' },
+          { ar: 'وَوَعْدِكَ', tr: 'wa waʿdika', en: 'and Your promise', bn: 'এবং আপনার প্রতিশ্রুতি' },
+          { ar: 'مَا اسْتَطَعْتُ', tr: 'mastaṭaʿtu', en: 'as much as I am able', bn: 'যথাসাধ্য' },
+        ],
+      },
+      {
+        arabic: 'أَعُوذُ بِكَ مِنْ شَرِّ مَا صَنَعْتُ',
+        translit: 'Aʿūdhu bika min sharri mā ṣanaʿtu',
+        banglaTranslit: 'আউযু বিকা মিন শাররি মা সানাতু',
+        meaningBn: 'আমি যা করেছি তার অনিষ্ট থেকে আপনার কাছে আশ্রয় চাই',
+        meaningEn: 'I seek refuge in You from the evil of what I have done',
+        words: [
+          { ar: 'أَعُوذُ بِكَ', tr: 'aʿūdhu bika', en: 'I seek refuge in You', bn: 'আমি আপনার আশ্রয় চাই' },
+          { ar: 'مِنْ شَرِّ', tr: 'min sharri', en: 'from the evil of', bn: 'অনিষ্ট থেকে' },
+          { ar: 'مَا صَنَعْتُ', tr: 'mā ṣanaʿtu', en: 'what I have done', bn: 'আমি যা করেছি' },
+        ],
+      },
+      {
+        arabic: 'أَبُوءُ لَكَ بِنِعْمَتِكَ عَلَيَّ وَأَبُوءُ بِذَنْبِي',
+        translit: 'Abūʾu laka bi-niʿmatika ʿalayya wa abūʾu bi-dhanbī',
+        banglaTranslit: 'আবূউ লাকা বিনিমাতিকা আলাইয়্যা ওয়া আবূউ বিযাম্বী',
+        meaningBn: 'আমার প্রতি আপনার নেয়ামত স্বীকার করছি এবং আমার গুনাহ স্বীকার করছি',
+        meaningEn: 'I acknowledge Your favor upon me and I acknowledge my sin',
+        words: [
+          { ar: 'أَبُوءُ لَكَ', tr: 'abūʾu laka', en: 'I acknowledge to You', bn: 'আমি আপনার কাছে স্বীকার করছি' },
+          { ar: 'بِنِعْمَتِكَ عَلَيَّ', tr: 'bi-niʿmatika ʿalayya', en: 'Your favor upon me', bn: 'আমার উপর আপনার নেয়ামত' },
+          { ar: 'وَأَبُوءُ بِذَنْبِي', tr: 'wa abūʾu bi-dhanbī', en: 'and I admit my sin', bn: 'এবং আমি আমার গুনাহ স্বীকার করছি' },
+        ],
+      },
+      {
+        arabic: 'فَاغْفِرْ لِي فَإِنَّهُ لَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنْتَ',
+        translit: 'Faghfir lī fa-innahu lā yaghfirudh-dhunūba illā anta',
+        banglaTranslit: 'ফাগফির লী ফাইন্নাহু লা ইয়াগফিরুয যুনুবা ইল্লা আনতা',
+        meaningBn: 'অতএব আমাকে ক্ষমা করুন; কারণ আপনি ছাড়া আর কেউ গুনাহ ক্ষমা করতে পারে না',
+        meaningEn: 'So forgive me, for none forgives sins except You',
+        words: [
+          { ar: 'فَاغْفِرْ لِي', tr: 'faghfir lī', en: 'so forgive me', bn: 'অতএব আমাকে ক্ষমা করুন' },
+          { ar: 'فَإِنَّهُ', tr: 'fa-innahu', en: 'for indeed', bn: 'কারণ নিশ্চয়ই' },
+          { ar: 'لَا يَغْفِرُ الذُّنُوبَ', tr: 'lā yaghfirudh-dhunūba', en: 'none forgives sins', bn: 'গুনাহ কেউ ক্ষমা করে না' },
+          { ar: 'إِلَّا أَنْتَ', tr: 'illā anta', en: 'except You', bn: 'আপনি ছাড়া' },
+        ],
+      },
+    ],
+  },
+
+  'astaghfirullah-atubu': {
+    reference: 'সহীহ বুখারি ৬৩০৭ · নবী ﷺ দিনে ৭০ বারের বেশি পড়তেন',
+    fullArabic: 'أَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ',
+    fullBanglaTranslit: 'আস্তাগফিরুল্লাহা ওয়া আতুবু ইলাইহি',
+    fullMeaningBn: 'আমি আল্লাহর কাছে ক্ষমা চাই এবং তাঁর কাছে তওবা করি',
+    segments: [
+      {
+        arabic: 'أَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ',
+        translit: 'Astaghfirullāha wa atūbu ilayh',
+        banglaTranslit: 'আস্তাগফিরুল্লাহা ওয়া আতুবু ইলাইহি',
+        meaningBn: 'আমি আল্লাহর কাছে ক্ষমা চাই এবং তাঁর কাছে তওবা করি',
+        meaningEn: 'I seek Allah\'s forgiveness and I repent to Him',
+        words: [
+          { ar: 'أَسْتَغْفِرُ', tr: 'astaghfiru', en: 'I seek forgiveness', bn: 'আমি ক্ষমা চাই' },
+          { ar: 'اللَّهَ', tr: 'Allāha', en: 'from Allah', bn: 'আল্লাহর কাছে' },
+          { ar: 'وَأَتُوبُ', tr: 'wa atūbu', en: 'and I repent', bn: 'এবং আমি তওবা করি' },
+          { ar: 'إِلَيْهِ', tr: 'ilayhi', en: 'to Him', bn: 'তাঁর কাছে' },
+        ],
+      },
+    ],
+  },
+
+  'rabbighfir-li-wa-tub': {
+    reference: 'আবু দাউদ ১৫১৬ · তিরমিযি ৩৪৩৪ · ইবনে উমর রা. বলেন, নবী ﷺ এক বৈঠকে একশ বার পড়তেন',
+    fullArabic: 'رَبِّ اغْفِرْ لِي وَتُبْ عَلَيَّ\nإِنَّكَ أَنْتَ التَّوَّابُ الرَّحِيمُ',
+    fullBanglaTranslit: 'রাব্বিগফির লী ওয়া তুব আলাইয়্যা ইন্নাকা আনতাত তাওয়্যাবুর রাহীম',
+    fullMeaningBn: 'হে আমার রব! আমাকে ক্ষমা করুন এবং আমার তওবা কবুল করুন নিশ্চয়ই আপনি তওবা কবুলকারী, পরম দয়ালু',
+    segments: [
+      {
+        arabic: 'رَبِّ اغْفِرْ لِي وَتُبْ عَلَيَّ',
+        translit: 'Rabbighfir lī wa tub ʿalayya',
+        banglaTranslit: 'রাব্বিগফির লী ওয়া তুব আলাইয়্যা',
+        meaningBn: 'হে আমার রব! আমাকে ক্ষমা করুন এবং আমার তওবা কবুল করুন',
+        meaningEn: 'My Lord, forgive me and accept my repentance',
+        words: [
+          { ar: 'رَبِّ', tr: 'rabbi', en: 'my Lord', bn: 'হে আমার রব' },
+          { ar: 'اغْفِرْ لِي', tr: 'ighfir lī', en: 'forgive me', bn: 'আমাকে ক্ষমা করুন' },
+          { ar: 'وَتُبْ عَلَيَّ', tr: 'wa tub ʿalayya', en: 'and accept my repentance', bn: 'এবং আমার তওবা কবুল করুন' },
+        ],
+      },
+      {
+        arabic: 'إِنَّكَ أَنْتَ التَّوَّابُ الرَّحِيمُ',
+        translit: 'Innaka antat-Tawwābur-Raḥīm',
+        banglaTranslit: 'ইন্নাকা আনতাত তাওয়্যাবুর রাহীম',
+        meaningBn: 'নিশ্চয়ই আপনি তওবা কবুলকারী, পরম দয়ালু',
+        meaningEn: 'Indeed You are the Accepter of repentance, the Most Merciful',
+        words: [
+          { ar: 'إِنَّكَ أَنْتَ', tr: 'innaka anta', en: 'indeed You are', bn: 'নিশ্চয়ই আপনি' },
+          { ar: 'التَّوَّابُ', tr: 'at-Tawwāb', en: 'the Accepter of repentance', bn: 'তওবা কবুলকারী' },
+          { ar: 'الرَّحِيمُ', tr: 'ar-Raḥīm', en: 'the Most Merciful', bn: 'পরম দয়ালু' },
+        ],
+      },
+    ],
+  },
+
+  'allahumma-afuwwun': {
+    reference: 'তিরমিযি ৩৫১৩ · ইবনে মাজাহ ৩৮৫০ · আয়েশা রা.-কে শেখানো লাইলাতুল কদরের দুআ',
+    fullArabic: 'اللَّهُمَّ إِنَّكَ عُفُوٌّ\nتُحِبُّ الْعَفْوَ\nفَاعْفُ عَنِّي',
+    fullBanglaTranslit: 'আল্লাহুম্মা ইন্নাকা আফুওউন তুহিব্বুল আফওয়া ফা’ফু আন্নী',
+    fullMeaningBn: 'হে আল্লাহ! আপনি অত্যন্ত ক্ষমাশীল আপনি ক্ষমা করা পছন্দ করেন অতএব আমাকে ক্ষমা করে দিন',
+    segments: [
+      {
+        arabic: 'اللَّهُمَّ إِنَّكَ عُفُوٌّ',
+        translit: 'Allāhumma innaka ʿafuwwun',
+        banglaTranslit: 'আল্লাহুম্মা ইন্নাকা আফুওউন',
+        meaningBn: 'হে আল্লাহ! আপনি অত্যন্ত ক্ষমাশীল',
+        meaningEn: 'O Allah, You are Most Forgiving',
+        words: [
+          { ar: 'اللَّهُمَّ', tr: 'Allāhumma', en: 'O Allah', bn: 'হে আল্লাহ' },
+          { ar: 'إِنَّكَ', tr: 'innaka', en: 'indeed You', bn: 'নিশ্চয়ই আপনি' },
+          { ar: 'عُفُوٌّ', tr: 'ʿafuwwun', en: 'Most Forgiving', bn: 'অত্যন্ত ক্ষমাশীল' },
+        ],
+      },
+      {
+        arabic: 'تُحِبُّ الْعَفْوَ',
+        translit: 'Tuḥibbul-ʿafwa',
+        banglaTranslit: 'তুহিব্বুল আফওয়া',
+        meaningBn: 'আপনি ক্ষমা করা পছন্দ করেন',
+        meaningEn: 'You love to forgive',
+        words: [
+          { ar: 'تُحِبُّ', tr: 'tuḥibbu', en: 'You love', bn: 'আপনি ভালোবাসেন' },
+          { ar: 'الْعَفْوَ', tr: 'al-ʿafwa', en: 'forgiveness', bn: 'ক্ষমা করা' },
+        ],
+      },
+      {
+        arabic: 'فَاعْفُ عَنِّي',
+        translit: 'Faʿfu ʿannī',
+        banglaTranslit: 'ফা’ফু আন্নী',
+        meaningBn: 'অতএব আমাকে ক্ষমা করে দিন',
+        meaningEn: 'So forgive me',
+        words: [
+          { ar: 'فَاعْفُ', tr: 'faʿfu', en: 'so forgive', bn: 'অতএব ক্ষমা করুন' },
+          { ar: 'عَنِّي', tr: 'ʿannī', en: 'me', bn: 'আমাকে' },
+        ],
+      },
+    ],
+  },
+
+  'rabbana-zalamna': {
+    reference: 'কুরআনুল কারিম (সূরা আল-আরাফ ৭:২৩)',
+    fullArabic: [sl(W723, 0, 3), sl(W723, 3, 11)].join('\n'),
+    fullBanglaTranslit: 'রাব্বানা যালামনা আনফুসানা ওয়া ইল্লাম তাগফির লানা ওয়া তারহামনা লানাকূনান্না মিনাল খাসিরীন',
+    fullMeaningBn: 'হে আমাদের রব! আমরা নিজেদের উপর জুলুম করেছি যদি আপনি আমাদের ক্ষমা না করেন ও দয়া না করেন, তবে অবশ্যই আমরা ক্ষতিগ্রস্তদের অন্তর্ভুক্ত হব',
+    segments: [
+      {
+        arabic: sl(W723, 0, 3),
+        translit: 'Rabbanā ẓalamnā anfusanā',
+        banglaTranslit: 'রাব্বানা যালামনা আনফুসানা',
+        meaningBn: 'হে আমাদের রব! আমরা নিজেদের উপর জুলুম করেছি',
+        meaningEn: 'Our Lord, we have wronged ourselves',
+        words: [
+          { ar: sl(W723, 0, 1), tr: 'rabbanā', en: 'our Lord', bn: 'হে আমাদের রব' },
+          { ar: sl(W723, 1, 2), tr: 'ẓalamnā', en: 'we have wronged', bn: 'আমরা জুলুম করেছি' },
+          { ar: sl(W723, 2, 3), tr: 'anfusanā', en: 'ourselves', bn: 'নিজেদের উপর' },
+        ],
+      },
+      {
+        arabic: sl(W723, 3, 11),
+        translit: 'Wa in lam taghfir lanā wa tarḥamnā lanakūnanna minal-khāsirīn',
+        banglaTranslit: 'ওয়া ইল্লাম তাগফির লানা ওয়া তারহামনা লানাকূনান্না মিনাল খাসিরীন',
+        meaningBn: 'যদি আপনি আমাদের ক্ষমা না করেন ও দয়া না করেন, তবে অবশ্যই আমরা ক্ষতিগ্রস্তদের অন্তর্ভুক্ত হব',
+        meaningEn: 'And if You do not forgive us and have mercy on us, we will surely be among the losers',
+        words: [
+          { ar: sl(W723, 3, 5), tr: 'wa in lam', en: 'and if not', bn: 'এবং যদি না' },
+          { ar: sl(W723, 5, 7), tr: 'taghfir lanā', en: 'You forgive us', bn: 'আপনি আমাদের ক্ষমা করেন' },
+          { ar: sl(W723, 7, 8), tr: 'wa tarḥamnā', en: 'and have mercy on us', bn: 'এবং দয়া করেন' },
+          { ar: sl(W723, 8, 9), tr: 'lanakūnanna', en: 'we will surely be', bn: 'অবশ্যই আমরা হব' },
+          { ar: sl(W723, 9, 11), tr: 'minal-khāsirīn', en: 'among the losers', bn: 'ক্ষতিগ্রস্তদের অন্তর্ভুক্ত' },
+        ],
+      },
+    ],
+  },
+
+  'rabbighfir-warham': {
+    reference: 'কুরআনুল কারিম (সূরা আল-মুমিনুন ২৩:১১৮)',
+    fullArabic: [sl(W2318, 0, 3), sl(W2318, 3, 6)].join('\n'),
+    fullBanglaTranslit: 'রাব্বিগফির ওয়ারহাম ওয়া আনতা খাইরুর রাহিমীন',
+    fullMeaningBn: 'হে আমার রব! ক্ষমা করুন এবং দয়া করুন আর আপনি সর্বোত্তম দয়ালু',
+    segments: [
+      {
+        arabic: sl(W2318, 0, 3),
+        translit: 'Rabbighfir warḥam',
+        banglaTranslit: 'রাব্বিগফির ওয়ারহাম',
+        meaningBn: 'হে আমার রব! ক্ষমা করুন এবং দয়া করুন',
+        meaningEn: 'My Lord, forgive and have mercy',
+        words: [
+          { ar: sl(W2318, 0, 1), tr: 'rabbi', en: 'my Lord', bn: 'হে আমার রব' },
+          { ar: sl(W2318, 1, 2), tr: 'ighfir', en: 'forgive', bn: 'ক্ষমা করুন' },
+          { ar: sl(W2318, 2, 3), tr: 'warḥam', en: 'and have mercy', bn: 'এবং দয়া করুন' },
+        ],
+      },
+      {
+        arabic: sl(W2318, 3, 6),
+        translit: 'Wa anta khayrur-rāḥimīn',
+        banglaTranslit: 'ওয়া আনতা খাইরুর রাহিমীন',
+        meaningBn: 'আর আপনি সর্বোত্তম দয়ালু',
+        meaningEn: 'And You are the best of those who show mercy',
+        words: [
+          { ar: sl(W2318, 3, 4), tr: 'wa anta', en: 'and You', bn: 'এবং আপনি' },
+          { ar: sl(W2318, 4, 5), tr: 'khayru', en: 'the best', bn: 'সর্বোত্তম' },
+          { ar: sl(W2318, 5, 6), tr: 'ar-rāḥimīn', en: 'of the merciful', bn: 'দয়ালুদের মধ্যে' },
+        ],
+      },
+    ],
+  },
+
+  'durud-azwaj': {
+    reference: 'সহীহ বুখারি ৩৩৬৯ · সহীহ মুসলিম ৪০৭',
+    fullArabic: 'اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى أَزْوَاجِهِ وَذُرِّيَّتِهِ\nكَمَا صَلَّيْتَ عَلَى آلِ إِبْرَاهِيمَ\nوَبَارِكْ عَلَى مُحَمَّدٍ وَعَلَى أَزْوَاجِهِ وَذُرِّيَّتِهِ\nكَمَا بَارَكْتَ عَلَى آلِ إِبْرَاهِيمَ\nإِنَّكَ حَمِيدٌ مَجِيدٌ',
+    fullBanglaTranslit: 'আল্লাহুম্মা সাল্লি আলা মুহাম্মাদিন ওয়া আলা আযওয়াজিহি ওয়া যুররিইয়্যাতিহি কামা সাল্লাইতা আলা আলি ইবরাহীম ওয়া বারিক আলা মুহাম্মাদিন ওয়া আলা আযওয়াজিহি ওয়া যুররিইয়্যাতিহি কামা বারাকতা আলা আলি ইবরাহীম ইন্নাকা হামীদুম মাজীদ',
+    fullMeaningBn: 'হে আল্লাহ! মুহাম্মাদ ﷺ, তাঁর স্ত্রীগণ ও বংশধরদের উপর রহমত বর্ষণ করুন যেমন আপনি ইব্রাহিমের বংশধরদের উপর রহমত বর্ষণ করেছেন আর মুহাম্মাদ ﷺ, তাঁর স্ত্রীগণ ও বংশধরদের উপর বরকত দান করুন যেমন আপনি ইব্রাহিমের বংশধরদের উপর বরকত দান করেছেন নিশ্চয়ই আপনি প্রশংসিত, মহিমান্বিত',
+    segments: [
+      {
+        arabic: 'اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى أَزْوَاجِهِ وَذُرِّيَّتِهِ',
+        translit: 'Allāhumma ṣalli ʿalā Muḥammadin wa ʿalā azwājihi wa dhurriyyatihi',
+        banglaTranslit: 'আল্লাহুম্মা সাল্লি আলা মুহাম্মাদিন ওয়া আলা আযওয়াজিহি ওয়া যুররিইয়্যাতিহি',
+        meaningBn: 'হে আল্লাহ! মুহাম্মাদ ﷺ, তাঁর স্ত্রীগণ ও বংশধরদের উপর রহমত বর্ষণ করুন',
+        meaningEn: 'O Allah, send blessings upon Muhammad, his wives and his offspring',
+        words: [
+          { ar: 'اللَّهُمَّ', tr: 'Allāhumma', en: 'O Allah', bn: 'হে আল্লাহ' },
+          { ar: 'صَلِّ', tr: 'ṣalli', en: 'send blessings', bn: 'রহমত বর্ষণ করুন' },
+          { ar: 'عَلَى مُحَمَّدٍ', tr: 'ʿalā Muḥammadin', en: 'upon Muhammad', bn: 'মুহাম্মাদের উপর' },
+          { ar: 'وَعَلَى أَزْوَاجِهِ', tr: 'wa ʿalā azwājihi', en: 'and upon his wives', bn: 'এবং তাঁর স্ত্রীগণের উপর' },
+          { ar: 'وَذُرِّيَّتِهِ', tr: 'wa dhurriyyatihi', en: 'and his offspring', bn: 'এবং তাঁর বংশধরদের উপর' },
+        ],
+      },
+      {
+        arabic: 'كَمَا صَلَّيْتَ عَلَى آلِ إِبْرَاهِيمَ',
+        translit: 'Kamā ṣallayta ʿalā āli Ibrāhīm',
+        banglaTranslit: 'কামা সাল্লাইতা আলা আলি ইবরাহীম',
+        meaningBn: 'যেমন আপনি ইব্রাহিমের বংশধরদের উপর রহমত বর্ষণ করেছেন',
+        meaningEn: 'As You sent blessings upon the family of Ibrahim',
+        words: [
+          { ar: 'كَمَا صَلَّيْتَ', tr: 'kamā ṣallayta', en: 'as You sent blessings', bn: 'যেমন আপনি রহমত বর্ষণ করেছেন' },
+          { ar: 'عَلَى آلِ إِبْرَاهِيمَ', tr: 'ʿalā āli Ibrāhīm', en: 'upon the family of Ibrahim', bn: 'ইব্রাহিমের পরিবারের উপর' },
+        ],
+      },
+      {
+        arabic: 'وَبَارِكْ عَلَى مُحَمَّدٍ وَعَلَى أَزْوَاجِهِ وَذُرِّيَّتِهِ',
+        translit: 'Wa bārik ʿalā Muḥammadin wa ʿalā azwājihi wa dhurriyyatihi',
+        banglaTranslit: 'ওয়া বারিক আলা মুহাম্মাদিন ওয়া আলা আযওয়াজিহি ওয়া যুররিইয়্যাতিহি',
+        meaningBn: 'আর মুহাম্মাদ ﷺ, তাঁর স্ত্রীগণ ও বংশধরদের উপর বরকত দান করুন',
+        meaningEn: 'And bless Muhammad, his wives and his offspring',
+        words: [
+          { ar: 'وَبَارِكْ', tr: 'wa bārik', en: 'and bless', bn: 'এবং বরকত দিন' },
+          { ar: 'عَلَى مُحَمَّدٍ', tr: 'ʿalā Muḥammadin', en: 'upon Muhammad', bn: 'মুহাম্মাদের উপর' },
+          { ar: 'وَعَلَى أَزْوَاجِهِ', tr: 'wa ʿalā azwājihi', en: 'and upon his wives', bn: 'এবং তাঁর স্ত্রীগণের উপর' },
+          { ar: 'وَذُرِّيَّتِهِ', tr: 'wa dhurriyyatihi', en: 'and his offspring', bn: 'এবং তাঁর বংশধরদের উপর' },
+        ],
+      },
+      {
+        arabic: 'كَمَا بَارَكْتَ عَلَى آلِ إِبْرَاهِيمَ',
+        translit: 'Kamā bārakta ʿalā āli Ibrāhīm',
+        banglaTranslit: 'কামা বারাকতা আলা আলি ইবরাহীম',
+        meaningBn: 'যেমন আপনি ইব্রাহিমের বংশধরদের উপর বরকত দান করেছেন',
+        meaningEn: 'As You blessed the family of Ibrahim',
+        words: [
+          { ar: 'كَمَا بَارَكْتَ', tr: 'kamā bārakta', en: 'as You blessed', bn: 'যেমন আপনি বরকত দিয়েছেন' },
+          { ar: 'عَلَى آلِ إِبْرَاهِيمَ', tr: 'ʿalā āli Ibrāhīm', en: 'upon the family of Ibrahim', bn: 'ইব্রাহিমের পরিবারের উপর' },
+        ],
+      },
+      {
+        arabic: 'إِنَّكَ حَمِيدٌ مَجِيدٌ',
+        translit: 'Innaka ḥamīdun majīd',
+        banglaTranslit: 'ইন্নাকা হামীদুম মাজীদ',
+        meaningBn: 'নিশ্চয়ই আপনি প্রশংসিত, মহিমান্বিত',
+        meaningEn: 'Indeed You are Praiseworthy and Glorious',
+        words: [
+          { ar: 'إِنَّكَ حَمِيدٌ', tr: 'innaka ḥamīdun', en: 'indeed You are Praiseworthy', bn: 'নিশ্চয়ই আপনি প্রশংসিত' },
+          { ar: 'مَجِيدٌ', tr: 'majīdun', en: 'Glorious', bn: 'মহিমান্বিত' },
+        ],
+      },
+    ],
+  },
+
+  'durud-abdika': {
+    reference: 'সহীহ বুখারি ৬৩৫৮',
+    fullArabic: 'اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ عَبْدِكَ وَرَسُولِكَ\nكَمَا صَلَّيْتَ عَلَى آلِ إِبْرَاهِيمَ\nوَبَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ\nكَمَا بَارَكْتَ عَلَى آلِ إِبْرَاهِيمَ',
+    fullBanglaTranslit: 'আল্লাহুম্মা সাল্লি আলা মুহাম্মাদিন আবদিকা ওয়া রাসূলিকা কামা সাল্লাইতা আলা আলি ইবরাহীম ওয়া বারিক আলা মুহাম্মাদিন ওয়া আলা আলি মুহাম্মাদ কামা বারাকতা আলা আলি ইবরাহীম',
+    fullMeaningBn: 'হে আল্লাহ! আপনার বান্দা ও রাসূল মুহাম্মাদ ﷺ-এর উপর রহমত বর্ষণ করুন যেমন আপনি ইব্রাহিমের বংশধরদের উপর রহমত বর্ষণ করেছেন আর মুহাম্মাদ ﷺ ও তাঁর পরিবারের উপর বরকত দান করুন যেমন আপনি ইব্রাহিমের বংশধরদের উপর বরকত দান করেছেন',
+    segments: [
+      {
+        arabic: 'اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ عَبْدِكَ وَرَسُولِكَ',
+        translit: 'Allāhumma ṣalli ʿalā Muḥammadin ʿabdika wa rasūlika',
+        banglaTranslit: 'আল্লাহুম্মা সাল্লি আলা মুহাম্মাদিন আবদিকা ওয়া রাসূলিকা',
+        meaningBn: 'হে আল্লাহ! আপনার বান্দা ও রাসূল মুহাম্মাদ ﷺ-এর উপর রহমত বর্ষণ করুন',
+        meaningEn: 'O Allah, send blessings upon Muhammad, Your servant and Messenger',
+        words: [
+          { ar: 'اللَّهُمَّ', tr: 'Allāhumma', en: 'O Allah', bn: 'হে আল্লাহ' },
+          { ar: 'صَلِّ', tr: 'ṣalli', en: 'send blessings', bn: 'রহমত বর্ষণ করুন' },
+          { ar: 'عَلَى مُحَمَّدٍ', tr: 'ʿalā Muḥammadin', en: 'upon Muhammad', bn: 'মুহাম্মাদের উপর' },
+          { ar: 'عَبْدِكَ', tr: 'ʿabdika', en: 'Your servant', bn: 'আপনার বান্দা' },
+          { ar: 'وَرَسُولِكَ', tr: 'wa rasūlika', en: 'and Your Messenger', bn: 'এবং আপনার রাসূল' },
+        ],
+      },
+      {
+        arabic: 'كَمَا صَلَّيْتَ عَلَى آلِ إِبْرَاهِيمَ',
+        translit: 'Kamā ṣallayta ʿalā āli Ibrāhīm',
+        banglaTranslit: 'কামা সাল্লাইতা আলা আলি ইবরাহীম',
+        meaningBn: 'যেমন আপনি ইব্রাহিমের বংশধরদের উপর রহমত বর্ষণ করেছেন',
+        meaningEn: 'As You sent blessings upon the family of Ibrahim',
+        words: [
+          { ar: 'كَمَا صَلَّيْتَ', tr: 'kamā ṣallayta', en: 'as You sent blessings', bn: 'যেমন আপনি রহমত বর্ষণ করেছেন' },
+          { ar: 'عَلَى آلِ إِبْرَاهِيمَ', tr: 'ʿalā āli Ibrāhīm', en: 'upon the family of Ibrahim', bn: 'ইব্রাহিমের পরিবারের উপর' },
+        ],
+      },
+      {
+        arabic: 'وَبَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ',
+        translit: 'Wa bārik ʿalā Muḥammadin wa ʿalā āli Muḥammad',
+        banglaTranslit: 'ওয়া বারিক আলা মুহাম্মাদিন ওয়া আলা আলি মুহাম্মাদ',
+        meaningBn: 'আর মুহাম্মাদ ﷺ ও তাঁর পরিবারের উপর বরকত দান করুন',
+        meaningEn: 'And bless Muhammad and the family of Muhammad',
+        words: [
+          { ar: 'وَبَارِكْ', tr: 'wa bārik', en: 'and bless', bn: 'এবং বরকত দিন' },
+          { ar: 'عَلَى مُحَمَّدٍ', tr: 'ʿalā Muḥammadin', en: 'upon Muhammad', bn: 'মুহাম্মাদের উপর' },
+          { ar: 'وَعَلَى آلِ مُحَمَّدٍ', tr: 'wa ʿalā āli Muḥammad', en: 'and upon the family of Muhammad', bn: 'এবং মুহাম্মাদের পরিবারের উপর' },
+        ],
+      },
+      {
+        arabic: 'كَمَا بَارَكْتَ عَلَى آلِ إِبْرَاهِيمَ',
+        translit: 'Kamā bārakta ʿalā āli Ibrāhīm',
+        banglaTranslit: 'কামা বারাকতা আলা আলি ইবরাহীম',
+        meaningBn: 'যেমন আপনি ইব্রাহিমের বংশধরদের উপর বরকত দান করেছেন',
+        meaningEn: 'As You blessed the family of Ibrahim',
+        words: [
+          { ar: 'كَمَا بَارَكْتَ', tr: 'kamā bārakta', en: 'as You blessed', bn: 'যেমন আপনি বরকত দিয়েছেন' },
+          { ar: 'عَلَى آلِ إِبْرَاهِيمَ', tr: 'ʿalā āli Ibrāhīm', en: 'upon the family of Ibrahim', bn: 'ইব্রাহিমের পরিবারের উপর' },
+        ],
+      },
+    ],
+  },
+
+  'durud-fil-alamin': {
+    reference: 'সহীহ মুসলিম ৪০৫',
+    fullArabic: 'اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ\nكَمَا صَلَّيْتَ عَلَى آلِ إِبْرَاهِيمَ\nوَبَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ\nكَمَا بَارَكْتَ عَلَى آلِ إِبْرَاهِيمَ فِي الْعَالَمِينَ\nإِنَّكَ حَمِيدٌ مَجِيدٌ',
+    fullBanglaTranslit: 'আল্লাহুম্মা সাল্লি আলা মুহাম্মাদিন ওয়া আলা আলি মুহাম্মাদ কামা সাল্লাইতা আলা আলি ইবরাহীম ওয়া বারিক আলা মুহাম্মাদিন ওয়া আলা আলি মুহাম্মাদ কামা বারাকতা আলা আলি ইবরাহীমা ফিল আলামীন ইন্নাকা হামীদুম মাজীদ',
+    fullMeaningBn: 'হে আল্লাহ! মুহাম্মাদ ﷺ ও তাঁর পরিবারের উপর রহমত বর্ষণ করুন যেমন আপনি ইব্রাহিমের বংশধরদের উপর রহমত বর্ষণ করেছেন আর মুহাম্মাদ ﷺ ও তাঁর পরিবারের উপর বরকত দান করুন যেমন আপনি সমগ্র জগতে ইব্রাহিমের বংশধরদের উপর বরকত দান করেছেন নিশ্চয়ই আপনি প্রশংসিত, মহিমান্বিত',
+    segments: [
+      {
+        arabic: 'اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ',
+        translit: 'Allāhumma ṣalli ʿalā Muḥammadin wa ʿalā āli Muḥammad',
+        banglaTranslit: 'আল্লাহুম্মা সাল্লি আলা মুহাম্মাদিন ওয়া আলা আলি মুহাম্মাদ',
+        meaningBn: 'হে আল্লাহ! মুহাম্মাদ ﷺ ও তাঁর পরিবারের উপর রহমত বর্ষণ করুন',
+        meaningEn: 'O Allah, send blessings upon Muhammad and the family of Muhammad',
+        words: [
+          { ar: 'اللَّهُمَّ', tr: 'Allāhumma', en: 'O Allah', bn: 'হে আল্লাহ' },
+          { ar: 'صَلِّ', tr: 'ṣalli', en: 'send blessings', bn: 'রহমত বর্ষণ করুন' },
+          { ar: 'عَلَى مُحَمَّدٍ', tr: 'ʿalā Muḥammadin', en: 'upon Muhammad', bn: 'মুহাম্মাদের উপর' },
+          { ar: 'وَعَلَى آلِ مُحَمَّدٍ', tr: 'wa ʿalā āli Muḥammad', en: 'and upon the family of Muhammad', bn: 'এবং মুহাম্মাদের পরিবারের উপর' },
+        ],
+      },
+      {
+        arabic: 'كَمَا صَلَّيْتَ عَلَى آلِ إِبْرَاهِيمَ',
+        translit: 'Kamā ṣallayta ʿalā āli Ibrāhīm',
+        banglaTranslit: 'কামা সাল্লাইতা আলা আলি ইবরাহীম',
+        meaningBn: 'যেমন আপনি ইব্রাহিমের বংশধরদের উপর রহমত বর্ষণ করেছেন',
+        meaningEn: 'As You sent blessings upon the family of Ibrahim',
+        words: [
+          { ar: 'كَمَا صَلَّيْتَ', tr: 'kamā ṣallayta', en: 'as You sent blessings', bn: 'যেমন আপনি রহমত বর্ষণ করেছেন' },
+          { ar: 'عَلَى آلِ إِبْرَاهِيمَ', tr: 'ʿalā āli Ibrāhīm', en: 'upon the family of Ibrahim', bn: 'ইব্রাহিমের পরিবারের উপর' },
+        ],
+      },
+      {
+        arabic: 'وَبَارِكْ عَلَى مُحَمَّدٍ وَعَلَى آلِ مُحَمَّدٍ',
+        translit: 'Wa bārik ʿalā Muḥammadin wa ʿalā āli Muḥammad',
+        banglaTranslit: 'ওয়া বারিক আলা মুহাম্মাদিন ওয়া আলা আলি মুহাম্মাদ',
+        meaningBn: 'আর মুহাম্মাদ ﷺ ও তাঁর পরিবারের উপর বরকত দান করুন',
+        meaningEn: 'And bless Muhammad and the family of Muhammad',
+        words: [
+          { ar: 'وَبَارِكْ', tr: 'wa bārik', en: 'and bless', bn: 'এবং বরকত দিন' },
+          { ar: 'عَلَى مُحَمَّدٍ', tr: 'ʿalā Muḥammadin', en: 'upon Muhammad', bn: 'মুহাম্মাদের উপর' },
+          { ar: 'وَعَلَى آلِ مُحَمَّدٍ', tr: 'wa ʿalā āli Muḥammad', en: 'and upon the family of Muhammad', bn: 'এবং মুহাম্মাদের পরিবারের উপর' },
+        ],
+      },
+      {
+        arabic: 'كَمَا بَارَكْتَ عَلَى آلِ إِبْرَاهِيمَ فِي الْعَالَمِينَ',
+        translit: 'Kamā bārakta ʿalā āli Ibrāhīma fil-ʿālamīn',
+        banglaTranslit: 'কামা বারাকতা আলা আলি ইবরাহীমা ফিল আলামীন',
+        meaningBn: 'যেমন আপনি সমগ্র জগতে ইব্রাহিমের বংশধরদের উপর বরকত দান করেছেন',
+        meaningEn: 'As You blessed the family of Ibrahim, among all the worlds',
+        words: [
+          { ar: 'كَمَا بَارَكْتَ', tr: 'kamā bārakta', en: 'as You blessed', bn: 'যেমন আপনি বরকত দিয়েছেন' },
+          { ar: 'عَلَى آلِ إِبْرَاهِيمَ', tr: 'ʿalā āli Ibrāhīm', en: 'upon the family of Ibrahim', bn: 'ইব্রাহিমের পরিবারের উপর' },
+          { ar: 'فِي الْعَالَمِينَ', tr: 'fil-ʿālamīna', en: 'among all the worlds', bn: 'সমগ্র জগতে' },
+        ],
+      },
+      {
+        arabic: 'إِنَّكَ حَمِيدٌ مَجِيدٌ',
+        translit: 'Innaka ḥamīdun majīd',
+        banglaTranslit: 'ইন্নাকা হামীদুম মাজীদ',
+        meaningBn: 'নিশ্চয়ই আপনি প্রশংসিত, মহিমান্বিত',
+        meaningEn: 'Indeed You are Praiseworthy and Glorious',
+        words: [
+          { ar: 'إِنَّكَ حَمِيدٌ', tr: 'innaka ḥamīdun', en: 'indeed You are Praiseworthy', bn: 'নিশ্চয়ই আপনি প্রশংসিত' },
+          { ar: 'مَجِيدٌ', tr: 'majīdun', en: 'Glorious', bn: 'মহিমান্বিত' },
+        ],
+      },
+    ],
+  },
+
+  'durud-ayah': {
+    reference: 'কুরআনুল কারিম (সূরা আল-আহযাব ৩৩:৫৬)',
+    fullArabic: [sl(W3356, 0, 7), sl(W3356, 7, 14)].join('\n'),
+    fullBanglaTranslit: 'ইন্নাল্লাহা ওয়া মালাইকাতাহু ইউসাল্লূনা আলান নাবিয়্যি ইয়া আইয়্যুহাল্লাযীনা আমানূ সাল্লূ আলাইহি ওয়া সাল্লিমূ তাসলীমা',
+    fullMeaningBn: 'নিশ্চয়ই আল্লাহ ও তাঁর ফেরেশতাগণ নবীর প্রতি দরূদ (রহমত) প্রেরণ করেন হে মুমিনগণ! তোমরাও তাঁর প্রতি দরূদ পাঠাও এবং যথাযথভাবে সালাম জানাও',
+    segments: [
+      {
+        arabic: sl(W3356, 0, 7),
+        translit: 'Inna llāha wa malāʾikatahu yuṣallūna ʿalan-nabiyy',
+        banglaTranslit: 'ইন্নাল্লাহা ওয়া মালাইকাতাহু ইউসাল্লূনা আলান নাবিয়্যি',
+        meaningBn: 'নিশ্চয়ই আল্লাহ ও তাঁর ফেরেশতাগণ নবীর প্রতি দরূদ (রহমত) প্রেরণ করেন',
+        meaningEn: 'Indeed Allah and His angels send blessings upon the Prophet',
+        words: [
+          { ar: sl(W3356, 0, 2), tr: 'inna llāha', en: 'indeed Allah', bn: 'নিশ্চয়ই আল্লাহ' },
+          { ar: sl(W3356, 2, 3), tr: 'wa malāʾikatahu', en: 'and His angels', bn: 'এবং তাঁর ফেরেশতাগণ' },
+          { ar: sl(W3356, 3, 4), tr: 'yuṣallūna', en: 'send blessings', bn: 'দরূদ প্রেরণ করেন' },
+          { ar: sl(W3356, 4, 6), tr: 'ʿalan-nabiyyi', en: 'upon the Prophet', bn: 'নবীর উপর' },
+        ],
+      },
+      {
+        arabic: sl(W3356, 7, 14),
+        translit: 'Yā ayyuhal-ladhīna āmanū ṣallū ʿalayhi wa sallimū taslīmā',
+        banglaTranslit: 'ইয়া আইয়্যুহাল্লাযীনা আমানূ সাল্লূ আলাইহি ওয়া সাল্লিমূ তাসলীমা',
+        meaningBn: 'হে মুমিনগণ! তোমরাও তাঁর প্রতি দরূদ পাঠাও এবং যথাযথভাবে সালাম জানাও',
+        meaningEn: 'O you who believe, send blessings upon him and greet him with peace',
+        words: [
+          { ar: sl(W3356, 7, 8), tr: 'yā ayyuhā', en: 'O', bn: 'হে' },
+          { ar: sl(W3356, 8, 10), tr: 'alladhīna āmanū', en: 'those who believe', bn: 'যারা ঈমান এনেছ' },
+          { ar: sl(W3356, 10, 12), tr: 'ṣallū ʿalayhi', en: 'send blessings upon him', bn: 'তাঁর উপর দরূদ পাঠাও' },
+          { ar: sl(W3356, 12, 14), tr: 'wa sallimū taslīmā', en: 'and greet with peace', bn: 'এবং যথাযথভাবে সালাম জানাও' },
+        ],
+      },
+    ],
+  },
 };
+
+// Copies shown in 'durud-istighfar' reuse the original's detail
+DETAIL_MAP['darud-di'] = DETAIL_MAP['darud'];
+DETAIL_MAP['durood-after-di'] = DETAIL_MAP['durood-after'];
+DETAIL_MAP['istighfar-salat-di'] = DETAIL_MAP['istighfar-salat'];

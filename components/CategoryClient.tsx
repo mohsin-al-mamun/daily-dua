@@ -3,6 +3,7 @@
 import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import type { DuaMeta, Category, CatLabel } from '@/lib/data';
+import { CAT_GROUPS } from '@/lib/data';
 import { LogoIcon } from './Logo';
 
 const BN = '০১২৩৪৫৬৭৮৯';
@@ -30,6 +31,21 @@ export default function CategoryClient({
   const filteredDuas = q
     ? duas.filter((d) => d.titleBn.toLowerCase().includes(q) || d.titleAr.includes(q))
     : duas;
+
+  const renderCard = (dua: DuaMeta) => (
+              <Link key={dua.id} className="dua-card" href={`/dua/${dua.id}`}>
+                <div className="card-top">
+                  <div className="card-ar-line">{dua.firstLine}</div>
+                </div>
+                <div className="card-btm">
+                  <div className="card-title-ar">{dua.titleAr}</div>
+                  <div className="card-title-bn">{dua.titleBn}</div>
+                  <div className="card-read">পড়ুন <span aria-hidden="true">→</span></div>
+                </div>
+              </Link>
+  );
+
+  const groups = CAT_GROUPS[cat.id];
 
   return (
     <>
@@ -77,7 +93,24 @@ export default function CategoryClient({
 
       {/* DUA CARDS */}
       <main className="main-wrap">
-        {filteredDuas.length > 0 ? (
+        {filteredDuas.length > 0 && groups ? (
+          groups.map((g) => {
+            const items = filteredDuas.filter((d) => d.group === g.id);
+            if (!items.length) return null;
+            return (
+              <section key={g.id} style={{ marginBottom: 36 }}>
+                <div className="section-hdr">
+                  <div className="sec-text">
+                    <div className="sec-name">{g.bn}</div>
+                    <div className="sec-sub">{g.en}</div>
+                  </div>
+                  <span className="count-pill">{toBn(items.length)}</span>
+                </div>
+                <div className="cards-grid">{items.map(renderCard)}</div>
+              </section>
+            );
+          })
+        ) : filteredDuas.length > 0 ? (
           <div className="cards-grid">
             {cat.id === 'after-salat' && !q && (
               <Link className="dua-card read-all-card" href={`/category/${cat.id}/all`}>
@@ -91,18 +124,7 @@ export default function CategoryClient({
                 </div>
               </Link>
             )}
-            {filteredDuas.map((dua) => (
-              <Link key={dua.id} className="dua-card" href={`/dua/${dua.id}`}>
-                <div className="card-top">
-                  <div className="card-ar-line">{dua.firstLine}</div>
-                </div>
-                <div className="card-btm">
-                  <div className="card-title-ar">{dua.titleAr}</div>
-                  <div className="card-title-bn">{dua.titleBn}</div>
-                  <div className="card-read">পড়ুন <span aria-hidden="true">→</span></div>
-                </div>
-              </Link>
-            ))}
+            {filteredDuas.map(renderCard)}
           </div>
         ) : (
           <div className="no-results show">
